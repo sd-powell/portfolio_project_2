@@ -7,6 +7,12 @@
 
 body {
     background-color: var(--background-color);
+    background-image: url(../images/lightbulb-silversoul.svg),
+    url(../images/pop-quiz.svg),
+    url(../images/bg-template.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left -16px top -22px, right -11px top 24px, top center;
+    background-size: 210px auto, 270px auto, 390px auto;
 }
 
 /************ CSS Variables ************/
