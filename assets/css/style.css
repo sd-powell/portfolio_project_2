@@ -79,3 +79,25 @@ span {
     gap: 10px;
     margin-top: 1rem;
 }
+
+button {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--highlight-blue);
+    padding: 5px 22px;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.outline_btn {
+    background: transparent;
+    border: 1px solid var(--highlight-blue);
+    color: var(--highlight-blue);
+}
+
+.reverse_btn {
+background: var(--highlight-blue);
+color: var(--background-color);
+border: none;
+}
