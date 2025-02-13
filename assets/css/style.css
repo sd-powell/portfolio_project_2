@@ -18,4 +18,10 @@ body {
 /************ CSS Variables ************/
 :root {
     --background-color: #1d1a21;
+    --window-color: #252733;
+    --highlight-blue: #4f9aff;
+    --correct-green: #4eb738;
+    --wrong-red: #e83c5a;
+    --star-gold: #f59527;
 }
+
