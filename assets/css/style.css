@@ -1,3 +1,21 @@
+/************ Google Fonts import ************/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/************ CSS Variables ************/
+:root {
+    /************ Colors ************/
+    --background-color: #1d1a21;
+    --window-color: #252733;
+    --highlight-blue: #4f9aff;
+    --correct-green: #4eb738;
+    --wrong-red: #e83c5a;
+    --star-gold: #f59527;
+
+/************ Typography ************/
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+}
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -13,15 +31,5 @@ body {
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: left -16px top -22px, right -11px top 24px, top center;
     background-size: 210px auto, 270px auto, 390px auto;
-}
-
-/************ CSS Variables ************/
-:root {
-    --background-color: #1d1a21;
-    --window-color: #252733;
-    --highlight-blue: #4f9aff;
-    --correct-green: #4eb738;
-    --wrong-red: #e83c5a;
-    --star-gold: #f59527;
 }
 
