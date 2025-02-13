@@ -5,6 +5,7 @@
 :root {
     /************ Colors ************/
     --background-color: #1d1a21;
+    --foreground-white: #ffffff;
     --window-color: #252733;
     --highlight-blue: #4f9aff;
     --correct-green: #4eb738;
@@ -48,10 +49,14 @@ h2 {
     padding-bottom: 1rem;
 }
 
-p {
+p,
+ul {
     font-family: var(--secondary-font);
     font-size: 1rem;
     line-height: 1.4rem;
+    /* https://stackoverflow.com/questions/1461015/why-dont-ul-bullets-stay-within-their-containing-div */
+    margin-left: 1em;
+    text-align: left;
 }
 
 span {
@@ -64,6 +69,7 @@ span {
     align-items: center;
     justify-content: flex-start;
     margin-top: 230px;
+    opacity: 1;
 }
 
 .info_panel {
@@ -100,4 +106,27 @@ button {
 background: var(--highlight-blue);
 color: var(--background-color);
 border: none;
+}
+
+/************ Modal containers ************/
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.modal_content {
+    position: absolute;
+    background-color: var(--window-color);
+    top: 227px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    /* opacity: 1; */
+    /* list-style-position: inside; */
 }
