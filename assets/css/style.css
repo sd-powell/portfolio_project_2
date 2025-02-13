@@ -35,7 +35,7 @@ body {
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     color: white;
 }
@@ -54,10 +54,15 @@ p {
     line-height: 1.4rem;
 }
 
+span {
+    font-weight: 700;
+}
 /************ Containers ************/
 .info_panel {
     background-color: var(--window-color);
     width: 350px;
     padding: 1rem;
+    margin: 1rem;
     border-radius: 0.5rem;
+    margin-top: 254px;
 }
