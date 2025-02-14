@@ -58,11 +58,11 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 - As a new site user, I want to play against a timer, so that I feel a sense of challenge and excitement while answering questions quickly.
 - As a new site user, I want to see my score and progress, so that I feel motivated to improve and replay.
 
-### Returning Site Users
+#### Returning Site Users
 
 - As a returning site user, I want to select the difficulty level of quiz questions, so that I can tailor the challenge to my knowledge and skill level.
 
-### Frequent Visitor Goals
+#### Frequent Visitor Goals
 
 - As a frequent site user, I want to see a leaderboard of top quiz scores, so that I can compare my performance with others and stay motivated to improve.
 
