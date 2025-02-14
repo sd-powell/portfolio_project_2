@@ -95,3 +95,9 @@ This color scheme enhances clarity, feedback, and user experience while maintain
 ![Hex swatch palette](documentation/hex-swatches.webp)
 
 </details>
+
+<a id=typography></a>
+
+### Typography
+
+Google Fonts was used to import the selected fonts for the site, ensuring high-quality and easily accessible typography.
