@@ -65,3 +65,26 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 ### Frequent Visitor Goals
 
 - As a frequent site user, I want to see a leaderboard of top quiz scores, so that I can compare my performance with others and stay motivated to improve.
+
+---
+
+<a id=Design></a>
+
+## Design
+
+<a id=colour-scheme></a>
+
+### Colour Scheme
+
+The site's color scheme draws inspiration from the vibrant neon lights of a 1970s disco, featuring bold, electrifying hues that evoke the energy, excitement, and retro-futuristic aesthetics of the era. The glowing, high-contrast palette enhances the immersive experience, creating a visually dynamic atmosphere reminiscent of classic dance floors, shimmering reflections, and the iconic nightlife of the time.
+
+The primary colours for the site are
+
+To enhance user engagement and guide attention to important areas, I incorporated distinct highlight colors:
+
+- `4f9aff` (Bright Blue): Used to emphasize key UI elements, drawing user focus to interactive components.
+- `e83c5a` (Red): Clearly signals an incorrect answer, creating an instant visual cue for mistakes.
+- `4eb738` (Green): Indicates a correct answer, reinforcing success with a positive color association.
+- `f59527` (Gold): Represents the user’s score, evoking achievement and reward with a warm, celebratory tone.
+
+This color scheme enhances clarity, feedback, and user experience while maintaining a cohesive, vibrant aesthetic.
