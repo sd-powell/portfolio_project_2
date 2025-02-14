@@ -34,10 +34,7 @@ body {
     background-position: left -16px top -22px, right -13px top 24px, top center;
     background-size: 210px auto, 270px auto, 390px auto;
     
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+    /* background: var(--background-color); */
     color: white;
 }
 
@@ -66,7 +63,24 @@ li {
 span {
     font-weight: 700;
 }
+
 /************ Containers ************/
+
+.info_panel,
+.rules_panel,
+.quiz_panel {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info_panel {
+    width: 350px;
+    border-radius: 0.5rem;
+    background-color: var(--window-color);
+}
+
 
 /*
 .container {
@@ -76,20 +90,18 @@ span {
     justify-content: flex-start;
     margin-top: 230px;
 }
-    */
+
 
 .intro_panel {
     background-color: var(--window-color);
     width: 350px;
     padding: 1rem;
-    /* margin: 1rem; */
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .nav_box {
     display: flex;
     gap: 10px;
-    /* margin-top: 1rem; */
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
@@ -114,19 +126,16 @@ background: var(--highlight-blue);
 color: var(--background-color);
 border: none;
 }
-
-/************ Modal containers ************/
+*/
+/************ Modal containers ***********
 .modal_container {
     position: fixed;
-    /* top: 0; */
-    /* left: 0; */
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.3);
-    /* opacity: 0; */
 }
 
 .modal_content {
@@ -137,6 +146,6 @@ border: none;
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.5rem;
-    /* opacity: 1; */
     list-style-position: inside;
 }
+*/
