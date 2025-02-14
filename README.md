@@ -88,3 +88,10 @@ To enhance user engagement and guide attention to important areas, I incorporate
 - `f59527` (Gold): Represents the user’s score, evoking achievement and reward with a warm, celebratory tone.
 
 This color scheme enhances clarity, feedback, and user experience while maintaining a cohesive, vibrant aesthetic.
+
+<details>
+<summary>- Toggle the arrow to view the colour swatches</summary>
+
+![Hex swatch palette](documentation/hex-swatches.webp)
+
+</details>
