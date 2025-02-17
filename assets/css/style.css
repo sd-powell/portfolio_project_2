@@ -57,7 +57,7 @@ li {
     margin-bottom: 0.35rem;
 }
 
-span {
+button, span {
     font-weight: 700;
 }
 
@@ -67,33 +67,35 @@ span {
 .rules_panel,
 .quiz_panel {
     position: absolute;
-    top: 52%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .info_panel {
     width: 350px;
-    border-radius: 0.5rem;
-    padding: 1.2rem;
+    border-radius: 8px;
+    padding: 19px;
     background-color: var(--window-color);
 }
 
 .rules_panel {
     width: 350px;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background-color: var(--window-color);
-    padding: 1.2rem;
+    padding: 19px;
     list-style-position: inside;
     opacity: 0;
 }
 
 .quiz_panel {
     width: 350px;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background-color: var(--window-color);
     opacity: 0;
 }
+
+/************ Buttons ************/
 
 .buttons {
     height: 48px;
@@ -104,10 +106,9 @@ span {
 }
 
 button {
-    font-weight: 700;
-    color: var(--highlight-blue);
-    padding: 5px 22px;
-    border-radius: 2rem;
+    font-size: 17px;
+    padding: 5px 17px;
+    border-radius: 32px;
     cursor: pointer;
 }
 
@@ -190,3 +191,4 @@ border: none;
     list-style-position: inside;
 }
 */
+
