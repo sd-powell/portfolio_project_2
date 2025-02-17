@@ -95,13 +95,33 @@ span {
     opacity: 0;
 }
 
-.info_panel .buttons {
-    height: 3rem;
+.buttons {
+    height: 48px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 1.8rem;
-} 
+    justify-content: space-between;
+}
+
+button {
+    font-weight: 700;
+    color: var(--highlight-blue);
+    padding: 5px 22px;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.outline_btn {
+    background: transparent;
+    border: 1px solid var(--highlight-blue);
+    color: var(--highlight-blue);
+}
+
+.reverse_btn {
+background: var(--highlight-blue);
+color: var(--background-color);
+border: none;
+}
 
 /*
 .container {
