@@ -1,5 +1,5 @@
 /************ Google Fonts import ************/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
 /************ CSS Variables ************/
 :root {
@@ -14,7 +14,7 @@
 
 /************ Typography ************/
     --primary-font: 'Roboto', sans-serif;
-    --secondary-font: 'Raleway', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
 }
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -41,7 +41,7 @@ body {
 /************ Typography ************/
 h2 {
     font-family: var(--primary-font);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--highlight-blue);
     padding-bottom: 1rem;
 }
@@ -49,11 +49,8 @@ h2 {
 p,
 ol {
     font-family: var(--secondary-font);
-    font-size: 1rem;
-    line-height: 1.4rem;
-    /* https://stackoverflow.com/questions/1461015/why-dont-ul-bullets-stay-within-their-containing-div */
-    /* margin-left: 1em; */
-    /* text-align: left; */
+    font-size: 17px;
+    line-height: 25px;
 }
 
 li {
@@ -70,7 +67,7 @@ span {
 .rules_panel,
 .quiz_panel {
     position: absolute;
-    top: 36%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -78,9 +75,33 @@ span {
 .info_panel {
     width: 350px;
     border-radius: 0.5rem;
+    padding: 1.2rem;
     background-color: var(--window-color);
 }
 
+.rules_panel {
+    width: 350px;
+    border-radius: 0.5rem;
+    background-color: var(--window-color);
+    padding: 1.2rem;
+    list-style-position: inside;
+    opacity: 0;
+}
+
+.quiz_panel {
+    width: 350px;
+    border-radius: 0.5rem;
+    background-color: var(--window-color);
+    opacity: 0;
+}
+
+.info_panel .buttons {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.8rem;
+} 
 
 /*
 .container {
