@@ -57,6 +57,10 @@ li {
     margin-bottom: 0.35rem;
 }
 
+.question_title {
+    font-family: var(--primary-font);
+}
+
 button, span {
     font-weight: 700;
 }
@@ -70,29 +74,24 @@ button, span {
     top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 350px;
+    border-radius: 8px;
+    background-color: var(--window-color);
 }
 
 .info_panel {
-    width: 350px;
-    border-radius: 8px;
     padding: 19px;
-    background-color: var(--window-color);
+    opacity: 0;
 }
 
 .rules_panel {
-    width: 350px;
-    border-radius: 8px;
-    background-color: var(--window-color);
     padding: 19px;
     list-style-position: inside;
-    opacity: 0;
+    opacity: 1;
 }
 
 .quiz_panel {
-    width: 350px;
-    border-radius: 8px;
-    background-color: var(--window-color);
-    opacity: 0;
+    opacity: 1;
 }
 
 /************ Buttons ************/
