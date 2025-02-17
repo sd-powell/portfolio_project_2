@@ -61,19 +61,23 @@ button, span {
     font-weight: 700;
 }
 
+.quiz_score i {
+    color: var(--star-gold);
+}
+
 /************ Containers ************/
 
 .info_panel,
 .rules_panel,
 .quiz_panel {
     position: absolute;
+    z-index: 5;
     top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
     border-radius: 8px;
     background-color: var(--window-color);
-    padding: 19px;
 }
 
 .info_panel {
@@ -90,11 +94,26 @@ button, span {
 }
 
 /************ Elements ************/
+#quiz_header {
+ position: relative;
+ z-index: 2;
+}
+
+#quiz_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-top: 1px solid var(--foreground-white);
+    padding: 18px 18px;
+}
 
 .question_total {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 18px 5px 18px;
+    border-bottom: 1px solid var(--foreground-white);
 }
 
 .quiz_timer {
@@ -104,6 +123,10 @@ button, span {
     font-family: var(--primary-font);
     color: var(--background-color);
     font-weight: 800;
+}
+
+#quiz_questions {
+    padding: 18px 18px;
 }
 
 .question_title {
@@ -146,10 +169,14 @@ button {
     border-radius: 8px;
     background: transparent;
     color: var(--foreground-white);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     width: 100%;
     height: 50px;
     text-align: left;
     margin: 6px 0;
+}
+
+.nextQuestion_btn {
+    background-color: var(--correct-green);
 }
