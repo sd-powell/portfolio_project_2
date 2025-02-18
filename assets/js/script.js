@@ -9,3 +9,4 @@ const hardQuiz =
 // Declare const variables for site interactivity
 const start_btn = document.getElementById(start_btn);
 const leaderboard_btn = document.getElementById("leaderboard_btn");
+const rules_btn = document.getElementById("rules_btn");
