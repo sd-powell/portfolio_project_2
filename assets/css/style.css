@@ -69,7 +69,8 @@ button, span {
 
 .info_panel,
 .rules_panel,
-.quiz_panel {
+.quiz_panel,
+#difficulty_panel {
     position: absolute;
     z-index: 5;
     top: 58%;
@@ -91,6 +92,11 @@ button, span {
 
 .quiz_panel {
     opacity: 1;
+}
+
+#difficulty_panel {
+    height: 380px;
+    padding: 18px 18px;
 }
 
 /************ Elements ************/
