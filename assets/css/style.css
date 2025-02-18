@@ -27,13 +27,14 @@
 body {
     /************ Background images ************/
     background-color: var(--background-color);
+    /*
     background-image: url(../images/lightbulb-silversoul.svg),
     url(../images/pop-quiz.svg),
     url(../images/bg-template-welcome.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: left -16px top -22px, right -13px top 24px, top center;
     background-size: 210px auto, 270px auto, 390px auto;
-    
+    */
     /* background: var(--background-color); */
     color: white;
 }
@@ -83,7 +84,8 @@ button, span {
 }
 
 .info_panel {
-    opacity: 0;
+    opacity: 1;
+    padding: 18px 18px;
 }
 
 .rules_panel {
