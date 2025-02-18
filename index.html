@@ -133,10 +133,17 @@
       <div class="results_score"></div>
       <p>
         Are you Top of the Pops? <br />
-        Claim Your Spot on the Leaderboard!
+        Claim your spot on the leaderboard!
       </p>
       <form>
-        <input type="text" id="user_name" placeholder="Your Name" />
+        <!-- <label for="user_name">Name</label> -->
+        <input
+          type="text"
+          id="user_name"
+          placeholder="Your Name"
+          pattern="\S(.*\S)?"
+          required
+        />
         <button class="outline_btn">Submit</button>
       </form>
       <div class="buttons">

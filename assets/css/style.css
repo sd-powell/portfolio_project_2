@@ -155,6 +155,21 @@ button, span {
     margin-bottom: 10px;
 }
 
+/************ Scores Form ************/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-family: var(--primary-font);
+    color: var(--background-color);
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+}
+
 /************ Buttons ************/
 
 .buttons {
