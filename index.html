@@ -68,11 +68,13 @@
     <div id="difficulty_panel">
       <h2>Turn it up a level - select your difficulty!</h2>
       <div class="difficulty_btn">
-        <button class="answer_btn">
-          🎧 Easy Listening - 'The warm up slot'
+        <button class="answer_btn" id="easy">
+          🎧 Easy Listening - 'The warm up'
         </button>
-        <button class="answer_btn">🔥 Medium - 'Peak Time questions'</button>
-        <button class="answer_btn">
+        <button class="answer_btn" id="medium">
+          🔥 Medium - 'Peak Time questions'
+        </button>
+        <button class="answer_btn" id="hard">
           🚀 Hard - 'After hours - for true fans'
         </button>
       </div>
@@ -119,6 +121,19 @@
       </section>
     </div>
     -->
+
+    <div id="results_panel">
+      <div class="results_icon">
+        <i class="fa-solid fa-headphones-simple"></i>
+      </div>
+      <div class="results_text"><h2>You've completed the Quiz!</h2></div>
+      <div class="results_score"></div>
+      <p>Are you Top of the Pops? Claim Your Spot on the Leaderboard!</p>
+      <div class="buttons">
+        <button class="outline_btn">Restart Quiz</button>
+        <button class="reverse_btn">Quit</button>
+      </div>
+    </div>
   </body>
 
   <!-- Font Awesome kit -->

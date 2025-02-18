@@ -70,7 +70,8 @@ button, span {
 .info_panel,
 .rules_panel,
 .quiz_panel,
-#difficulty_panel {
+#difficulty_panel,
+#results_panel {
     position: absolute;
     z-index: 5;
     top: 58%;
@@ -96,6 +97,14 @@ button, span {
 
 #difficulty_panel {
     height: 380px;
+    padding: 18px 18px;
+}
+
+#results_panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 18px 18px;
 }
 
@@ -139,6 +148,11 @@ button, span {
     font-family: var(--primary-font);
     font-size: 18px;
     padding: 12px 0;
+}
+
+#results_panel .results_icon {
+    font-size: 100px;
+    margin-bottom: 10px;
 }
 
 /************ Buttons ************/
