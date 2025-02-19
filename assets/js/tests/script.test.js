@@ -1,4 +1,6 @@
 /** @jest-environment jsdom */
+import "jest-fetch-mock";
+fetchMock.enableMocks();
 
 const start_btn = document.getElementById("start-btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
@@ -35,3 +37,5 @@ describe("rules_btn existence test", () => {
     expect(start_btn).not.toBeNull();
   });
 });
+
+//Test API links with jest-fetch-mock

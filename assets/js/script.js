@@ -7,6 +7,7 @@ const hardQuiz =
   "https://opentdb.com/api.php?command=request&amount=5&category=12&difficulty=hard&type=multiple";
 
 // Declare const variables for site interactivity
-const start_btn = document.getElementById(start_btn);
+// info_panel buttons
+const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");

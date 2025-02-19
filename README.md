@@ -101,3 +101,23 @@ This color scheme enhances clarity, feedback, and user experience while maintain
 ### Typography
 
 Google Fonts was used to import the selected fonts for the site, ensuring high-quality and easily accessible typography.
+
+- **h1, h2 and h3 headings** The font [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=Think%20you%20know%20your%20music%3F) was chosen because it offers a clean, modern, and highly readable design that enhances user experience while maintaining a professional and contemporary look.
+
+![Roboto Font Example](documentation/type-roboto.webp)
+
+- **paragraph elements:** The font [Inter](https://fonts.google.com/specimen/Inter) was chosen as a font pairing for Roboto because its geometric yet friendly design complements Roboto’s modern aesthetic, ensuring a harmonious and highly readable typography combination for my site.
+
+![Inter Font Example](documentation/type-inter.webp)
+
+- **social media icons:** [Font Awesome](https://fontawesome.com/) library icons were used throughout the site because they provide a versatile, scalable, and visually consistent icon set that enhances usability and complements the clean, modern aesthetic of my typography.
+
+<a id=imagery></a>
+
+### Imagery
+
+I chose neon imagery for my site because it’s a pop quiz, and I wanted to reflect the fun, energetic vibe of an ’80s neon disco theme. The vibrant glow and retro-futuristic aesthetic create an engaging, nostalgic atmosphere that makes the quiz experience feel exciting and immersive. All images were sourced from [Adobe Stock](https://stock.adobe.com/)
+
+<a id=wireframes></a>
+
+### Wireframes
