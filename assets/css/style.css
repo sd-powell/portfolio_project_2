@@ -91,12 +91,13 @@ button, span {
 
 #rules_panel {
     list-style-position: inside;
-    opacity: 1;
+    opacity: 0;
+    pointer-events: none;
     padding: 18px 18px;
 }
 
 .quiz_panel {
-    opacity: 1;
+    opacity: 0;
 }
 
 #difficulty_panel {
@@ -110,6 +111,11 @@ button, span {
     flex-direction: column;
     justify-content: center;
     padding: 18px 18px;
+}
+
+.show {
+opacity: 1;
+pointer-events: auto;
 }
 
 /************ Elements ************/
