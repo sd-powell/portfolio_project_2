@@ -11,3 +11,5 @@ const hardQuiz =
 const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
+// info_panel container
+const openRules = document.getElementById("rules_panel");

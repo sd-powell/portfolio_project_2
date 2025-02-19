@@ -69,8 +69,8 @@ button, span {
 
 /************ Containers ************/
 
-.info_panel,
-.rules_panel,
+#info_panel,
+#rules_panel,
 .quiz_panel,
 #difficulty_panel,
 #results_panel {
@@ -84,14 +84,15 @@ button, span {
     background-color: var(--window-color);
 }
 
-.info_panel {
+#info_panel {
     opacity: 1;
     padding: 18px 18px;
 }
 
-.rules_panel {
+#rules_panel {
     list-style-position: inside;
     opacity: 1;
+    padding: 18px 18px;
 }
 
 .quiz_panel {
