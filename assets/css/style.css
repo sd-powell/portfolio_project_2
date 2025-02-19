@@ -11,6 +11,7 @@
     --correct-green: #4eb738;
     --wrong-red: #e83c5a;
     --star-gold: #f59527;
+    --reverse_btn-hover: rgba(255, 255, 255, 0.2);
 
 /************ Typography ************/
     --primary-font: 'Roboto', sans-serif;
@@ -216,4 +217,12 @@ button {
 
 .nextQuestion_btn {
     background-color: var(--correct-green);
+}
+
+.outline_btn:hover {
+    background: var(--foreground-white);
+}
+
+.reverse_btn:hover {
+    color: var(--foreground-white);
 }
