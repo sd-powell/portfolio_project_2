@@ -121,3 +121,5 @@ I chose neon imagery for my site because it’s a pop quiz, and I wanted to refl
 <a id=wireframes></a>
 
 ### Wireframes
+
+Wireframes for mobile, tablet, and desktop views were created using [Balsamiq](https://balsamiq.com/). These wireframes helped map out the structure and layout of the site, ensuring a seamless user experience across all devices. The design process focused on responsive layout adjustments to provide an intuitive interface for users on various screen sizes.
