@@ -14,6 +14,8 @@ const rules_btn = document.getElementById("rules_btn");
 // info_panel container
 const openRules = document.getElementById("rules_panel");
 // rules_panel buttons
+const exit_btn = document.getElementById("exit_btn");
+const rules_start_btn = document.getElementById("rules_start_btn");
 
 //Open Rules Panel - event listener
 rules_btn.addEventListener("click", () => {
@@ -21,3 +23,6 @@ rules_btn.addEventListener("click", () => {
 });
 
 //Exit Rules Panel - event listener
+exit_btn.addEventListener("click", () => {
+  openRules.classList.remove("show");
+});
