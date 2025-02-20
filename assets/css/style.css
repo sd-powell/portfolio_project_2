@@ -13,7 +13,7 @@
     --star-gold: #f59527;
     --reverse_btn-hover: rgba(255, 255, 255, 0.2);
 
-/************ Typography ************/
+    /************ Typography ************/
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Inter', sans-serif;
 }
@@ -51,8 +51,8 @@ h2 {
 p,
 ol {
     font-family: var(--secondary-font);
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 1.0625rem; /* Equivalent to 17px */
+    line-height: 1.5625rem; /* Equivalent to 25px */
 }
 
 li {
@@ -85,25 +85,25 @@ button, span {
 }
 
 #info_panel {
-    opacity: 1;
+    /* opacity: 1; */
     padding: 18px 18px;
 }
 
 #rules_panel {
     list-style-position: inside;
-    opacity: 0;
     padding: 18px 18px;
-    pointer-events: none;
+    display: none;
     transition: all 0.3s ease;
 }
 
 .quiz_panel {
-    opacity: 0;
+    display: none;
 }
 
 #difficulty_panel {
     height: 380px;
     padding: 18px 18px;
+    display: none;
 }
 
 #results_panel {
@@ -112,12 +112,11 @@ button, span {
     flex-direction: column;
     justify-content: center;
     padding: 18px 18px;
+    display: none;
 }
 
 #rules_panel.show {
-        display: block;
-    opacity: 1;
-    pointer-events: auto;
+    display: block;
     z-index: 5;
 }
 
@@ -204,12 +203,14 @@ button {
     background: transparent;
     border: 1px solid var(--highlight-blue);
     color: var(--highlight-blue);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .reverse_btn {
     background: var(--highlight-blue);
     color: var(--background-color);
     border: none;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .answer_btn {
