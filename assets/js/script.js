@@ -104,6 +104,10 @@ function increaseScore() {
 // Get question function
 function getQuestions(data) {
   next.classList.add("hide");
+  // Check buttons are not disabled
+  document
+    .querySelectorAll(".answer_btn")
+    .forEach((btn) => (btn.disabled = false));
   let results = data.results[questionNum];
   console.log(results);
   // Check no of questions and loop
