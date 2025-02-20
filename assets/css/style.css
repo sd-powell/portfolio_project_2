@@ -92,8 +92,9 @@ button, span {
 #rules_panel {
     list-style-position: inside;
     opacity: 0;
-    pointer-events: none;
     padding: 18px 18px;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .quiz_panel {
