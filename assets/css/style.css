@@ -158,7 +158,7 @@ button, span {
     padding: 18px 18px;
 }
 
-.question_title {
+#question_title {
     font-family: var(--primary-font);
     font-size: 18px;
     padding: 12px 0;

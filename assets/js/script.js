@@ -4,6 +4,8 @@ let questionNum = 0;
 let questionCount = 1;
 let apiAddress;
 let score = 0;
+let correctAnswer;
+let selectedAnswer;
 
 //QUIZ API SETTINGS
 const easyQuiz =
@@ -36,6 +38,15 @@ const hard = document.getElementById("hard");
 
 // quiz_panel container
 const quizPanel = document.getElementById("quiz_panel");
+
+// quiz_panel elements
+const question = document.getElementById("question_title");
+const answerBtns = document.getElementsByClassName("answer_list");
+const answer1 = document.getElementById("answerNo1");
+const answer2 = document.getElementById("answerNo2");
+const answer3 = document.getElementById("answerNo3");
+const answer4 = document.getElementById("answerNo4");
+const next = document.getElementById("next_btn");
 
 // Add event listener to difficulty buttons
 easy.addEventListener("click", apiCall);
