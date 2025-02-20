@@ -6,6 +6,8 @@ let apiAddress;
 let score = 0;
 let correctAnswer;
 let selectedAnswer;
+let acceptAnswers = true;
+let scoreCount = document.getElementById("score_total");
 
 //QUIZ API SETTINGS
 const easyQuiz =
@@ -72,6 +74,7 @@ start_btn.addEventListener("click", () => {
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
   const response = await fetch(apiAddress);
+  // Check api response codes - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses
   if (response.status >= 200 && response.status <= 299) {
     data = await response.json();
     // Hide difficulty_panel
@@ -92,11 +95,18 @@ function showQuiz_panel() {
   quizPanel.classList.add("show");
 }
 
+// Score function
+function increaseScore() {
+  score += 10;
+  scoreCount.innerText = `${score}`;
+}
+
 // Get question function
 function getQuestions(data) {
   next.classList.add("hide");
   let results = data.results[questionNum];
   console.log(results);
+  // Check no of questions and loop
   if (questionNum <= 5) {
     // Add question_title to UI
     question.innerHTML = results.question;
