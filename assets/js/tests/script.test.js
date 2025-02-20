@@ -4,8 +4,6 @@
 
 const { default: expect } = require("expect");
 
-// const fs = require("fs");
-
 //Load html into Jest
 beforeAll(() => {
   let fs = require("fs");
@@ -15,7 +13,7 @@ beforeAll(() => {
   document.close();
 
   // load javaScript
-  require("../script.js");
+  //   require("../script.js");
 });
 
 // Test existence of info_panel buttons in the DOM
@@ -116,11 +114,11 @@ describe("start_btn event listener test for .show being added", () => {
     const startBtn = document.getElementById("start_btn");
     const difficulty = document.getElementById("difficulty_panel");
 
-    expect(startBtn).not.toBeNull;
-    expect(difficulty).not.toBeNull;
+    expect(startBtn).not.toBeNull();
+    expect(difficulty).not.toBeNull();
 
     // Simulate click event
-    start_btn.click();
+    startBtn.click();
 
     // Check if class "show" was added
     expect(difficulty.classList.contains("show")).toBe(true);

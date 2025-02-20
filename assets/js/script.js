@@ -1,3 +1,10 @@
+// Declare game variables
+let quizData = {};
+let questionNum = 0;
+let questionCount = 1;
+let apiAddress;
+let score = 0;
+
 //QUIZ API SETTINGS
 const easyQuiz =
   "https://opentdb.com/api.php?amount=5&category=12&difficulty=easy&type=multiple";
