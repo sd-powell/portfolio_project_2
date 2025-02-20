@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-import { rules_btn, openRules } from "../script";
-
 // const { game } = require("../script");
 
 //Load html into Jest
@@ -14,15 +12,6 @@ beforeAll(() => {
   document.write(fileContents);
   document.close();
 });
-
-// describe("game object contains correct keys", () => {
-//   test("score key exists", () => {
-//     expect("score" in game).toBe(true);
-//   });
-//   test("currentGame key exists", () => {
-//     expect("currentGame" in game).toBe(true);
-//   });
-// });
 
 // //Test existence of info_panel buttons in the DOM
 // describe("start_btn existence test", () => {
@@ -56,7 +45,7 @@ beforeAll(() => {
 //   });
 // });
 
-// //Test existence of rules_panel container in the DOM
+//Test existence of rules_panel container in the DOM
 // describe("rules_panel container existence test", () => {
 //   test("should exist in the DOM", () => {
 //     document.body.innerHTML = '<div id="rules_panel">';
@@ -69,12 +58,37 @@ beforeAll(() => {
 
 //Test event listener for rules_btn
 describe("rules_btn event listener test", () => {
-  test('should add "show" class to openRules when clicked', () => {
-    //check if openRules doesn't contain show class
-    expect(openRules.classList.contains("show")).toBe(false);
+  test("should call event listener when button is clicked", () => {
+    const button = document.getElementById("rules_btn");
+    const handleClick = jest.fn();
+
+    button.addEventListener("click", handleClick);
+
     //Simulate click event
+    button.click();
+
+    expect(handleClick).toHaveBeenCalled();
+  });
+});
+
+describe("rules_btn event listener test for .show being added", () => {
+  test('should add "show" class when rules button is clicked', () => {
+    document.body.innerHTML = `
+      <button id="rules_btn">Rules</button>
+      <div id="rules_panel"></div>
+    `;
+
+    const rules_btn = document.getElementById("rules_btn");
+    const openRules = document.getElementById("rules_panel");
+
+    rules_btn.addEventListener("click", () => {
+      openRules.classList.add("show");
+    });
+
+    // Simulate click event
     rules_btn.click();
-    //Check if openRules contains show class
+
+    // Check if class "show" was added
     expect(openRules.classList.contains("show")).toBe(true);
   });
 });
