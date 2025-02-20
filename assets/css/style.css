@@ -75,7 +75,7 @@ button, span {
 #difficulty_panel,
 #results_panel {
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
     top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -113,9 +113,11 @@ button, span {
     padding: 18px 18px;
 }
 
-.show {
-opacity: 1;
-pointer-events: auto;
+#rules_panel.show {
+        display: block;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 5;
 }
 
 /************ Elements ************/

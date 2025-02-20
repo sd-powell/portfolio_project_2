@@ -13,9 +13,11 @@ const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
 // info_panel container
 const openRules = document.getElementById("rules_panel");
+// rules_panel buttons
 
 //Open Rules Panel - event listener
 rules_btn.addEventListener("click", () => {
   openRules.classList.add("show");
-  console.log("show-added");
 });
+
+//Exit Rules Panel - event listener
