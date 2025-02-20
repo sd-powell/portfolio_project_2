@@ -95,6 +95,18 @@ function showQuiz_panel() {
 // Get question function
 function getQuestions(data) {
   next.classList.add("hide");
-  let result = data.result[questionNum];
-  console.log(result);
+  let results = data.results[questionNum];
+  console.log(results);
+  if (questionNum <= 5) {
+    // Add question_title to UI
+    question.innerHTML = results.question;
+    correctAnswer = results.correct_answer;
+    // Hold answers in array
+    const answers = [...results.incorrect_answers, correctAnswer];
+    // Add answers to buttons in UI
+    answerNo1.innerHTML = `${answers[0]}`;
+    answerNo2.innerHTML = `${answers[1]}`;
+    answerNo3.innerHTML = `${answers[2]}`;
+    answerNo4.innerHTML = `${answers[3]}`;
+  }
 }
