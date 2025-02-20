@@ -34,6 +34,14 @@ const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
 
+// quiz_panel container
+const quizPanel = document.getElementById("quiz_panel");
+
+// Add event listener to difficulty buttons
+easy.addEventListener("click", apiCall);
+medium.addEventListener("click", apiCall);
+hard.addEventListener("click", apiCall);
+
 // Open Rules Panel - event listener
 rules_btn.addEventListener("click", () => {
   openRules.classList.add("show");
@@ -48,3 +56,26 @@ exit_btn.addEventListener("click", () => {
 start_btn.addEventListener("click", () => {
   difficulty.classList.add("show");
 });
+
+// API call function
+async function apiCall() {
+  const response = await fetch(apiAddress);
+  if (response.status >= 200 && response.status <= 299) {
+    data = await response.json();
+    // Hide difficulty_panel
+    hideDifficultyPanel();
+    // Show quiz_panel
+    showQuiz_panel();
+    getQuestion(data);
+  }
+}
+
+//Hide difficulty_panel function
+function hideDifficultyPanel() {
+  difficulty.classList.remove("show");
+}
+
+//Show quiz_panel function
+function showQuiz_panel() {
+  quizPanel.classList.add("show");
+}

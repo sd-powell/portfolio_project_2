@@ -67,20 +67,24 @@
     <div id="difficulty_panel">
       <h2>Turn it up a level - select your difficulty!</h2>
       <div class="difficulty_btn">
-        <button class="answer_btn" id="easy">
+        <button class="answer_btn" id="easy" onclick="apiAddress = easyQuiz">
           🎧 Easy Listening - 'The warm up'
         </button>
-        <button class="answer_btn" id="medium">
+        <button
+          class="answer_btn"
+          id="medium"
+          onclick="apiAddress = mediumQuiz"
+        >
           🔥 Medium - 'Peak Time questions'
         </button>
-        <button class="answer_btn" id="hard">
+        <button class="answer_btn" id="hard" onclick="apiAddress = hardQuiz">
           🚀 Hard - 'After hours - for true fans'
         </button>
       </div>
     </div>
 
     <!-- Quiz Box Container -->
-    <div class="quiz_panel">
+    <div id="quiz_panel">
       <section id="quiz_header">
         <div class="question_total">
           <p class="question_title">

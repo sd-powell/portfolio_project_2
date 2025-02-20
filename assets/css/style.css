@@ -71,7 +71,7 @@ button, span {
 
 #info_panel,
 #rules_panel,
-.quiz_panel,
+#quiz_panel,
 #difficulty_panel,
 #results_panel {
     position: absolute;
@@ -97,7 +97,7 @@ button, span {
     transition: all 0.3s ease;
 }
 
-.quiz_panel {
+#quiz_panel {
     display: none;
 }
 
@@ -115,12 +115,9 @@ button, span {
     display: none;
 }
 
-#rules_panel.show {
-    display: block;
-    z-index: 5;
-}
-
-#difficulty_panel.show {
+#rules_panel.show,
+#difficulty_panel.show,
+#quiz_panel.show {
     display: block;
     z-index: 5;
 }
