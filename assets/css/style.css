@@ -124,8 +124,8 @@ button, span {
 
 /************ Elements ************/
 #quiz_header {
- position: relative;
- z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 #quiz_footer {
@@ -230,6 +230,14 @@ button {
 
 .nextQuestion_btn {
     background-color: var(--correct-green);
+}
+
+.nextQuestion_btn.hide {
+    display: none;
+}
+
+.nextQuestion_btn:hover {
+    background: var(--foreground-white) ;
 }
 
 .outline_btn:hover {
