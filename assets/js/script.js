@@ -58,6 +58,7 @@ start_btn.addEventListener("click", () => {
 });
 
 // API call function
+// Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
   const response = await fetch(apiAddress);
   if (response.status >= 200 && response.status <= 299) {
@@ -70,7 +71,7 @@ async function apiCall() {
   }
 }
 
-//Hide difficulty_panel function
+// Hide difficulty_panel function
 function hideDifficultyPanel() {
   difficulty.classList.remove("show");
 }

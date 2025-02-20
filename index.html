@@ -88,7 +88,7 @@
       <section id="quiz_header">
         <div class="question_total">
           <p class="question_title">
-            Question No. <span id="question_no">1</span>
+            Question No. <span id="questionNo">1</span>
           </p>
           <p class="quiz_timer">Time: <span id="timer_secs">15</span></p>
         </div>
@@ -101,10 +101,10 @@
         </div>
         <div class="answer_list">
           <!-- question options from API -->
-          <button class="answer_btn">RL Grime</button>
-          <button class="answer_btn">Baauer</button>
-          <button class="answer_btn">NGHTMARE</button>
-          <button class="answer_btn">Flosstradamus</button>
+          <button class="answer_btn" id="answerNo1">RL Grime</button>
+          <button class="answer_btn" id="answerNo2">Baauer</button>
+          <button class="answer_btn" id="answerNo3">NGHTMARE</button>
+          <button class="answer_btn" id="answerNo4">Flosstradamus</button>
         </div>
       </section>
       <section id="quiz_footer">
@@ -115,7 +115,7 @@
             <span id="score_total">0</span>
           </p>
         </div>
-        <button class="nextQuestion_btn">
+        <button class="nextQuestion_btn" id="next_btn">
           Next <i class="fa-solid fa-arrow-right"></i>
         </button>
       </section>
