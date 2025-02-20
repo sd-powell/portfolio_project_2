@@ -102,7 +102,6 @@ button, span {
 }
 
 #difficulty_panel {
-    height: 380px;
     padding: 18px 18px;
     display: none;
 }
@@ -242,4 +241,8 @@ button {
 
 .reverse_btn:hover {
     color: var(--foreground-white);
+}
+
+.answer_btn:hover {
+    background-color: var(--highlight-blue);
 }
