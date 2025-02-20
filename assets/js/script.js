@@ -12,19 +12,27 @@ const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
 
-// info_panel container
+// rules_panel container
 const openRules = document.getElementById("rules_panel");
 
 // rules_panel buttons
 const exit_btn = document.getElementById("exit_btn");
 const rules_start_btn = document.getElementById("rules_start_btn");
 
-//Open Rules Panel - event listener
+// rules_panel container
+const difficulty = document.getElementById("difficulty_panel");
+
+// difficulty_panel buttons
+const easy = document.getElementById("easy");
+const medium = document.getElementById("medium");
+const hard = document.getElementById("hard");
+
+// Open Rules Panel - event listener
 rules_btn.addEventListener("click", () => {
   openRules.classList.add("show");
 });
 
-//Exit Rules Panel - event listener
+// Exit Rules Panel - event listener
 exit_btn.addEventListener("click", () => {
   openRules.classList.remove("show");
 });
