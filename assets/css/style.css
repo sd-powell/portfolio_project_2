@@ -201,6 +201,8 @@ button {
     cursor: pointer;
 }
 
+/************ Button styling ************/
+
 .outline_btn {
     background: transparent;
     border: 1px solid var(--highlight-blue);
@@ -250,4 +252,14 @@ button {
 
 .answer_btn:hover {
     background-color: var(--highlight-blue);
+}
+
+/************ Button styling for quiz answers ************/
+
+.answer_btn.correct {
+    border: 2px solid var(--correct-green);
+}
+
+.answer_btn.incorrect {
+    border: 2px solid var(--wrong-red);
 }

@@ -78,7 +78,7 @@ async function apiCall() {
     hideDifficultyPanel();
     // Show quiz_panel
     showQuiz_panel();
-    getQuestion(data);
+    getQuestions(data);
   }
 }
 
@@ -90,4 +90,11 @@ function hideDifficultyPanel() {
 //Show quiz_panel function
 function showQuiz_panel() {
   quizPanel.classList.add("show");
+}
+
+// Get question function
+function getQuestions(data) {
+  next.classList.add("hide");
+  let result = data.result[questionNum];
+  console.log(result);
 }
