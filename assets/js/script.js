@@ -36,3 +36,8 @@ rules_btn.addEventListener("click", () => {
 exit_btn.addEventListener("click", () => {
   openRules.classList.remove("show");
 });
+
+// Open Difficulty Panel - event listener
+start_btn.addEventListener("click", () => {
+  difficulty.classList.add("show");
+});

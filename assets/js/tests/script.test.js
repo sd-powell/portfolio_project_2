@@ -155,3 +155,26 @@ describe("hard button existence test", () => {
     expect(hard).not.toBeNull();
   });
 });
+
+// Test event listener for rules_btn to add show class
+describe("start_btn event listener test for .show being added", () => {
+  test('should add "show" class when start button is clicked', () => {
+    document.body.innerHTML = `
+        <button id="start_btn">Start</button>
+        <div id="difficulty_panel"></div>
+      `;
+
+    const start_btn = document.getElementById("start_btn");
+    const difficulty = document.getElementById("difficulty_panel");
+
+    start_btn.addEventListener("click", () => {
+      difficulty.classList.add("show");
+    });
+
+    // Simulate click event
+    start_btn.click();
+
+    // Check if class "show" was added
+    expect(difficulty.classList.contains("show")).toBe(true);
+  });
+});

@@ -80,6 +80,7 @@ button, span {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
+    height: 478px;
     border-radius: 8px;
     background-color: var(--window-color);
 }
@@ -116,6 +117,11 @@ button, span {
 }
 
 #rules_panel.show {
+    display: block;
+    z-index: 5;
+}
+
+#difficulty_panel.show {
     display: block;
     z-index: 5;
 }
