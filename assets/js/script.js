@@ -102,7 +102,7 @@ function getQuestions(data) {
   quizData = data;
   let results = quizData.results[questionNum];
 
-  if (questionNum <= 5) {
+  if (questionNum < quizData.results.length) {
     question.innerHTML = results.question;
     correctAnswer = results.correct_answer;
 
@@ -165,10 +165,15 @@ function answerCheck(event) {
 
 // Next question function
 function nextQuestion() {
-  questionNum++;
-  questionCount++;
-  questionNo.innerText = `${questionCount}`;
-  getQuestions(quizData);
+  if (questionNum < quizData.results.length - 1) {
+    questionNum++;
+    questionCount++;
+    questionNo.innerText = `${questionCount}`;
+    getQuestions(quizData);
+  } else {
+    console.log("No more Questions");
+    return;
+  }
 
   // Remove correct and incorrect classes from selected answers
   let selectedButton = document.querySelector(
@@ -190,9 +195,6 @@ function nextQuestion() {
 
   //Hide the next button until the user selects the answer
   next.classList.add("hide");
-
-  // Load the next question
-  getQuestions(quizData);
 }
 
 // Reset answer buttons function
