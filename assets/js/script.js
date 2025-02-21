@@ -58,15 +58,17 @@ start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 // API call function
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
-  const response = await fetch(apiAddress);
-  // Check api response codes - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses
-  if (response.status >= 200 && response.status <= 299) {
-    data = await response.json();
-    // Hide difficulty_panel
+  try {
+    const response = await fetch(apiAddress);
+    if (!response.ok) {
+      throw new Error("Failed to fetch quiz data");
+    }
+    const data = await response.json();
     hideDifficultyPanel();
-    // Show quiz_panel
     showQuiz_panel();
     getQuestions(data);
+  } catch (error) {
+    console.error("Error fetching quiz data:", error);
   }
 }
 
