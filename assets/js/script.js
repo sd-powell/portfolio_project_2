@@ -28,15 +28,9 @@ const rules_start_btn = document.getElementById("rules_start_btn");
 const difficulty = document.getElementById("difficulty_panel");
 const quizPanel = document.getElementById("quiz_panel");
 const question = document.getElementById("question_title");
+const questionNo = document.getElementById("questionNo");
 const answer_list = document.querySelector(".answer_list");
 const next = document.getElementById("next_btn");
-
-const answerBtns = document.getElementsByClassName("answer_btn");
-
-const answer1 = document.getElementById("answerNo1");
-const answer2 = document.getElementById("answerNo2");
-const answer3 = document.getElementById("answerNo3");
-const answer4 = document.getElementById("answerNo4");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
@@ -105,9 +99,10 @@ function getQuestions(data) {
     .querySelectorAll(".answer_btn")
     .forEach((btn) => (btn.disabled = false));
 
-  let results = data.results[questionNum];
+  quizData = data;
+  let results = quizData.results[questionNum];
 
-  if (questionNum <= 5) {
+  if (questionNum < quizData.results.length) {
     question.innerHTML = results.question;
     correctAnswer = results.correct_answer;
 
@@ -165,4 +160,46 @@ function answerCheck(event) {
 
   // Shows next button for user to proceed and adds event listener for click
   next.classList.remove("hide");
+  next.addEventListener("click", nextQuestion, { once: true });
+}
+
+// Next question function
+function nextQuestion() {
+  questionNum++;
+  questionCount++;
+  questionNo.innerText = `${questionCount}`;
+  getQuestions(quizData);
+
+  // Remove correct and incorrect classes from selected answers
+  let selectedButton = document.querySelector(
+    ".answer_btn.correct, .answer_btn.incorrect"
+  );
+  if (selectedButton) {
+    selectedButton.classList.remove("correct", "incorrect");
+  }
+
+  // Remove highlights from answers
+  let displayCorrectAnswer = document.querySelector("[data-correct='true']");
+  if (displayCorrectAnswer) {
+    displayCorrectAnswer.classList.remove("correct");
+    displayCorrectAnswer.removeAttribute("data-correct");
+  }
+
+  // Reset all buttons
+  resetButtons();
+
+  //Hide the next button until the user selects the answer
+  next.classList.add("hide");
+
+  // Load the next question
+  getQuestions(data);
+}
+
+// Reset answer buttons function
+function resetButtons() {
+  document.querySelectorAll(".answer_btn").forEach((button) => {
+    button.removeAttribute("data-correct");
+    button.classList.remove("correct", "incorrect", "disabled");
+    button.disabled = false;
+  });
 }
