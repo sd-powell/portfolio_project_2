@@ -135,29 +135,34 @@ function getQuestions(data) {
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 function answerCheck(event) {
-  // Get ID of clicked answer
   if (!event.target.matches(".answer_btn")) return; // Ensure a button was clicked
 
-  // Check clicked answer is correct
-  if (a.target.dataset.correct) {
-    // Add correct button style
-    document.getElementById(selectedAnswer).classList.add("correct");
-    // Increase the score
-    increaseScore();
-    console.log("Correct Answer");
-  } else {
-    // Add incorrect button style
-    document.getElementById(selectedAnswer).classList.add("incorrect");
-    // Show correct answer to user
-    let showCorrectAnswer = document.querySelector("[data-correct='true']");
-    showCorrectAnswer.classList.add("correct");
-    console.log("Wrong Answer");
-  }
+  selectedAnswer = event.target;
+  let isCorrect = selectedAnswer.innerHTML === parseHtmlEntities(correctAnswer);
+
   // Disable answer buttons after user has made their selection
   document.querySelectorAll(".answer_btn").forEach((btn) => {
     btn.classList.add("disabled");
   });
+
+  if (isCorrect) {
+    selectedAnswer.classList.add("correct");
+    selectedAnswer.dataset.correct = "true"; // Add FontAwesome tick via CSS
+    increaseScore();
+  } else {
+    selectedAnswer.classList.add("incorrect");
+
+    // Find the correct answer and highlight it
+    let correctButton = [...document.querySelectorAll(".answer_btn")].find(
+      (btn) => btn.innerHTML === parseHtmlEntities(correctAnswer)
+    );
+
+    if (correctButton) {
+      correctButton.dataset.correct = "true";
+      correctButton.classList.add("correct");
+    }
+  }
+
   // Shows next button for user to proceed and adds event listener for click
   next.classList.remove("hide");
-  //   next.addEventListener("click");
 }
