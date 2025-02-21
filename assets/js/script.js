@@ -43,12 +43,15 @@ const quizPanel = document.getElementById("quiz_panel");
 
 // quiz_panel elements
 const question = document.getElementById("question_title");
-const answerBtns = document.getElementsByClassName("answer_list");
+const answerBtns = document.getElementsByClassName("answer_btn");
+const answer_list = document.querySelector(".answer_list");
 const answer1 = document.getElementById("answerNo1");
 const answer2 = document.getElementById("answerNo2");
 const answer3 = document.getElementById("answerNo3");
 const answer4 = document.getElementById("answerNo4");
 const next = document.getElementById("next_btn");
+// Get all answers from answer_list
+const allAnswers = answer_list.children.length;
 
 // Add event listener to difficulty buttons
 easy.addEventListener("click", apiCall);
@@ -98,18 +101,20 @@ function showQuiz_panel() {
 // Decode special characters
 // Based on suggested solutions from https://stackoverflow.com/questions/7394748/whats-the-right-way-to-decode-a-string-that-has-special-html-entities-in-it and  https://jsfiddle.net/Be2Bd/1/
 function parseHtmlEntities(str) {
-    return str.replace(/&#(\d+);/g, function (match, num) {
-        return String.fromCharCode(num);
-    })
+  return str.replace(/&#(\d+);/g, function (match, num) {
+    return String.fromCharCode(num);
+  });
 }
 
 // Score function
+// Based on content from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 function increaseScore() {
   score += 10;
   scoreCount.innerText = `${score}`;
 }
 
 // Get question function
+// https://stackoverflow.com/questions/72588081/working-on-a-javascript-quiz-app-and-having-an-issue-dynamically-generating-ques
 function getQuestions(data) {
   next.classList.add("hide");
   // Check buttons are not disabled
@@ -130,10 +135,49 @@ function getQuestions(data) {
     answerNo2.innerHTML = `${answers[1]}`;
     answerNo3.innerHTML = `${answers[2]}`;
     answerNo4.innerHTML = `${answers[3]}`;
+
+    // Checks for the correct answer and adds attribute
+    for (let button of answerBtns) {
+      if (button.innerHTML === parseHtmlEntities(correctAnswer)) {
+        button.setAttribute("data-correct", "true");
+      }
+      // Add event listener to buttons for answer checking after click
+      button.addEventListener("click", answerCheck);
+    }
   }
 }
 
-// Checks for the correct answer and adds attribute
-for (let button of answerBtns) {
-    if (button.innerHTML === )
+// Function to check answer on a button click
+// https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
+// Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+function answerCheck(a) {
+  // Disables answer button after user has answered
+  document
+    .querySelectorAll(".answer-text")
+    .forEach((btn) => (btn.disabled = true));
+  // Get ID of clicked answer
+  selectedAnswer = a.target.getAttribute("id");
+
+  // Check clicked answer is correct
+  if (a.target.dataset.correct) {
+    // Add correct button style
+    document.getElementById(selectedAnswer).classList.add("correct");
+    // Increase the score
+    increaseScore();
+    console.log("Correct Answer");
+  } else {
+    // Add incorrect button style
+    document.getElementById(selectedAnswer).classList.add("incorrect");
+    // Show correct answer to user
+    let showCorrectAnswer = document.querySelector("[data-correct='true']");
+    showCorrectAnswer.classList.add("correct");
+    console.log("Wrong Answer");
+  }
+  // Disable answer buttons after user has made their selection
+  document.querySelectorAll(".answer_btn").forEach((btn) => {
+    btn.classList.add("disabled");
+  });
+  // Shows next button for user to proceed and adds event listener for click
+  next.classList.remove("hide");
+  //   next.addEventListener("click");
 }

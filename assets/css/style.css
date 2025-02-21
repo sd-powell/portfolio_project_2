@@ -263,3 +263,7 @@ button {
 .answer_btn.incorrect {
     border: 2px solid var(--wrong-red);
 }
+
+.answer_btn.disabled {
+    pointer-events: none;
+}
