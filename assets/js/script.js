@@ -95,6 +95,14 @@ function showQuiz_panel() {
   quizPanel.classList.add("show");
 }
 
+// Decode special characters
+// Based on suggested solutions from https://stackoverflow.com/questions/7394748/whats-the-right-way-to-decode-a-string-that-has-special-html-entities-in-it and  https://jsfiddle.net/Be2Bd/1/
+function parseHtmlEntities(str) {
+    return str.replace(/&#(\d+);/g, function (match, num) {
+        return String.fromCharCode(num);
+    })
+}
+
 // Score function
 function increaseScore() {
   score += 10;
@@ -123,4 +131,9 @@ function getQuestions(data) {
     answerNo3.innerHTML = `${answers[2]}`;
     answerNo4.innerHTML = `${answers[3]}`;
   }
+}
+
+// Checks for the correct answer and adds attribute
+for (let button of answerBtns) {
+    if (button.innerHTML === )
 }
