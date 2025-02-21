@@ -222,7 +222,7 @@ function showResults() {
   resultsPanel.classList.add("show");
   quizPanel.classList.remove("show");
 
-  finalScore.innerText = `${score} out of ${quizData.results.length}`;
+  finalScore.innerText = `${score} out of ${quizData.results.length * 10}`;
 
   document
     .getElementById("submitScore")
