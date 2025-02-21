@@ -31,6 +31,7 @@ const question = document.getElementById("question_title");
 const questionNo = document.getElementById("questionNo");
 const answer_list = document.querySelector(".answer_list");
 const next = document.getElementById("next_btn");
+const resultsPanel = document.getElementById("results_panel");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
@@ -99,7 +100,7 @@ function getQuestions(data) {
   next.classList.add("hide");
 
   if (questionNum >= quizData.results.length) {
-    console.log("Game Over!");
+    showResults();
     return;
   }
 
@@ -178,7 +179,7 @@ function nextQuestion() {
     questionNo.innerText = `${questionCount}`;
     getQuestions(quizData);
   } else {
-    console.log("No more Questions");
+    showResults();
     return;
   }
 
@@ -211,4 +212,10 @@ function resetButtons() {
     button.classList.remove("correct", "incorrect", "disabled");
     button.disabled = false;
   });
+}
+
+// Show results panel at end of quiz
+function showResults() {
+  resultsPanel.classList.add("show");
+  quizPanel.classList.remove("show");
 }

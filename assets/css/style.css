@@ -120,7 +120,8 @@ button, span {
 
 #rules_panel.show,
 #difficulty_panel.show,
-#quiz_panel.show {
+#quiz_panel.show,
+#results_panel.show {
     display: block;
     z-index: 5;
 }
