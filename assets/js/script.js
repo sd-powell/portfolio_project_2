@@ -220,4 +220,6 @@ function resetButtons() {
 function showResults() {
   resultsPanel.classList.add("show");
   quizPanel.classList.remove("show");
+
+  finalScore.innerText = score;
 }
