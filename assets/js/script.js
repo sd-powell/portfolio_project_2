@@ -32,6 +32,8 @@ const questionNo = document.getElementById("questionNo");
 const answer_list = document.querySelector(".answer_list");
 const next = document.getElementById("next_btn");
 const resultsPanel = document.getElementById("results_panel");
+const finalScore = document.getElementById("score_number");
+const userName = document.getElementById("user_name");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
