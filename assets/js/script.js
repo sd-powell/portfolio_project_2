@@ -102,7 +102,7 @@ function getQuestions(data) {
   quizData = data;
   let results = quizData.results[questionNum];
 
-  if (questionNum < quizData.results.length) {
+  if (questionNum <= 5) {
     question.innerHTML = results.question;
     correctAnswer = results.correct_answer;
 
@@ -192,7 +192,7 @@ function nextQuestion() {
   next.classList.add("hide");
 
   // Load the next question
-  getQuestions(data);
+  getQuestions(quizData);
 }
 
 // Reset answer buttons function
