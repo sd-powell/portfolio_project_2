@@ -34,6 +34,7 @@ const next = document.getElementById("next_btn");
 const resultsPanel = document.getElementById("results_panel");
 const finalScore = document.getElementById("score_number");
 const userName = document.getElementById("user_name");
+const submitScore = document.getElementById("submit_score");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
@@ -221,5 +222,35 @@ function showResults() {
   resultsPanel.classList.add("show");
   quizPanel.classList.remove("show");
 
-  finalScore.innerText = score;
+  finalScore.innerText = `${score} out of ${quizData.results.length}`;
+
+  document
+    .getElementById("submitScore")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      saveHighScore();
+    });
+}
+
+// Save high score function
+function saveHighScore() {
+  const playerName = userName.value.trim();
+  if (!playerName) {
+    alert("Please enter your name before submitting!");
+    return;
+  }
+
+  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  // Create new score entry
+  const newScore = { playerName, score };
+  // Add new score to high scores array
+  highScores.push(newScore);
+  // Sort scores in descending order
+  highScores.sort((a, b) => b.score - a.score);
+  // Keep only top 10 scores
+  highScores.splice(10);
+  // Save updated scores back to localStorage
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+
+  alert("Score saved successfully!");
 }
