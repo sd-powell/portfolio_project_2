@@ -92,38 +92,45 @@ function increaseScore() {
 // Get question function
 // https://stackoverflow.com/questions/72588081/working-on-a-javascript-quiz-app-and-having-an-issue-dynamically-generating-ques
 function getQuestions(data) {
+  if (data) {
+    quizData = data;
+  }
+
   next.classList.add("hide");
+
+  if (questionNum >= quizData.results.length) {
+    console.log("Game Over!");
+    return;
+  }
 
   // Enable all answer buttons
   document
     .querySelectorAll(".answer_btn")
     .forEach((btn) => (btn.disabled = false));
 
-  quizData = data;
   let results = quizData.results[questionNum];
 
-  if (questionNum < quizData.results.length) {
-    question.innerHTML = results.question;
-    correctAnswer = results.correct_answer;
+  question.innerHTML = results.question;
+  correctAnswer = results.correct_answer;
 
-    // Shuffle and assign answers to buttons dynamically
-    let answers = [...results.incorrect_answers, correctAnswer].sort(
-      () => Math.random() - 0.5
-    );
+  // Shuffle and assign answers to buttons dynamically
+  let answers = [...results.incorrect_answers, correctAnswer].sort(
+    () => Math.random() - 0.5
+  );
 
-    // Generate answer buttons dynamically
-    answer_list.innerHTML = answers
-      .map(
-        (answer, index) =>
-          `<button class="answer_btn" id="answerNo${
-            index + 1
-          }">${parseHtmlEntities(answer)}</button>`
-      )
-      .join("");
+  // Generate answer buttons dynamically
+  answer_list.innerHTML = answers
+    .map(
+      (answer, index) =>
+        `<button class="answer_btn" id="answerNo${
+          index + 1
+        }">${parseHtmlEntities(answer)}</button>`
+    )
+    .join("");
 
-    // Add event listener to answer buttons using event delegation
-    answer_list.addEventListener("click", answerCheck);
-  }
+  // Remove old event listeners and add new to answer buttons
+  answer_list.removeEventListener("click", answerCheck);
+  answer_list.addEventListener("click", answerCheck);
 }
 
 // Function to check answer on a button click
