@@ -92,49 +92,51 @@ function parseHtmlEntities(str) {
 // Based on content from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 function increaseScore() {
   score += 10;
-  scoreCount.innerText = `${score}`;
+  scoreCount.innerText = score;
 }
 
 // Get question function
 // https://stackoverflow.com/questions/72588081/working-on-a-javascript-quiz-app-and-having-an-issue-dynamically-generating-ques
 function getQuestions(data) {
   next.classList.add("hide");
-  // Check buttons are not disabled
+
+  // Enable all answer buttons
   document
     .querySelectorAll(".answer_btn")
     .forEach((btn) => (btn.disabled = false));
+
   let results = data.results[questionNum];
-  console.log(results);
-  // Check no of questions and loop
+
   if (questionNum <= 5) {
-    // Add question_title to UI
     question.innerHTML = results.question;
     correctAnswer = results.correct_answer;
-    // Hold answers in array
-    const answers = [...results.incorrect_answers, correctAnswer];
-    // Add answers to buttons in UI
-    answerNo1.innerHTML = `${answers[0]}`;
-    answerNo2.innerHTML = `${answers[1]}`;
-    answerNo3.innerHTML = `${answers[2]}`;
-    answerNo4.innerHTML = `${answers[3]}`;
 
-    // Checks for the correct answer and adds attribute
-    for (let button of answerBtns) {
-      if (button.innerHTML === parseHtmlEntities(correctAnswer)) {
-        button.setAttribute("data-correct", "true");
-      }
-      // Add event listener to buttons for answer checking after click
-      button.addEventListener("click", answerCheck);
-    }
+    // Shuffle and assign answers to buttons dynamically
+    let answers = [...results.incorrect_answers, correctAnswer].sort(
+      () => Math.random() - 0.5
+    );
+
+    // Generate answer buttons dynamically
+    answer_list.innerHTML = answers
+      .map(
+        (answer, index) =>
+          `<button class="answer_btn" id="answerNo${
+            index + 1
+          }">${parseHtmlEntities(answer)}</button>`
+      )
+      .join("");
+
+    // Add event listener to answer buttons using event delegation
+    answer_list.addEventListener("click", answerCheck);
   }
 }
 
 // Function to check answer on a button click
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
-function answerCheck(a) {
+function answerCheck(event) {
   // Get ID of clicked answer
-  selectedAnswer = a.target.getAttribute("id");
+  if (!event.target.matches(".answer_btn")) return; // Ensure a button was clicked
 
   // Check clicked answer is correct
   if (a.target.dataset.correct) {
