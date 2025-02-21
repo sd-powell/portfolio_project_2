@@ -55,7 +55,7 @@ rules_btn.addEventListener("click", () => openRules.classList.add("show"));
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
 start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 
-// API call function
+// Api call function
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
   try {
@@ -85,9 +85,7 @@ function showQuiz_panel() {
 // Decode special characters
 // Based on suggested solutions from https://stackoverflow.com/questions/7394748/whats-the-right-way-to-decode-a-string-that-has-special-html-entities-in-it and  https://jsfiddle.net/Be2Bd/1/
 function parseHtmlEntities(str) {
-  return str.replace(/&#(\d+);/g, function (match, num) {
-    return String.fromCharCode(num);
-  });
+  return str.replace(/&#(\d+);/g, (_, num) => String.fromCharCode(num));
 }
 
 // Score function
