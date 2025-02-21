@@ -2,76 +2,58 @@
 let quizData = {};
 let questionNum = 0;
 let questionCount = 1;
-let apiAddress;
 let score = 0;
 let correctAnswer;
 let selectedAnswer;
 let acceptAnswers = true;
 let scoreCount = document.getElementById("score_total");
+let apiAddress;
 
-//QUIZ API SETTINGS
-const easyQuiz =
-  "https://opentdb.com/api.php?amount=5&category=12&difficulty=easy&type=multiple";
-const mediumQuiz =
-  "https://opentdb.com/api.php?amount=5&category=12&difficulty=medium&type=multiple";
-const hardQuiz =
-  "https://opentdb.com/api.php?amount=5&category=12&difficulty=hard&type=multiple";
+// Quiz api settings
+const quizAPIs = {
+  easy: "https://opentdb.com/api.php?amount=5&category=12&difficulty=easy&type=multiple",
+  medium:
+    "https://opentdb.com/api.php?amount=5&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=5&category=12&difficulty=hard&type=multiple",
+};
 
 // Declare const variables for site interactivity
 // info_panel buttons
 const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
-
-// rules_panel container
 const openRules = document.getElementById("rules_panel");
-
-// rules_panel buttons
 const exit_btn = document.getElementById("exit_btn");
 const rules_start_btn = document.getElementById("rules_start_btn");
-
-// rules_panel container
 const difficulty = document.getElementById("difficulty_panel");
-
-// difficulty_panel buttons
-const easy = document.getElementById("easy");
-const medium = document.getElementById("medium");
-const hard = document.getElementById("hard");
-
-// quiz_panel container
 const quizPanel = document.getElementById("quiz_panel");
-
-// quiz_panel elements
 const question = document.getElementById("question_title");
-const answerBtns = document.getElementsByClassName("answer_btn");
 const answer_list = document.querySelector(".answer_list");
+const next = document.getElementById("next_btn");
+
+const answerBtns = document.getElementsByClassName("answer_btn");
+
 const answer1 = document.getElementById("answerNo1");
 const answer2 = document.getElementById("answerNo2");
 const answer3 = document.getElementById("answerNo3");
 const answer4 = document.getElementById("answerNo4");
-const next = document.getElementById("next_btn");
+
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
 
 // Add event listener to difficulty buttons
-easy.addEventListener("click", apiCall);
-medium.addEventListener("click", apiCall);
-hard.addEventListener("click", apiCall);
-
-// Open Rules Panel - event listener
-rules_btn.addEventListener("click", () => {
-  openRules.classList.add("show");
+// Event delegation method - https://www.freecodecamp.org/news/event-delegation-javascript/
+document.getElementById("difficulty_panel").addEventListener("click", (e) => {
+  if (e.target.matches("#easy, #medium, #hard")) {
+    apiAddress = quizAPIs[e.target.id]; // Get correct API based on clicked button
+    apiCall();
+  }
 });
 
-// Exit Rules Panel - event listener
-exit_btn.addEventListener("click", () => {
-  openRules.classList.remove("show");
-});
-
-// Open Difficulty Panel - event listener
-start_btn.addEventListener("click", () => {
-  difficulty.classList.add("show");
-});
+// Event listeners for opening and closing panels
+rules_btn.addEventListener("click", () => openRules.classList.add("show"));
+exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
+start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 
 // API call function
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
@@ -151,10 +133,6 @@ function getQuestions(data) {
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 function answerCheck(a) {
-  // Disables answer button after user has answered
-  document
-    .querySelectorAll(".answer-text")
-    .forEach((btn) => (btn.disabled = true));
   // Get ID of clicked answer
   selectedAnswer = a.target.getAttribute("id");
 
