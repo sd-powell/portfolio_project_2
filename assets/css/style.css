@@ -46,16 +46,23 @@ body {
 /************ Typography ************/
 h2 {
     font-family: var(--primary-font);
-    font-weight: 800;
+    font-weight: 500;
+    font-size: 2rem;
     color: var(--highlight-blue);
     padding-bottom: 1rem;
+    letter-spacing: 0.5px;
 }
 
 p,
 ol {
     font-family: var(--secondary-font);
-    font-size: 1.0625rem; /* Equivalent to 17px */
-    line-height: 1.5625rem; /* Equivalent to 25px */
+    font-size: 1.2rem;
+    /* line-height: 1.5625rem; Equivalent to 25px */
+}
+
+#info_panel p {
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 li {
@@ -83,9 +90,15 @@ button, span {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
-    height: 478px;
+    height: auto;
+    min-height: 200px;
     border-radius: 8px;
     background-color: var(--window-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 #info_panel {
@@ -191,11 +204,11 @@ input {
 /************ Buttons ************/
 
 .buttons {
-    height: 48px;
-    padding-top: 20px;
+    margin-top: auto;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
 }
 
 button {
@@ -203,6 +216,7 @@ button {
     padding: 5px 17px;
     border-radius: 32px;
     cursor: pointer;
+    flex: none;
 }
 
 /************ Button styling ************/
