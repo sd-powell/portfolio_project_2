@@ -102,7 +102,7 @@ button, span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 
 #info_panel {
@@ -133,7 +133,7 @@ button, span {
     justify-content: center;
     gap: 20px;
     padding: 18px 18px;
-    display: block;
+    display: none;
 }
 
 #rules_panel.show,
