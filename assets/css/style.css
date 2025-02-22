@@ -88,9 +88,9 @@ button, span {
 #difficulty_panel,
 #results_panel {
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 350px;
     height: auto;
     min-height: 400px;
