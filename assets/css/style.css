@@ -177,8 +177,8 @@ button, span {
 
 #question_title {
     font-family: var(--primary-font);
-    font-size: 18px;
-    padding: 12px 0;
+    font-size: 22px;
+    /* padding: 10px 0; */
 }
 
 #results_panel .results_icon {
