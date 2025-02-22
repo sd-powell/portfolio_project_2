@@ -54,8 +54,7 @@ h2 {
 p,
 ol {
     font-family: var(--secondary-font);
-    font-size: 1rem;
-    /* line-height: 1.5625rem; Equivalent to 25px */
+    word-wrap: break-word;
 }
 
 #info_panel p,
@@ -89,12 +88,12 @@ button, span {
 #difficulty_panel,
 #results_panel {
     position: absolute;
-    top: 58%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
     height: auto;
-    min-height: 300px;
+    min-height: 400px;
     border-radius: 8px;
     background-color: var(--window-color);
     display: flex;
@@ -254,7 +253,6 @@ button {
     border-radius: 8px;
     background: transparent;
     color: var(--foreground-white);
-    font-size: 17px;
     font-weight: 500;
     width: 100%;
     min-height: 50px;
