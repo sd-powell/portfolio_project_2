@@ -64,6 +64,11 @@ ol {
     line-height: 1.4;
 }
 
+.results_text p {
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+}
+
 li {
     margin-bottom: 0.35rem;
 }
@@ -97,6 +102,7 @@ button, span {
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: none;
 }
 
 #info_panel {
@@ -125,8 +131,9 @@ button, span {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
     padding: 18px 18px;
-    display: none;
+    display: block;
 }
 
 #rules_panel.show,
@@ -149,7 +156,7 @@ button, span {
     justify-content: space-between;
     height: 70px;
     border-top: 1px solid var(--foreground-white);
-    padding: 18px 18px;
+    padding: 12px 18px;
 }
 
 .question_total {
@@ -188,7 +195,9 @@ button, span {
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 12px;
+    padding: 25px 0;
 }
 
 input {
@@ -207,6 +216,10 @@ input {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+#results_panel .buttons {
+    justify-content: space-between;
 }
 
 button {

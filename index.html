@@ -129,19 +129,22 @@
         <i class="fa-solid fa-headphones-simple"></i>
       </div>
       <div class="results_text">
-        <h2>You've completed the Quiz!</h2>
+        <h2>Well done - you've completed the Quiz!</h2>
         <p>You scored: <span id="score_number">0</span></p>
       </div>
       <div class="results_score"></div>
       <p>
-        Are you Top of the Pops? <br />
-        Claim your spot on the leaderboard!
+        Are you <span>Top of the Pops</span>?
+        <br />
+        <br />
+        Submit your name and claim your spot on the leaderboard!
       </p>
       <form>
         <input
           type="text"
           id="user_name"
-          placeholder="Your Name"
+          placeholder="Enter Your Name"
+          maxlength="20"
           pattern="\S(.*\S)?"
           required
         />
