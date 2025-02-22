@@ -101,7 +101,7 @@ button, span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 
 #info_panel {
@@ -117,7 +117,7 @@ button, span {
 }
 
 #quiz_panel {
-    display: block;
+    display: none;
 }
 
 #difficulty_panel {
