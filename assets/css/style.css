@@ -28,7 +28,8 @@
 body {
     /************ Background images ************/
     background: var(--background-color) url(../images/pop-quiz-background-390px.svg) no-repeat left -24px top -27px;
-    background-size: 405px auto;
+    /* background-size: 405px auto; */
+    background-size: cover;
     /*
     background-image: url(../images/lightbulb-silversoul.svg),
     url(../images/pop-quiz.svg),
