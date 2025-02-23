@@ -36,6 +36,9 @@ const userName = document.getElementById("user_name");
 const submitScore = document.getElementById("submit_score");
 const quitQuiz = document.getElementById("quit_quiz");
 const restartQuiz = document.getElementById("restart_quiz");
+const highScore = document.getElementById("high_scores");
+const leaderStart = document.getElementById("leaderboard_start");
+const leaderQuit = document.getElementById("leaderboard_quit");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;

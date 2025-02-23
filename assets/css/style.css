@@ -86,7 +86,8 @@ button, span {
 #rules_panel,
 #quiz_panel,
 #difficulty_panel,
-#results_panel {
+#results_panel,
+#leaderboard_panel {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -105,7 +106,6 @@ button, span {
 }
 
 #info_panel {
-    /* opacity: 1; */
     padding: 18px 18px;
 }
 
@@ -135,10 +135,16 @@ button, span {
     display: none;
 }
 
+#leaderboard_panel {
+    display: none;
+    padding: 18px 18px;
+}
+
 #rules_panel.show,
 #difficulty_panel.show,
 #quiz_panel.show,
-#results_panel.show {
+#results_panel.show,
+#leaderboard_panel.show {
     display: block;
     z-index: 5;
 }
