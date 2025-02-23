@@ -11,10 +11,10 @@ let apiAddress;
 
 // Quiz api settings
 const quizAPIs = {
-  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
+  easy: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
   medium:
-    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
-  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
+    "https://opentdb.com/api.php?amount=10&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=10&category=12&difficulty=hard&type=multiple",
 };
 
 // Declare const variables for site interactivity
