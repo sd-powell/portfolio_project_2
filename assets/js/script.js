@@ -11,14 +11,13 @@ let apiAddress;
 
 // Quiz api settings
 const quizAPIs = {
-  easy: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
+  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
   medium:
-    "https://opentdb.com/api.php?amount=10&category=12&difficulty=medium&type=multiple",
-  hard: "https://opentdb.com/api.php?amount=10&category=12&difficulty=hard&type=multiple",
+    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
 };
 
 // Declare const variables for site interactivity
-// info_panel buttons
 const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
@@ -35,6 +34,8 @@ const resultsPanel = document.getElementById("results_panel");
 const finalScore = document.getElementById("score_number");
 const userName = document.getElementById("user_name");
 const submitScore = document.getElementById("submit_score");
+const quitQuiz = document.getElementById("quit_quiz");
+const restartQuiz = document.getElementById("restart_quiz");
 
 // Get all answers from answer_list
 const allAnswers = answer_list.children.length;
