@@ -257,7 +257,7 @@ function saveHighScore() {
     // Sort scores in descending order
     highScores.sort((a, b) => b.score - a.score);
     // Keep only top 10 scores
-    highScores.splice(15);
+    highScores.splice(10);
     // Save updated scores back to localStorage
     localStorage.setItem("highScores", JSON.stringify(highScores));
 

@@ -160,6 +160,7 @@ button {
 }
 
 /************ Elements ************/
+
 #quiz_header {
     position: relative;
     z-index: 2;
@@ -293,6 +294,33 @@ button {
 .submit_form button:hover {
     color: var(--foreground-white);
 }
+
+/************ Leaderboard table ************/
+
+#high_scores {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+  }
+  
+  #high_scores th, #high_scores td {
+    font-family: var(--secondary-font);
+    padding: 5px;
+    text-align: center;
+    border: 2px solid var(--highlight-blue);
+  }
+  
+  #high_scores th {
+    background-color: var(--highlight-blue);
+    color: var(--background-color);
+    font-weight: bold;
+  }
+  
+  #high_scores tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
 /************ Buttons ************/
 
