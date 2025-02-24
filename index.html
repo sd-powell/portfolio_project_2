@@ -156,7 +156,18 @@
 
     <div id="leaderboard_panel">
       <h2>leaderboard</h2>
-      <ul id="high_scores"></ul>
+      <table id="high_scores">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Scores will be inserted dynamically here -->
+        </tbody>
+      </table>
       <div class="buttons">
         <button id="leaderboard_start" class="outline_btn">Restart Quiz</button>
         <button id="leaderboard_quit" class="reverse_btn">Exit</button>

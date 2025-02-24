@@ -54,6 +54,7 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
 
 // Event listeners for opening and closing panels
 rules_btn.addEventListener("click", () => openRules.classList.add("show"));
+leaderboard_btn.addEventListener("click", () => showLeaderboard());
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
 start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 rules_start_btn.addEventListener("click", () => {

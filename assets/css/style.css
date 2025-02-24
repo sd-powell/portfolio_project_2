@@ -146,8 +146,8 @@ button {
 }
 
 #leaderboard_panel {
-    display: none;
     padding: 18px 18px;
+    display: block;
 }
 
 #rules_panel.show,
