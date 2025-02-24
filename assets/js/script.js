@@ -82,19 +82,27 @@ leaderQuit.addEventListener("click", function () {
 async function apiCall() {
   try {
     const response = await fetch(apiAddress);
+
+    // Check if response is okay (status code 200-299)
     if (!response.ok) {
-      throw new Error("Failed to fetch quiz data");
+      throw new Error(`Server error: ${response.status}`);
     }
+
     const data = await response.json();
+
+    // Check if the API returned quiz questions
     if (!data.results || data.results.length === 0) {
       throw new Error("No quiz data available");
     }
+    // If API call is successful, show the quiz
     hideDifficultyPanel();
     showQuiz_panel();
     getQuestions(data);
   } catch (error) {
     console.error("Error fetching quiz data:", error);
-    alert("Sorry, we couldn't load the quiz. Please try again later.");
+
+    // Redirect user to a custom 500 error page
+    window.location.href = "/500.html";
   }
 }
 
