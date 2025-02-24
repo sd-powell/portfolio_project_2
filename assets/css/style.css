@@ -77,10 +77,6 @@ ol {
     font-size: 1rem;
 }
 
-li {
-    margin-bottom: 0.35rem;
-}
-
 button, span {
     font-weight: 700;
 }
@@ -111,7 +107,7 @@ button, span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 
 #info_panel {
@@ -121,8 +117,8 @@ button, span {
 #rules_panel {
     list-style-position: inside;
     padding: 18px 18px;
-    display: none;
     transition: all 0.3s ease;
+    display: block;
 }
 
 #quiz_panel {
@@ -205,6 +201,56 @@ button, span {
     margin-bottom: 10px;
 }
 
+#rules_panel ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#rules_panel li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--highlight-blue);
+    border-radius: 8px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 100%;
+    height: auto;
+    min-height: 55px;
+    text-align: left;
+    margin-bottom: 12px;
+    padding: 8px 25px 8px 55px;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+#rules_panel li::before {
+    content: counter(rule-counter);
+    counter-increment: rule-counter;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--highlight-blue);
+    color: var(--background-color);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rules_panel ol {
+    counter-reset: rule-counter;
+}
+
 /************ Scores Form ************/
 
 .submit_form {
@@ -249,7 +295,7 @@ button, span {
     margin-top: auto;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
