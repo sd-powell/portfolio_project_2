@@ -82,10 +82,6 @@ button {
     font-size: 1rem;
 }
 
-/* button, span {
-    font-weight: 700;
-} */
-
 .quiz_score i {
     color: var(--star-gold);
 }
@@ -348,7 +344,7 @@ button {
 
 .outline_btn {
     background: transparent;
-    border: 1px solid var(--highlight-blue);
+    border: 2px solid var(--highlight-blue);
     color: var(--highlight-blue);
     transition: background 0.3s ease, color 0.3s ease;
 }
