@@ -70,6 +70,7 @@ button {
 #difficulty_panel p {
     margin-bottom: 22px;
     line-height: 1.4;
+    text-wrap: balance;
 }
 
 .results_text h3,
