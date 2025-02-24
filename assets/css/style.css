@@ -187,6 +187,16 @@ button {
     font-weight: 800;
 }
 
+.time_line {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 4px;
+    background: var(--highlight-blue); /* Or any color you prefer */
+    width: 100%; /* Full width at start */
+    transition: width linear;
+}
+
 #quiz_questions {
     padding: 16px 18px 0px 18px;
 }

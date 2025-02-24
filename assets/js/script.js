@@ -1,4 +1,4 @@
-// Declare game variables
+// Declare game variables (Track game state)
 let quizData = {};
 let questionNum = 0;
 let questionCount = 1;
@@ -8,8 +8,12 @@ let selectedAnswer;
 let acceptAnswers = true;
 let scoreCount = document.getElementById("score_total");
 let apiAddress;
+let timerDisplay;
+let timerInterval;
+let quizTimerText;
+let timeLine;
 
-// Quiz api settings
+// Quiz API settings (Fetches quiz questions based on difficulty)
 const quizAPIs = {
   easy: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
   medium:
@@ -17,7 +21,7 @@ const quizAPIs = {
   hard: "https://opentdb.com/api.php?amount=10&category=12&difficulty=hard&type=multiple",
 };
 
-// Declare const variables for site interactivity
+// Declare UI elements for interaction
 const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
@@ -40,10 +44,7 @@ const highScore = document.getElementById("high_scores");
 const leaderStart = document.getElementById("leaderboard_start");
 const leaderQuit = document.getElementById("leaderboard_quit");
 
-// Get all answers from answer_list
-const allAnswers = answer_list.children.length;
-
-// Add event listener to difficulty buttons
+// Add event listener to difficulty selection buttons
 // Event delegation method - https://www.freecodecamp.org/news/event-delegation-javascript/
 document.getElementById("difficulty_panel").addEventListener("click", (e) => {
   if (e.target.matches("#easy, #medium, #hard")) {
@@ -52,7 +53,7 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
   }
 });
 
-// Event listeners for opening and closing panels
+// Event listeners for opening and closing quiz panels
 rules_btn.addEventListener("click", () => openRules.classList.add("show"));
 leaderboard_btn.addEventListener("click", () => showLeaderboard());
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
@@ -61,18 +62,22 @@ rules_start_btn.addEventListener("click", () => {
   rules_panel.classList.remove("show");
   difficulty.classList.add("show");
 });
+
+// Start quiz from leaderboard
 leaderStart.addEventListener("click", () => {
   resetQuiz();
   resultsPanel.classList.remove("show");
   difficulty.classList.add("show");
 });
+
+// Quit from leaderboard
 leaderQuit.addEventListener("click", function () {
   leaderboard_panel.classList.remove("show");
   info_panel.classList.add("show");
   resetQuiz();
 });
 
-// Api call function
+// API call function (Fetches quiz data from the selected difficulty)
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
   try {
@@ -89,40 +94,40 @@ async function apiCall() {
   }
 }
 
-// Hide difficulty_panel function
+// Hides the difficulty selection panel once a level is selected
 function hideDifficultyPanel() {
   difficulty.classList.remove("show");
 }
 
-//Show quiz_panel function
+// Shows the quiz panel when the game starts
 function showQuiz_panel() {
   quizPanel.classList.add("show");
 }
 
-// Decode special characters
+// Converts HTML entity codes to readable text (e.g., `&quot;` → `"`)
 // Based on suggested solutions from https://stackoverflow.com/questions/7394748/whats-the-right-way-to-decode-a-string-that-has-special-html-entities-in-it and  https://jsfiddle.net/Be2Bd/1/
 function parseHtmlEntities(str) {
   return str.replace(/&#(\d+);/g, (_, num) => String.fromCharCode(num));
 }
 
-// Score function
+// Updates the score when a correct answer is selected
 // Based on content from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 function increaseScore() {
   score += 10;
   scoreCount.innerText = score;
 }
 
-// Get question function
+// Retrieves and displays a new question from API data
 // https://stackoverflow.com/questions/72588081/working-on-a-javascript-quiz-app-and-having-an-issue-dynamically-generating-ques
 function getQuestions(data) {
   if (data) {
     quizData = data;
   }
 
-  next.classList.add("hide");
+  next.classList.add("hide"); // Hide "Next" button initially
 
   if (questionNum >= quizData.results.length) {
-    showResults();
+    showResults(); // End quiz if no more questions
     return;
   }
 
@@ -155,11 +160,10 @@ function getQuestions(data) {
   answer_list.removeEventListener("click", answerCheck);
   answer_list.addEventListener("click", answerCheck);
 
-  // Start the timer for the question
-  startTimer(15);
+  startTimer(15); // Start timer for the new question
 }
 
-// Function to check answer on a button click
+// Handles answer selection and validation
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 function answerCheck(event) {
@@ -196,8 +200,10 @@ function answerCheck(event) {
   next.addEventListener("click", nextQuestion, { once: true });
 }
 
-// Next question function
+// Loads the next question in the quiz
 function nextQuestion() {
+  resetTimer(); // Reset timer FIRST to ensure UI updates immediately
+
   if (questionNum < quizData.results.length - 1) {
     questionNum++;
     questionCount++;
@@ -208,7 +214,6 @@ function nextQuestion() {
     return;
   }
 
-  // Remove correct and incorrect classes from selected answers
   let selectedButton = document.querySelector(
     ".answer_btn.correct, .answer_btn.incorrect"
   );
@@ -216,21 +221,17 @@ function nextQuestion() {
     selectedButton.classList.remove("correct", "incorrect");
   }
 
-  // Remove highlights from answers
   let displayCorrectAnswer = document.querySelector("[data-correct='true']");
   if (displayCorrectAnswer) {
     displayCorrectAnswer.classList.remove("correct");
     displayCorrectAnswer.removeAttribute("data-correct");
   }
 
-  // Reset all buttons
   resetButtons();
-
-  //Hide the next button until the user selects the answer
   next.classList.add("hide");
 }
 
-// Reset answer buttons function
+// Resets answer buttons for a new question
 function resetButtons() {
   document.querySelectorAll(".answer_btn").forEach((button) => {
     button.removeAttribute("data-correct");
@@ -330,43 +331,54 @@ function resetQuiz() {
   leaderboard_panel.classList.remove("show");
 }
 
+// Timer function
 function startTimer(time) {
-  let timerDisplay = document.getElementById("timer_secs");
-  let quizTimerText = document.querySelector(".quiz_timer"); // Get the timer container
-  let counter = setInterval(() => {
-    timerDisplay.textContent = time; // Update the timer display
-    time--; // Decrement the time value
+  // Ensure elements are up to date (in case DOM has changed)
+  timerDisplay = document.getElementById("timer_secs");
+  quizTimerText = document.querySelector(".quiz_timer");
+  timeLine = document.querySelector(".time_line");
+
+  // Clear any existing timer before starting a new one
+  if (timerInterval) {
+    clearInterval(timerInterval);
+  }
+
+  let totalTime = time;
+  timeLine.style.width = "100%"; // Reset progress bar to full width
+
+  timerInterval = setInterval(() => {
+    timerDisplay.textContent = time;
+    time--;
 
     if (time < 10) {
-      timerDisplay.textContent = "0" + time; // Add leading zero
+      timerDisplay.textContent = "0" + time;
     }
 
-    if (time < 0) {
-      clearInterval(counter); // Stop the timer
-      quizTimerText.innerHTML = "Time's up!"; // Change timer text
+    let progressWidth = Math.max((time / totalTime) * 100, 0);
+    timeLine.style.width = progressWidth + "%";
 
-      // Disable all answer buttons
+    if (time < 0) {
+      clearInterval(timerInterval);
+      quizTimerText.innerHTML = "Time's up!";
+
       document.querySelectorAll(".answer_btn").forEach((btn) => {
         btn.classList.add("disabled");
       });
 
-      // Auto-select the correct answer if time runs out
       let correctButton = [...document.querySelectorAll(".answer_btn")].find(
         (btn) => btn.innerHTML === parseHtmlEntities(correctAnswer)
       );
 
       if (correctButton) {
         correctButton.classList.add("correct");
-        correctButton.dataset.correct = "true"; // Add FontAwesome tick via CSS
-        console.log("Time's up! Auto-selected the correct answer.");
+        correctButton.dataset.correct = "true";
       }
 
-      // Show next question button
       next.classList.remove("hide");
       next.addEventListener(
         "click",
         () => {
-          resetTimer(); // Reset the timer when "Next" is clicked
+          resetTimer();
           nextQuestion();
         },
         { once: true }
@@ -375,10 +387,24 @@ function startTimer(time) {
   }, 1000);
 }
 
+// Instantly resets the timer UI
 function resetTimer() {
-  let timerDisplay = document.getElementById("timer_secs");
-  let quizTimerText = document.querySelector(".quiz_timer");
+  timerDisplay = document.getElementById("timer_secs");
+  quizTimerText = document.querySelector(".quiz_timer");
+  timeLine = document.querySelector(".time_line");
 
-  // Reset timer display back to default
+  if (!timerDisplay || !quizTimerText || !timeLine) {
+    console.error("Error: Timer elements not found during reset!");
+    return;
+  }
+
+  // **Clear any previous interval to prevent overlaps**
+  if (timerInterval) {
+    clearInterval(timerInterval);
+  }
+
+  // **Instantly reset the timer UI**
   quizTimerText.innerHTML = `Time: <span id="timer_secs">15</span>`;
+  timerDisplay.textContent = "15";
+  timeLine.style.width = "100%"; // Reset progress bar immediately
 }
