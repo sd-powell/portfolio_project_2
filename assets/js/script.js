@@ -254,31 +254,29 @@ function showResults() {
 
 // Save high score function
 function saveHighScore() {
-  return new Promise((resolve) => {
-    const playerName = userName.value.trim();
-    if (!playerName) {
-      alert("Please enter your name before submitting!");
-      return;
-    }
+  const playerName = userName.value.trim();
+  if (!playerName) {
+    alert("Please enter your name before submitting!");
+    return;
+  }
 
-    const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-    // Create new score entry
-    const newScore = { playerName, score };
-    // Add new score to high scores array
-    highScores.push(newScore);
-    // Sort scores in descending order
-    highScores.sort((a, b) => b.score - a.score);
-    // Keep only top 10 scores
-    highScores.splice(10);
-    // Save updated scores back to localStorage
-    localStorage.setItem("highScores", JSON.stringify(highScores));
+  // Create new score entry
+  const newScore = { playerName, score };
+  // Add new score to high scores array
+  highScores.push(newScore);
+  // Sort scores in descending order
+  highScores.sort((a, b) => b.score - a.score);
+  // Keep only top 10 scores
+  highScores.splice(10);
+  // Save updated scores back to localStorage
+  localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    // Show leaderboard panel
-    showLeaderboard();
+  // Show leaderboard panel
+  showLeaderboard();
 
-    resolve();
-  });
+  resolve();
 }
 
 // Function to show leaderboard and populate scores
