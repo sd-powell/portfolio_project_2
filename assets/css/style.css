@@ -147,7 +147,7 @@ button {
 
 #leaderboard_panel {
     padding: 18px 18px;
-    display: block;
+    display: none;
 }
 
 #rules_panel.show,

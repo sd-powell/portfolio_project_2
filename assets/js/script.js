@@ -62,9 +62,14 @@ rules_start_btn.addEventListener("click", () => {
   difficulty.classList.add("show");
 });
 leaderStart.addEventListener("click", () => {
-  resetQuiz(); // Reset quiz variables and UI
+  resetQuiz();
   resultsPanel.classList.remove("show");
   difficulty.classList.add("show");
+});
+leaderQuit.addEventListener("click", function () {
+  leaderboard_panel.classList.remove("show");
+  info_panel.classList.add("show");
+  resetQuiz();
 });
 
 // Api call function
