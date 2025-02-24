@@ -57,8 +57,14 @@ rules_btn.addEventListener("click", () => openRules.classList.add("show"));
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
 start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 rules_start_btn.addEventListener("click", () => {
-  rules_panel.classList.remove("show"); // Hide rules panel
-  difficulty.classList.add("show"); // Show difficulty panel
+  rules_panel.classList.remove("show");
+  difficulty.classList.add("show");
+});
+leaderboard_start.addEventListener("click", () => {
+  resetQuiz(); // Reset quiz variables and UI
+  resultsPanel.classList.remove("show");
+  leaderboard_panel.classList.remove("show");
+  difficulty.classList.add("show");
 });
 
 // Api call function
@@ -293,3 +299,25 @@ submitScore.addEventListener("click", function (event) {
   event.preventDefault();
   saveHighScore();
 });
+
+function resetQuiz() {
+  questionNum = 0;
+  questionCount = 1;
+  score = 0;
+  scoreCount.innerText = "0";
+  finalScore.innerText = "0"; // Reset displayed score
+
+  // Clear any existing questions and answers
+  question.innerHTML = "";
+  answer_list.innerHTML = "";
+
+  // Reset button states
+  next.classList.add("hide");
+
+  // Remove any applied styles
+  document.querySelectorAll(".answer_btn").forEach((btn) => {
+    btn.classList.remove("correct", "incorrect", "disabled");
+    btn.removeAttribute("data-correct");
+    btn.disabled = false;
+  });
+}
