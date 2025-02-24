@@ -107,7 +107,7 @@ button, span {
     align-items: center;
     justify-content: center;
     text-align: center;
-    display: none;
+    display: block;
 }
 
 #info_panel {
@@ -118,7 +118,7 @@ button, span {
     list-style-position: inside;
     padding: 18px 18px;
     transition: all 0.3s ease;
-    display: block;
+    display: none;
 }
 
 #quiz_panel {

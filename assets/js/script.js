@@ -56,6 +56,10 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
 rules_btn.addEventListener("click", () => openRules.classList.add("show"));
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
 start_btn.addEventListener("click", () => difficulty.classList.add("show"));
+rules_start_btn.addEventListener("click", () => {
+  rules_panel.classList.remove("show"); // Hide rules panel
+  difficulty.classList.add("show"); // Show difficulty panel
+});
 
 // Api call function
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
