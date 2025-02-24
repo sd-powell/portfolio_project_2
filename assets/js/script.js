@@ -273,18 +273,20 @@ function showLeaderboard() {
   resultsPanel.classList.remove("show");
   leaderboard_panel.classList.add("show");
 
-  const highScoresList = document.getElementById("high_scores");
-  highScoresList.innerHTML = ""; // Clear existing scores
+  const highScoresTable = document.querySelector("#high_scores tbody");
+  highScoresTable.innerHTML = ""; // Clear existing scores
 
   const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
   // Loop through scores and create list items
   highScores.forEach((entry, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${index + 1}. ${entry.playerName}</strong>: ${
-      entry.score
-    } points`;
-    highScoresList.appendChild(li);
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${entry.playerName}</td>
+      <td>${entry.score}</td>
+    `;
+    highScoresTable.appendChild(row);
   });
 }
 
