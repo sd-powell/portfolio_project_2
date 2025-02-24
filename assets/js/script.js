@@ -154,6 +154,9 @@ function getQuestions(data) {
   // Remove old event listeners and add new to answer buttons
   answer_list.removeEventListener("click", answerCheck);
   answer_list.addEventListener("click", answerCheck);
+
+  // Start the timer for the question
+  startTimer(15);
 }
 
 // Function to check answer on a button click
@@ -325,4 +328,57 @@ function resetQuiz() {
   quizPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
   leaderboard_panel.classList.remove("show");
+}
+
+function startTimer(time) {
+  let timerDisplay = document.getElementById("timer_secs");
+  let quizTimerText = document.querySelector(".quiz_timer"); // Get the timer container
+  let counter = setInterval(() => {
+    timerDisplay.textContent = time; // Update the timer display
+    time--; // Decrement the time value
+
+    if (time < 10) {
+      timerDisplay.textContent = "0" + time; // Add leading zero
+    }
+
+    if (time < 0) {
+      clearInterval(counter); // Stop the timer
+      quizTimerText.innerHTML = "Time's up!"; // Change timer text
+
+      // Disable all answer buttons
+      document.querySelectorAll(".answer_btn").forEach((btn) => {
+        btn.classList.add("disabled");
+      });
+
+      // Auto-select the correct answer if time runs out
+      let correctButton = [...document.querySelectorAll(".answer_btn")].find(
+        (btn) => btn.innerHTML === parseHtmlEntities(correctAnswer)
+      );
+
+      if (correctButton) {
+        correctButton.classList.add("correct");
+        correctButton.dataset.correct = "true"; // Add FontAwesome tick via CSS
+        console.log("Time's up! Auto-selected the correct answer.");
+      }
+
+      // Show next question button
+      next.classList.remove("hide");
+      next.addEventListener(
+        "click",
+        () => {
+          resetTimer(); // Reset the timer when "Next" is clicked
+          nextQuestion();
+        },
+        { once: true }
+      );
+    }
+  }, 1000);
+}
+
+function resetTimer() {
+  let timerDisplay = document.getElementById("timer_secs");
+  let quizTimerText = document.querySelector(".quiz_timer");
+
+  // Reset timer display back to default
+  quizTimerText.innerHTML = `Time: <span id="timer_secs">15</span>`;
 }
