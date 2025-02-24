@@ -125,31 +125,29 @@
 
     <!-- Results panel container -->
     <div id="results_panel">
-      <!-- <div class="results_icon">
-        <i class="fa-solid fa-headphones-simple"></i>
-      </div> -->
       <div class="results_text">
         <h2>Well done - you've completed the Quiz!</h2>
-        <p>You scored: <span id="score_number">0</span></p>
+        <h3>You scored: <span id="score_number">0</span></h3>
+        <p>
+          Are you <span>Top of the Pops</span>?
+          <br />
+          <br />
+          Submit your name and claim your spot on the leaderboard!
+        </p>
       </div>
-      <div class="results_score"></div>
-      <p>
-        Are you <span>Top of the Pops</span>?
-        <br />
-        <br />
-        Submit your name and claim your spot on the leaderboard!
-      </p>
-      <form>
-        <input
-          type="text"
-          id="user_name"
-          placeholder="Enter Your Name"
-          maxlength="20"
-          pattern="\S(.*\S)?"
-          required
-        />
-        <button class="outline_btn" id="submit_score">Submit</button>
-      </form>
+      <div class="submit_form">
+        <form>
+          <input
+            type="text"
+            id="user_name"
+            placeholder="Enter Your Name"
+            maxlength="20"
+            pattern="\S(.*\S)?"
+            required
+          />
+          <button id="submit_score">Submit</button>
+        </form>
+      </div>
       <div class="buttons">
         <button id="restart_quiz" class="outline_btn">Restart Quiz</button>
         <button id="quit_quiz" class="reverse_btn">Quit</button>
