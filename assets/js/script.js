@@ -257,8 +257,35 @@ function saveHighScore() {
     // Save updated scores back to localStorage
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    alert("Score saved successfully!");
+    // Show leaderboard panel
+    showLeaderboard();
 
     resolve();
   });
 }
+
+// Function to show leaderboard and populate scores
+function showLeaderboard() {
+  resultsPanel.classList.remove("show");
+  leaderboard_panel.classList.add("show");
+
+  const highScoresList = document.getElementById("high_scores");
+  highScoresList.innerHTML = ""; // Clear existing scores
+
+  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+  // Loop through scores and create list items
+  highScores.forEach((entry, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${index + 1}. ${entry.playerName}</strong>: ${
+      entry.score
+    } points`;
+    highScoresList.appendChild(li);
+  });
+}
+
+// Event listener for submit button
+submitScore.addEventListener("click", function (event) {
+  event.preventDefault();
+  saveHighScore();
+});
