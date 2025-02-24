@@ -93,7 +93,8 @@ button {
 #quiz_panel,
 #difficulty_panel,
 #results_panel,
-#leaderboard_panel {
+#leaderboard_panel,
+#error_panel {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -110,7 +111,8 @@ button {
     text-align: center;
 }
 
-#info_panel {
+#info_panel,
+#error_panel {
     padding: 18px 18px;
 }
 
@@ -265,6 +267,34 @@ button {
 
 #rules_panel ol {
     counter-reset: rule-counter;
+}
+
+/************ Error Panel ************/
+
+#error_panel h2 {
+    animation: shake 0.5s ease-in-out infinite alternate;
+    padding-bottom: 0;
+}
+
+#error_panel p {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    text-wrap: balance;
+}
+
+#error_panel i {
+    font-size: 5rem;
+    color: var(--highlight-blue);
+}
+
+#error_panel a {
+    color: var(--highlight-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#error_panel a:hover {
+    text-decoration: underline;
 }
 
 /************ Scores Form ************/
@@ -451,4 +481,12 @@ button {
     content: "\f057"; 
     font-weight: 900;
     color: var(--wrong-red); 
+  }
+
+/************ Effects ************/
+
+/************ Shake animation for error panel ************/
+  @keyframes shake {
+    0% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
   }
