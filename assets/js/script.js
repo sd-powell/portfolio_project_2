@@ -60,10 +60,9 @@ rules_start_btn.addEventListener("click", () => {
   rules_panel.classList.remove("show");
   difficulty.classList.add("show");
 });
-leaderboard_start.addEventListener("click", () => {
+leaderStart.addEventListener("click", () => {
   resetQuiz(); // Reset quiz variables and UI
   resultsPanel.classList.remove("show");
-  leaderboard_panel.classList.remove("show");
   difficulty.classList.add("show");
 });
 
@@ -320,4 +319,8 @@ function resetQuiz() {
     btn.removeAttribute("data-correct");
     btn.disabled = false;
   });
+  // Hide quiz and results panel
+  quizPanel.classList.remove("show");
+  resultsPanel.classList.remove("show");
+  leaderboard_panel.classList.remove("show");
 }
