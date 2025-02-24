@@ -229,7 +229,7 @@ function showResults() {
   finalScore.innerText = `${score} out of ${quizData.results.length * 10}`;
 
   document
-    .getElementById("submitScore")
+    .getElementById("submit_score")
     .addEventListener("click", function (event) {
       event.preventDefault();
       saveHighScore();
