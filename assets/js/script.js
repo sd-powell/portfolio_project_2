@@ -86,11 +86,15 @@ async function apiCall() {
       throw new Error("Failed to fetch quiz data");
     }
     const data = await response.json();
+    if (!data.results || data.results.length === 0) {
+      throw new Error("No quiz data available");
+    }
     hideDifficultyPanel();
     showQuiz_panel();
     getQuestions(data);
   } catch (error) {
     console.error("Error fetching quiz data:", error);
+    alert("Sorry, we couldn't load the quiz. Please try again later.");
   }
 }
 
