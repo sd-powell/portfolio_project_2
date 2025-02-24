@@ -106,9 +106,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    display: block;
 }
 
 #info_panel {
@@ -196,6 +195,11 @@ button {
     font-family: var(--primary-font);
     font-size: 19px;
     text-wrap: balance;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #results_panel .results_icon {
