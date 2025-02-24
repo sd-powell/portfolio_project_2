@@ -236,13 +236,6 @@ function showResults() {
   quizPanel.classList.remove("show");
 
   finalScore.innerText = `${score} out of ${quizData.results.length * 10}`;
-
-  document
-    .getElementById("submit_score")
-    .addEventListener("click", function (event) {
-      event.preventDefault();
-      saveHighScore();
-    });
 }
 
 // Save high score function
@@ -255,6 +248,7 @@ function saveHighScore() {
     }
 
     const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
     // Create new score entry
     const newScore = { playerName, score };
     // Add new score to high scores array
@@ -262,7 +256,7 @@ function saveHighScore() {
     // Sort scores in descending order
     highScores.sort((a, b) => b.score - a.score);
     // Keep only top 10 scores
-    highScores.splice(10);
+    highScores.splice(15);
     // Save updated scores back to localStorage
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
