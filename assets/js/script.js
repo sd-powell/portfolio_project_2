@@ -67,13 +67,9 @@ rulesStartBtn.addEventListener("click", () => {
   rulesPanel.classList.remove("show");
   difficultyPanel.classList.add("show");
 });
-
-// Start quiz from leaderboard
-leaderStart.addEventListener("click", () => {
-  resetQuiz();
-  resultsPanel.classList.remove("show");
-  difficultyPanel.classList.add("show");
-});
+leaderStart.addEventListener("click", restartFromLeaderboard);
+quitQuiz.addEventListener("click", quitToHome);
+restartQuiz.addEventListener("click", restartQuizSession);
 
 // Quit from leaderboard
 leaderQuit.addEventListener("click", function () {
@@ -89,19 +85,25 @@ quizExitBtn.addEventListener("click", () => {
   infoPanel.classList.add("show"); // Show home panel
 });
 
-// Add event listener for quitting the quiz from results panel
-quitQuiz.addEventListener("click", () => {
-  resetQuiz(); // Reset quiz state
-  resultsPanel.classList.remove("show"); // Hide results panel
-  infoPanel.classList.add("show"); // Show home panel
-});
+// Restart Quiz from Leaderboard
+function restartFromLeaderboard() {
+  resetQuiz();
+  resultsPanel.classList.remove("show");
+  difficultyPanel.classList.add("show");
+}
 
-// Add event listener for restarting the quiz from results panel
-restartQuiz.addEventListener("click", () => {
-  resetQuiz(); // Reset quiz state
-  resultsPanel.classList.remove("show"); // Hide results panel
-  difficultyPanel.classList.add("show"); // Show difficulty selection
-});
+// Quit Quiz to Home
+function quitToHome() {
+  resetQuiz();
+  resultsPanel.classList.remove("show");
+  infoPanel.classList.add("show");
+}
+
+function restartQuizSession() {
+  resetQuiz();
+  resultsPanel.classList.remove("show");
+  difficultyPanel.classList.add("show");
+}
 
 // API call function (Fetches quiz data from the selected difficulty)
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
@@ -109,6 +111,7 @@ async function apiCall() {
   try {
     questionCount = 1; // Reset question count when a new quiz starts
     questionNo.innerText = `${questionCount}`; // Update UI
+
     const response = await fetch(apiAddress);
 
     // Check if response is okay (status code 200-299)
