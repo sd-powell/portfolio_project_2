@@ -22,18 +22,20 @@ const quizAPIs = {
 
 // Declare UI elements for interaction
 const infoPanel = document.getElementById("info_panel");
-const start_btn = document.getElementById("start_btn");
+const startBtn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
-const rules_btn = document.getElementById("rules_btn");
-const openRules = document.getElementById("rules_panel");
-const exit_btn = document.getElementById("exit_btn");
-const rules_start_btn = document.getElementById("rules_start_btn");
+const rulesBtn = document.getElementById("rules_btn");
+const rulesPanel = document.getElementById("rules_panel");
+const exitBtn = document.getElementById("exit_btn");
+const rulesStartBtn = document.getElementById("rules_start_btn");
 const difficulty = document.getElementById("difficulty_panel");
+const diffExitBtn = document.getElementById("diff_exit_btn");
 const quizPanel = document.getElementById("quiz_panel");
+const quizExitBtn = document.getElementById("quiz_exit_btn");
 const question = document.getElementById("question_title");
 const questionNo = document.getElementById("questionNo");
-const answer_list = document.querySelector(".answer_list");
-const next = document.getElementById("next_btn");
+const answerList = document.querySelector(".answer_list");
+const nextBtn = document.getElementById("next_btn");
 const resultsPanel = document.getElementById("results_panel");
 const finalScore = document.getElementById("score_number");
 const userName = document.getElementById("user_name");
@@ -54,12 +56,15 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
 });
 
 // Event listeners for opening and closing quiz panels
-rules_btn.addEventListener("click", () => openRules.classList.add("show"));
+rulesBtn.addEventListener("click", () => rulesPanel.classList.add("show"));
 leaderboard_btn.addEventListener("click", () => showLeaderboard());
-exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
-start_btn.addEventListener("click", () => difficulty.classList.add("show"));
-rules_start_btn.addEventListener("click", () => {
-  openRules.classList.remove("show");
+exitBtn.addEventListener("click", () => rulesPanel.classList.remove("show"));
+startBtn.addEventListener("click", () => difficulty.classList.add("show"));
+diffExitBtn.addEventListener("click", () =>
+  difficulty.classList.remove("show")
+);
+rulesStartBtn.addEventListener("click", () => {
+  rulesPanel.classList.remove("show");
   difficulty.classList.add("show");
 });
 
@@ -75,6 +80,13 @@ leaderQuit.addEventListener("click", function () {
   leaderboardPanel.classList.remove("show");
   infoPanel.classList.add("show");
   resetQuiz();
+});
+
+// Add event listener for quitting the quiz
+quizExitBtn.addEventListener("click", () => {
+  resetQuiz(); // Reset quiz state
+  quizPanel.classList.remove("show"); // Hide quiz panel
+  infoPanel.classList.add("show"); // Show home panel
 });
 
 // API call function (Fetches quiz data from the selected difficulty)
@@ -136,7 +148,7 @@ function getQuestions(data) {
     quizData = data;
   }
 
-  next.classList.add("hide"); // Hide "Next" button initially
+  nextBtn.classList.add("hide"); // Hide "Next" button initially
 
   if (questionNum >= quizData.results.length) {
     showResults(); // End quiz if no more questions
@@ -159,7 +171,7 @@ function getQuestions(data) {
   );
 
   // Generate answer buttons dynamically
-  answer_list.innerHTML = answers
+  answerList.innerHTML = answers
     .map(
       (answer, index) =>
         `<button class="answer_btn" id="answerNo${
@@ -169,8 +181,8 @@ function getQuestions(data) {
     .join("");
 
   // Remove old event listeners and add new to answer buttons
-  answer_list.removeEventListener("click", answerCheck);
-  answer_list.addEventListener("click", answerCheck);
+  answerList.removeEventListener("click", answerCheck);
+  answerList.addEventListener("click", answerCheck);
 
   startTimer(15); // Start timer for the new question
 }
@@ -207,9 +219,9 @@ function answerCheck(event) {
     }
   }
 
-  // Shows next button for user to proceed and adds event listener for click
-  next.classList.remove("hide");
-  next.addEventListener("click", nextQuestion, { once: true });
+  // Shows nextBtn button for user to proceed and adds event listener for click
+  nextBtn.classList.remove("hide");
+  nextBtn.addEventListener("click", nextQuestion, { once: true });
 }
 
 // Loads the next question in the quiz
@@ -240,7 +252,7 @@ function nextQuestion() {
   }
 
   resetButtons();
-  next.classList.add("hide");
+  nextBtn.classList.add("hide");
 }
 
 // Resets answer buttons for a new question
@@ -322,10 +334,10 @@ function resetQuiz() {
 
   // Clear any existing questions and answers
   question.innerHTML = "";
-  answer_list.innerHTML = "";
+  answerList.innerHTML = "";
 
   // Reset button states
-  next.classList.add("hide");
+  nextBtn.classList.add("hide");
 
   // Remove any applied styles
   document.querySelectorAll(".answer_btn").forEach((btn) => {
@@ -382,8 +394,8 @@ function startTimer(time) {
         correctButton.dataset.correct = "true";
       }
 
-      next.classList.remove("hide");
-      next.addEventListener(
+      nextBtn.classList.remove("hide");
+      nextBtn.addEventListener(
         "click",
         () => {
           resetTimer();

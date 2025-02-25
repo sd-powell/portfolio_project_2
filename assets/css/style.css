@@ -184,7 +184,7 @@ overflow:hidden;
 }
 
 /* Ensure .exit_btn is left-aligned */
-#exit_btn {
+#quiz_exit_btn {
     margin-right: auto;
 }
 
