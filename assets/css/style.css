@@ -471,6 +471,7 @@ button {
 .answer_btn[data-correct="true"]::after {
     font-family: "Font Awesome 6 Free";
     content: "\f058"; 
+    font-size: 1rem;
     font-weight: 900;
     color: var(--correct-green);
   }
@@ -478,7 +479,8 @@ button {
 /* Adds cross to button with incorrect answer */
   .answer_btn.incorrect::after {
     font-family: "Font Awesome 6 Free";
-    content: "\f057"; 
+    content: "\f057";
+    font-size: 1rem; 
     font-weight: 900;
     color: var(--wrong-red); 
   }

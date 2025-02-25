@@ -358,17 +358,16 @@ function startTimer(time) {
 
   timerInterval = setInterval(() => {
     timerDisplay.textContent = time;
+    time--;
 
     if (time < 10) {
       timerDisplay.textContent = "0" + time;
-    } else {
-      timerDisplay.textContent = time;
     }
 
     let progressWidth = Math.max((time / totalTime) * 100, 0);
     timeLine.style.width = progressWidth + "%";
 
-    if (time === 0) {
+    if (time < 0) {
       clearInterval(timerInterval);
       quizTimerText.innerHTML = "Time's up!";
 
@@ -395,7 +394,6 @@ function startTimer(time) {
         { once: true }
       );
     }
-    time--;
   }, 1000);
 }
 
