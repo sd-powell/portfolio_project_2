@@ -22,158 +22,165 @@
     <title>DJ Silver Soul Pop Quiz - Home Page</title>
   </head>
   <body>
+    <header class="hidden_heading">
+      <h1>DJ Silver Soul Pop Quiz</h1>
+    </header>
     <!-- Container with introduction text -->
-    <div id="info_panel">
-      <h2>Hit Start & Test Your Music Knowledge!</h2>
-      <p>
-        Think you know your music?
-        <br />
-        Put your knowledge to the test with
-        <span>DJ Silver Soul's Pop Quiz</span> - a fun, interactive trivia game
-        featuring greatest hits, legendary artists, and unforgettable moments in
-        popular music history!
-        <br />
-        <br />
-        Do you have what it takes to top the leaderboard? Hit that Start button
-        and let the music trivia showdown begin!
-      </p>
-      <div class="buttons">
-        <button id="rules_btn" class="outline_btn">Rules</button>
-        <button id="leaderboard_btn" class="outline_btn">leaderboard</button>
-        <button id="start_btn" class="reverse_btn">Start</button>
-      </div>
-    </div>
-
-    <!-- Modal Container with rules -->
-    <div id="rules_panel">
-      <h2>Quiz Rules</h2>
-      <ol>
-        <li>Choose the level of difficulty you would like to play</li>
-        <li>You will have 15 seconds to answer each question</li>
-        <li>Once you have selected your answer, it cannot be changed</li>
-        <li>When the timer has elapsed you can't select an answer</li>
-        <li>You can't exit from the quiz once it has started</li>
-        <li>You will be allocated points based on your correct answers</li>
-      </ol>
-      <div class="buttons">
-        <button id="exit_btn" class="outline_btn">Exit</button>
-        <button id="rules_start_btn" class="reverse_btn">Start Quiz</button>
-      </div>
-    </div>
-
-    <!-- Modal Container with difficulty levels -->
-    <div id="difficulty_panel">
-      <h2>
-        Turn it up a level -
-        <br />
-        select your difficulty!
-      </h2>
-      <p>
-        Are you ready to test your music knowledge? Pick your level and step
-        into the world of beats, bangers, and brain-teasers!
-      </p>
-      <div class="difficulty_btn">
-        <button class="answer_btn" id="easy">
-          🎧 Easy Listening - 'The warm up'
-        </button>
-        <button class="answer_btn" id="medium">
-          🔥 Medium - 'Peak Time questions'
-        </button>
-        <button class="answer_btn" id="hard">
-          🚀 Hard - 'After hours - for true fans'
-        </button>
-      </div>
-    </div>
-
-    <!-- Quiz Box Container -->
-    <div id="quiz_panel">
-      <section id="quiz_header">
-        <div class="question_total">
-          <p class="question_title">
-            Question No. <span id="questionNo">1</span> of 10
-          </p>
-          <p class="quiz_timer">Time: <span id="timer_secs">15</span></p>
-          <div class="time_line"></div>
-        </div>
-      </section>
-      <section id="quiz_questions">
-        <div id="question_title">
-          <!-- question title from API - wrap in h3 -->
-          Which artist released the 2012 'Harlem Shake', which was used in
-          numerous YouTube videos in 2013?
-        </div>
-        <div class="answer_list">
-          <!-- question options from API -->
-          <button class="answer_btn" id="answerNo1">RL Grime</button>
-          <button class="answer_btn" id="answerNo2">Baauer</button>
-          <button class="answer_btn" id="answerNo3">NGHTMARE</button>
-          <button class="answer_btn" id="answerNo4">Flosstradamus</button>
-        </div>
-      </section>
-      <section id="quiz_footer">
-        <div class="score">
-          <!-- score total -->
-          <p class="quiz_score">
-            <i class="fa-solid fa-star"></i> Score:
-            <span id="score_total">0</span>
-          </p>
-        </div>
-        <button class="nextQuestion_btn" id="next_btn">
-          Next <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </section>
-    </div>
-
-    <!-- Results panel container -->
-    <div id="results_panel">
-      <div class="results_text">
-        <h2>Well done - you've completed the Quiz!</h2>
-        <h3>You scored: <span id="score_number">0</span></h3>
+    <main>
+      <div id="info_panel">
+        <h2>Hit Start & Test Your Music Knowledge!</h2>
         <p>
-          Are you <span>Top of the Pops</span>?
+          Think you know your music?
+          <br />
+          Put your knowledge to the test with
+          <span>DJ Silver Soul's Pop Quiz</span> - a fun, interactive trivia
+          game featuring greatest hits, legendary artists, and unforgettable
+          moments in popular music history!
           <br />
           <br />
-          Submit your name and claim your spot in the top 10!
+          Do you have what it takes to top the leaderboard? Hit that Start
+          button and let the music trivia showdown begin!
         </p>
+        <div class="buttons">
+          <button id="rules_btn" class="outline_btn">Rules</button>
+          <button id="leaderboard_btn" class="outline_btn">leaderboard</button>
+          <button id="start_btn" class="reverse_btn">Start</button>
+        </div>
       </div>
-      <div class="submit_form">
-        <form>
-          <input
-            type="text"
-            id="user_name"
-            placeholder="Enter Your Name"
-            maxlength="20"
-            pattern="\S(.*\S)?"
-            required
-          />
-          <button id="submit_score">Submit</button>
-        </form>
-      </div>
-      <div class="buttons">
-        <button id="restart_quiz" class="outline_btn">Restart Quiz</button>
-        <button id="quit_quiz" class="reverse_btn">Quit</button>
-      </div>
-    </div>
 
-    <div id="leaderboard_panel">
-      <h2>Top 10 Scores</h2>
-      <table id="high_scores">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Scores will be inserted dynamically here -->
-        </tbody>
-      </table>
-      <div class="buttons">
-        <button id="leaderboard_quit" class="outline_btn">Exit</button>
-        <button id="leaderboard_start" class="reverse_btn">Restart Quiz</button>
+      <!-- Modal Container with rules -->
+      <div id="rules_panel">
+        <h2>Quiz Rules</h2>
+        <ol>
+          <li>Choose the level of difficulty you would like to play</li>
+          <li>You will have 15 seconds to answer each question</li>
+          <li>Once you have selected your answer, it cannot be changed</li>
+          <li>When the timer has elapsed you can't select an answer</li>
+          <li>You can't exit from the quiz once it has started</li>
+          <li>You will be allocated points based on your correct answers</li>
+        </ol>
+        <div class="buttons">
+          <button id="exit_btn" class="outline_btn">Exit</button>
+          <button id="rules_start_btn" class="reverse_btn">Start Quiz</button>
+        </div>
       </div>
-    </div>
+
+      <!-- Modal Container with difficulty levels -->
+      <div id="difficulty_panel">
+        <h2>
+          Turn it up a level -
+          <br />
+          select your difficulty!
+        </h2>
+        <p>
+          Are you ready to test your music knowledge? Pick your level and step
+          into the world of beats, bangers, and brain-teasers!
+        </p>
+        <div class="difficulty_btn">
+          <button class="answer_btn" id="easy">
+            🎧 Easy Listening - 'The warm up'
+          </button>
+          <button class="answer_btn" id="medium">
+            🔥 Medium - 'Peak Time questions'
+          </button>
+          <button class="answer_btn" id="hard">
+            🚀 Hard - 'After hours - for true fans'
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Box Container -->
+      <div id="quiz_panel">
+        <section id="quiz_header">
+          <div class="question_total">
+            <p class="question_title">
+              Question No. <span id="questionNo">1</span> of 10
+            </p>
+            <p class="quiz_timer">Time: <span id="timer_secs">15</span></p>
+            <div class="time_line"></div>
+          </div>
+        </section>
+        <section id="quiz_questions">
+          <div id="question_title">
+            <!-- question title from API - wrap in h3 -->
+            Which artist released the 2012 'Harlem Shake', which was used in
+            numerous YouTube videos in 2013?
+          </div>
+          <div class="answer_list">
+            <!-- question options from API -->
+            <button class="answer_btn" id="answerNo1">RL Grime</button>
+            <button class="answer_btn" id="answerNo2">Baauer</button>
+            <button class="answer_btn" id="answerNo3">NGHTMARE</button>
+            <button class="answer_btn" id="answerNo4">Flosstradamus</button>
+          </div>
+        </section>
+        <section id="quiz_footer">
+          <div class="score">
+            <!-- score total -->
+            <p class="quiz_score">
+              <i class="fa-solid fa-star"></i> Score:
+              <span id="score_total">0</span>
+            </p>
+          </div>
+          <button class="nextQuestion_btn" id="next_btn">
+            Next <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </section>
+      </div>
+
+      <!-- Results panel container -->
+      <div id="results_panel">
+        <div class="results_text">
+          <h2>Well done - you've completed the Quiz!</h2>
+          <h3>You scored: <span id="score_number">0</span></h3>
+          <p>
+            Are you <span>Top of the Pops</span>?
+            <br />
+            <br />
+            Submit your name and claim your spot in the top 10!
+          </p>
+        </div>
+        <div class="submit_form">
+          <form>
+            <input
+              type="text"
+              id="user_name"
+              placeholder="Enter Your Name"
+              maxlength="20"
+              pattern="\S(.*\S)?"
+              required
+            />
+            <button id="submit_score">Submit</button>
+          </form>
+        </div>
+        <div class="buttons">
+          <button id="restart_quiz" class="outline_btn">Restart Quiz</button>
+          <button id="quit_quiz" class="reverse_btn">Quit</button>
+        </div>
+      </div>
+
+      <div id="leaderboard_panel">
+        <h2>Top 10 Scores</h2>
+        <table id="high_scores">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Scores will be inserted dynamically here -->
+          </tbody>
+        </table>
+        <div class="buttons">
+          <button id="leaderboard_quit" class="outline_btn">Exit</button>
+          <button id="leaderboard_start" class="reverse_btn">
+            Restart Quiz
+          </button>
+        </div>
+      </div>
+    </main>
 
     <!-- Custom JS Link -->
     <script src="assets/js/script.js"></script>

@@ -87,6 +87,15 @@ button {
 }
 
 /************ Containers ************/
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+.hidden_heading {
+    position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
 
 #info_panel,
 #rules_panel,
