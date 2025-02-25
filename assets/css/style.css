@@ -180,6 +180,26 @@ overflow:hidden;
     height: 50px;
     border-top: 1px solid var(--foreground-white);
     padding: 12px 18px;
+    position: relative;
+}
+
+/* Ensure .exit_btn is left-aligned */
+#exit_btn {
+    margin-right: auto;
+}
+
+/* Center the .quiz_score */
+.quiz_score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Ensure .nextQuestion_btn is right-aligned */
+#next_btn {
+    margin-left: auto;
 }
 
 .question_total {
