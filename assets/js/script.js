@@ -28,7 +28,7 @@ const rulesBtn = document.getElementById("rules_btn");
 const rulesPanel = document.getElementById("rules_panel");
 const exitBtn = document.getElementById("exit_btn");
 const rulesStartBtn = document.getElementById("rules_start_btn");
-const difficulty = document.getElementById("difficulty_panel");
+const difficultyPanel = document.getElementById("difficulty_panel");
 const diffExitBtn = document.getElementById("diff_exit_btn");
 const quizPanel = document.getElementById("quiz_panel");
 const quizExitBtn = document.getElementById("quiz_exit_btn");
@@ -59,20 +59,20 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
 rulesBtn.addEventListener("click", () => rulesPanel.classList.add("show"));
 leaderboard_btn.addEventListener("click", () => showLeaderboard());
 exitBtn.addEventListener("click", () => rulesPanel.classList.remove("show"));
-startBtn.addEventListener("click", () => difficulty.classList.add("show"));
+startBtn.addEventListener("click", () => difficultyPanel.classList.add("show"));
 diffExitBtn.addEventListener("click", () =>
-  difficulty.classList.remove("show")
+  difficultyPanel.classList.remove("show")
 );
 rulesStartBtn.addEventListener("click", () => {
   rulesPanel.classList.remove("show");
-  difficulty.classList.add("show");
+  difficultyPanel.classList.add("show");
 });
 
 // Start quiz from leaderboard
 leaderStart.addEventListener("click", () => {
   resetQuiz();
   resultsPanel.classList.remove("show");
-  difficulty.classList.add("show");
+  difficultyPanel.classList.add("show");
 });
 
 // Quit from leaderboard
@@ -87,6 +87,20 @@ quizExitBtn.addEventListener("click", () => {
   resetQuiz(); // Reset quiz state
   quizPanel.classList.remove("show"); // Hide quiz panel
   infoPanel.classList.add("show"); // Show home panel
+});
+
+// Add event listener for quitting the quiz from results panel
+quitQuiz.addEventListener("click", () => {
+  resetQuiz(); // Reset quiz state
+  resultsPanel.classList.remove("show"); // Hide results panel
+  infoPanel.classList.add("show"); // Show home panel
+});
+
+// Add event listener for restarting the quiz from results panel
+restartQuiz.addEventListener("click", () => {
+  resetQuiz(); // Reset quiz state
+  resultsPanel.classList.remove("show"); // Hide results panel
+  difficultyPanel.classList.add("show"); // Show difficulty selection
 });
 
 // API call function (Fetches quiz data from the selected difficulty)
@@ -120,7 +134,7 @@ async function apiCall() {
 
 // Hides the difficulty selection panel once a level is selected
 function hideDifficultyPanel() {
-  difficulty.classList.remove("show");
+  difficultyPanel.classList.remove("show");
 }
 
 // Shows the quiz panel when the game starts
