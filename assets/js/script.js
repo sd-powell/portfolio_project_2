@@ -107,6 +107,8 @@ restartQuiz.addEventListener("click", () => {
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
 async function apiCall() {
   try {
+    questionCount = 1; // Reset question count when a new quiz starts
+    questionNo.innerText = `${questionCount}`; // Update UI
     const response = await fetch(apiAddress);
 
     // Check if response is okay (status code 200-299)
