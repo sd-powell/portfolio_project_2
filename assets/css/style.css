@@ -27,9 +27,10 @@
 
 body {
     /************ Background images ************/
-    background: var(--background-color) url(../images/pop-quiz-background-390px.svg) no-repeat left -24px top -27px;
+    /* background-color: var(--background-color); */
+    /* background: var(--background-color) url(../images/pop-quiz-background-390px.svg) no-repeat left -24px top -27px; */
     /* background-size: 405px auto; */
-    background-size: cover;
+    /* background-size: cover; */
     /*
     background-image: url(../images/lightbulb-silversoul.svg),
     url(../images/pop-quiz.svg),
@@ -121,13 +122,13 @@ overflow:hidden;
 }
 
 #info_panel,
-#error_panel {
+#error_panel,
+#rules_panel {
     padding: 18px 18px;
 }
 
 #rules_panel {
     list-style-position: inside;
-    padding: 18px 18px;
     transition: all 0.3s ease;
     display: none;
 }
@@ -501,3 +502,121 @@ button {
     0% { transform: rotate(-2deg); }
     100% { transform: rotate(2deg); }
   }
+
+  /************ Media Queries ************/
+
+  /************ Desktop View ************/
+  @media screen and (min-width: 768px) {
+    /* Change the background images */
+    body {
+        background-color: var(--background-color);
+        background-image: url(../images/pop-quiz.svg), url(../images/lightbulb-silversoul.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: center top 10px, left -35px top -60px;
+        background-size: 450px auto, 450px auto;
+    }
+    /* Increase the width of content containers */
+    #info_panel,
+    #rules_panel,
+    #quiz_panel,
+    #difficulty_panel,
+    #results_panel,
+    #leaderboard_panel,
+    #error_panel {
+        width: 60%;
+        max-width: 600px;
+        min-height: 550px;
+    }
+
+    #info_panel,
+    #rules_panel,
+    #difficulty_panel,
+    #results_panel {
+        padding: 30px; 
+    }
+
+    #quiz_questions {
+        padding: 20px 30px 0px 30px;
+    }
+
+    /* Adjust text for better readability */
+    h2 {
+        font-size: 2.5rem;
+        padding-bottom: 22px;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    #rules_panel li {
+        font-size: 1.4rem;
+        padding: 10px 40px 10px 70px;
+        margin-bottom: 25px;
+    }
+
+    #rules_panel li::before {
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.3rem;
+    }
+
+    #question_title {
+        font-size: 1.6rem;
+        min-height: 90px;
+    }
+
+    .question_total {
+        padding: 18px 30px 18px 30px;
+    }
+
+    #quiz_footer {
+        height: 80px;
+        padding: 18px 30px;
+    }
+
+    /* Improve button spacing */
+    button {
+    font-size: 1.4rem;
+    padding: 8px 25px;
+    font-weight: 700;
+    }
+
+    .answer_btn {
+        font-size: 1.3rem;
+        min-height: 55px;
+        padding: 10px 50px;
+        margin: 18px 0;
+    }
+
+    /* Adjust leaderboard spacing */
+    #high_scores {
+        margin-bottom: 25px;
+    
+      }
+      
+      #high_scores th, #high_scores td {
+        font-size: 1.4rem;
+        padding: 8px;
+      }
+
+      .answer_btn::after {
+        right: 55px;
+    }
+
+      /* Adds tick to button with correct answer */
+.answer_btn[data-correct="true"]::after {
+    font-size: 1.5rem;
+  }
+
+/* Adds cross to button with incorrect answer */
+  .answer_btn.incorrect::after {
+    font-size: 1.5rem;  
+  }
+}
