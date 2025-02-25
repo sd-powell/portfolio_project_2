@@ -498,22 +498,36 @@ button {
 /************ Effects ************/
 
 /************ Shake animation for error panel ************/
-  @keyframes shake {
+@keyframes shake {
     0% { transform: rotate(-2deg); }
     100% { transform: rotate(2deg); }
-  }
+}
 
-  /************ Media Queries ************/
+/************ Media Queries ************/
 
-  /************ Desktop View ************/
-  @media screen and (min-width: 768px) {
+/* Mobile devices less than 500px */
+@media (max-width: 500px) {
+    /* Change the background images */
+    body {
+        background-color: var(--background-color);
+        background-image: url(../images/pop-quiz-background-390px.svg);
+        background-repeat: no-repeat;
+        background-position: left -24px top -27px;
+        background-size: cover;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
     /* Change the background images */
     body {
         background-color: var(--background-color);
         background-image: url(../images/pop-quiz.svg), url(../images/lightbulb-silversoul.svg);
         background-repeat: no-repeat, no-repeat;
-        background-position: center top 10px, left -35px top -60px;
-        background-size: 450px auto, 450px auto;
+        background-position: center top 20px, left -25px top -40px;
+        /* background-position: center top 10px, left -35px top -60px; */
+        background-size: 350px auto, 300px auto;
+        /* background-size: 450px auto, 450px auto; */
     }
     /* Increase the width of content containers */
     #info_panel,
@@ -525,7 +539,7 @@ button {
     #error_panel {
         width: 60%;
         max-width: 600px;
-        min-height: 550px;
+        min-height: 600px;
     }
 
     #info_panel,
