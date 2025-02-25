@@ -5,7 +5,6 @@ let questionCount = 1;
 let score = 0;
 let correctAnswer;
 let selectedAnswer;
-let acceptAnswers = true;
 let scoreCount = document.getElementById("score_total");
 let apiAddress;
 let timerDisplay;
@@ -22,6 +21,7 @@ const quizAPIs = {
 };
 
 // Declare UI elements for interaction
+const infoPanel = document.getElementById("info_panel");
 const start_btn = document.getElementById("start_btn");
 const leaderboard_btn = document.getElementById("leaderboard_btn");
 const rules_btn = document.getElementById("rules_btn");
@@ -40,7 +40,7 @@ const userName = document.getElementById("user_name");
 const submitScore = document.getElementById("submit_score");
 const quitQuiz = document.getElementById("quit_quiz");
 const restartQuiz = document.getElementById("restart_quiz");
-const highScore = document.getElementById("high_scores");
+const leaderboardPanel = document.getElementById("leaderboard_panel");
 const leaderStart = document.getElementById("leaderboard_start");
 const leaderQuit = document.getElementById("leaderboard_quit");
 
@@ -59,7 +59,7 @@ leaderboard_btn.addEventListener("click", () => showLeaderboard());
 exit_btn.addEventListener("click", () => openRules.classList.remove("show"));
 start_btn.addEventListener("click", () => difficulty.classList.add("show"));
 rules_start_btn.addEventListener("click", () => {
-  rules_panel.classList.remove("show");
+  openRules.classList.remove("show");
   difficulty.classList.add("show");
 });
 
@@ -72,8 +72,8 @@ leaderStart.addEventListener("click", () => {
 
 // Quit from leaderboard
 leaderQuit.addEventListener("click", function () {
-  leaderboard_panel.classList.remove("show");
-  info_panel.classList.add("show");
+  leaderboardPanel.classList.remove("show");
+  infoPanel.classList.add("show");
   resetQuiz();
 });
 
@@ -283,14 +283,12 @@ function saveHighScore() {
 
   // Show leaderboard panel
   showLeaderboard();
-
-  resolve();
 }
 
 // Function to show leaderboard and populate scores
 function showLeaderboard() {
   resultsPanel.classList.remove("show");
-  leaderboard_panel.classList.add("show");
+  leaderboardPanel.classList.add("show");
 
   const highScoresTable = document.querySelector("#high_scores tbody");
   highScoresTable.innerHTML = ""; // Clear existing scores
@@ -338,7 +336,7 @@ function resetQuiz() {
   // Hide quiz and results panel
   quizPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
-  leaderboard_panel.classList.remove("show");
+  leaderboardPanel.classList.remove("show");
 }
 
 // Timer function
