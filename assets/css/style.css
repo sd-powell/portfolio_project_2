@@ -27,7 +27,6 @@
 
 body {
   /************ Background images ************/
-  /* background-color: var(--background-color); */
   background-color: var(--background-color);
   background-image: url(../images/pop-quiz.svg),
     url(../images/lightbulb-silversoul.svg);
@@ -135,38 +134,28 @@ button {
 
 #info_panel,
 #error_panel,
-#rules_panel {
+#rules_panel,
+#difficulty_panel,
+#leaderboard_panel,
+#results_panel {
   padding: 18px 18px;
 }
 
-#rules_panel {
+#rules_panel,
+#quiz_panel,
+#difficulty_panel,
+#results_panel,
+#leaderboard_panel {
   transition: all 0.3s ease;
   display: none;
 }
 
-#quiz_panel {
-  display: none;
-}
-
-#difficulty_panel {
-  padding: 18px 18px;
-  display: none;
-}
-
 #results_panel {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: 350px;
-  /* gap: 20px; */
-  padding: 18px 18px;
-  display: none;
-}
-
-#leaderboard_panel {
-  padding: 18px 18px;
-  display: none;
 }
 
 #rules_panel.show,
@@ -722,6 +711,17 @@ button {
 
 /* Extra large devices (large laptops and desktops, 1700px and up) */
 @media only screen and (min-width: 1700px) {
+  body {
+    background-color: var(--background-color);
+    background-image: url(../images/pop-quiz.svg),
+      url(../images/lightbulb-silversoul.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top 20px, left -35px top -55px;
+    /* background-position: center top 10px, left -35px top -60px; */
+    background-size: 450px auto, 450px auto;
+    /* background-size: 450px auto, 450px auto; */
+  }
+
   h2 {
     font-size: 2.5rem;
     letter-spacing: 1px;
