@@ -69,7 +69,7 @@ button {
 
 #info_panel p,
 #difficulty_panel p {
-  margin-bottom: 22px;
+  margin-bottom: 12px;
   line-height: 1.4;
   text-wrap: balance;
 }
@@ -111,7 +111,7 @@ button {
   transform: translateX(-50%);
   width: 350px;
   height: auto;
-  min-height: 400px;
+  min-height: 450px;
   border-radius: 8px;
   background-color: var(--window-color);
   display: flex;
@@ -128,7 +128,6 @@ button {
 }
 
 #rules_panel {
-  list-style-position: inside;
   transition: all 0.3s ease;
   display: none;
 }
@@ -158,10 +157,14 @@ button {
 }
 
 #rules_panel.show,
-#difficulty_panel.show,
-#quiz_panel.show,
 #results_panel.show,
-#leaderboard_panel.show {
+#leaderboard_panel.show,
+#difficulty_panel.show {
+  display: flex;
+  z-index: 5;
+}
+
+#quiz_panel.show {
   display: block;
   z-index: 5;
 }
@@ -230,14 +233,14 @@ button {
 }
 
 #quiz_questions {
-  padding: 16px 18px 0px 18px;
+  padding: 12px 18px 0px 18px;
 }
 
 #question_title {
   font-family: var(--primary-font);
   font-size: 19px;
   text-wrap: balance;
-  min-height: 66px;
+  min-height: 92px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -269,7 +272,7 @@ button {
   height: auto;
   min-height: 55px;
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding: 8px 25px 8px 55px;
   word-wrap: break-word;
   white-space: normal;
@@ -376,7 +379,8 @@ button {
 #high_scores th,
 #high_scores td {
   font-family: var(--secondary-font);
-  padding: 5px;
+  font-size: 1rem;
+  padding: 3px;
   text-align: center;
   border: 2px solid var(--highlight-blue);
 }
@@ -443,7 +447,7 @@ button {
   min-height: 45px;
   height: auto;
   text-align: center;
-  margin: 15px 0;
+  margin: 12px 0;
   padding: 8px 40px;
   word-wrap: break-word;
   white-space: normal;
@@ -452,6 +456,10 @@ button {
 #difficulty_panel .answer_btn {
   padding: 12px;
   text-align: left;
+}
+
+.difficulty_btn {
+  width: 100%;
 }
 
 .nextQuestion_btn {
