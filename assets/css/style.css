@@ -620,23 +620,28 @@ button {
     font-size: 1.3rem;
   }
 
+  #difficulty_panel p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
   #difficulty_panel h2 {
     font-size: 2.3rem;
-    padding: 0 15px 22px 15px;
+    padding: 0 15px 15px 15px;
   }
 
   #info_panel h2 {
     padding: 0 22px 22px 22px;
   }
 
-  .difficulty_btn {
+  /* .difficulty_btn {
     padding-bottom: 32px;
-  }
+  } */
 
   #rules_panel li {
-    font-size: 1.2rem;
     padding: 10px 40px 10px 70px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    justify-content: left;
   }
 
   #rules_panel li::before {
@@ -680,8 +685,8 @@ button {
 
   #high_scores th,
   #high_scores td {
-    font-size: 1.1rem;
-    padding: 6.5px;
+    font-size: 0.9rem;
+    padding: 4.5px;
   }
 
   .answer_btn::after {
@@ -711,7 +716,7 @@ button {
   #error_panel {
     width: 60%;
     max-width: 600px;
-    min-height: 500px;
+    min-height: 600px;
   }
 }
 
@@ -754,5 +759,114 @@ button {
   #high_scores td {
     font-size: 1.4rem;
     padding: 8px;
+  }
+
+  #high_scores th,
+  #high_scores td {
+    font-size: 1.1rem;
+    padding: 6.5px;
+  }
+
+  #rules_panel li {
+    font-size: 1.2rem;
+    padding: 10px 40px 10px 70px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 850px) and (max-height: 390px) {
+  body {
+    background-color: var(--background-color);
+    background-image: url(../images/pop-quiz.svg),
+      url(../images/lightbulb-silversoul.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 10px top 20px, left -25px top -40px;
+    /* background-position: center top 10px, left -35px top -60px; */
+    background-size: 300px auto, 300px auto;
+    /* background-size: 450px auto, 450px auto; */
+  }
+  #info_panel,
+  #rules_panel,
+  #quiz_panel,
+  #difficulty_panel,
+  #results_panel,
+  #leaderboard_panel,
+  #error_panel {
+    top: 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-height: 870px) {
+  /* Change the background images */
+  body {
+    background-color: var(--background-color);
+    background-image: url(../images/pop-quiz.svg),
+      url(../images/lightbulb-silversoul.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 10px top 20px, left -25px top -40px;
+    /* background-position: center top 10px, left -35px top -60px; */
+    background-size: 300px auto, 300px auto;
+    /* background-size: 450px auto, 450px auto; */
+  }
+  #info_panel,
+  #rules_panel,
+  #quiz_panel,
+  #difficulty_panel,
+  #results_panel,
+  #leaderboard_panel,
+  #error_panel {
+    top: 10%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  #info_panel p,
+  #difficulty_panel p {
+    padding: 0 20px 0 20px;
+    font-size: 1.55rem;
+    margin-bottom: 22px;
+  }
+
+  #info_panel h2,
+  #difficulty_panel h2 {
+    padding: 0 22px 22px 22px;
+  }
+
+  .difficulty_btn {
+    padding-bottom: 32px;
+  }
+
+  #rules_panel li {
+    font-size: 1.3rem;
+    padding: 10px 40px 10px 70px;
+    margin-bottom: 25px;
+  }
+
+  /* Improve button spacing */
+  button {
+    font-size: 1.4rem;
+    padding: 8px 25px;
+    font-weight: 700;
+  }
+
+  #high_scores th,
+  #high_scores td {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+
+  #high_scores th,
+  #high_scores td {
+    font-size: 1.1rem;
+    padding: 6.5px;
+  }
+
+  #rules_panel li {
+    font-size: 1.2rem;
+    padding: 10px 40px 10px 70px;
+    margin-bottom: 15px;
   }
 }
