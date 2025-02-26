@@ -28,6 +28,14 @@
 body {
   /************ Background images ************/
   /* background-color: var(--background-color); */
+  background-color: var(--background-color);
+  background-image: url(../images/pop-quiz.svg),
+    url(../images/lightbulb-silversoul.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top 20px, left -25px top -40px;
+  /* background-position: center top 10px, left -35px top -60px; */
+  background-size: 350px auto, 300px auto;
+  /* background-size: 450px auto, 450px auto; */
   /* background: var(--background-color) url(../images/pop-quiz-background-390px.svg) no-repeat left -24px top -27px; */
   /* background-size: 405px auto; */
   /* background-size: cover; */
@@ -65,6 +73,10 @@ ol {
 
 button {
   font-family: var(--secondary-font);
+}
+
+#info_panel p {
+  font-size: 1.1rem;
 }
 
 #info_panel p,
@@ -146,7 +158,8 @@ button {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  min-height: 350px;
+  /* gap: 20px; */
   padding: 18px 18px;
   display: none;
 }
@@ -578,7 +591,8 @@ button {
   #info_panel,
   #rules_panel,
   #difficulty_panel,
-  #results_panel {
+  #results_panel,
+  #leaderboard_panel {
     padding: 30px;
   }
 
@@ -588,7 +602,7 @@ button {
 
   /* Adjust text for better readability */
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     letter-spacing: 1px;
   }
 
@@ -600,10 +614,29 @@ button {
     font-size: 1.4rem;
   }
 
+  #info_panel p,
+  #difficulty_panel p {
+    padding: 0 20px 0 20px;
+    font-size: 1.3rem;
+  }
+
+  #difficulty_panel h2 {
+    font-size: 2.3rem;
+    padding: 0 15px 22px 15px;
+  }
+
+  #info_panel h2 {
+    padding: 0 22px 22px 22px;
+  }
+
+  .difficulty_btn {
+    padding-bottom: 32px;
+  }
+
   #rules_panel li {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 10px 40px 10px 70px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   #rules_panel li::before {
@@ -615,7 +648,7 @@ button {
 
   #question_title {
     font-size: 1.6rem;
-    min-height: 90px;
+    min-height: 120px;
   }
 
   .question_total {
@@ -630,7 +663,6 @@ button {
   /* Improve button spacing */
   button {
     font-size: 1.4rem;
-    padding: 8px 25px;
     font-weight: 700;
   }
 
@@ -643,13 +675,13 @@ button {
 
   /* Adjust leaderboard spacing */
   #high_scores {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   #high_scores th,
   #high_scores td {
-    font-size: 1.4rem;
-    padding: 8px;
+    font-size: 1.1rem;
+    padding: 6.5px;
   }
 
   .answer_btn::after {
@@ -669,6 +701,27 @@ button {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* Increase the width of content containers */
+  #info_panel,
+  #rules_panel,
+  #quiz_panel,
+  #difficulty_panel,
+  #results_panel,
+  #leaderboard_panel,
+  #error_panel {
+    width: 60%;
+    max-width: 600px;
+    min-height: 500px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
   #info_panel p,
   #difficulty_panel p {
     padding: 0 20px 0 20px;
@@ -682,5 +735,24 @@ button {
 
   .difficulty_btn {
     padding-bottom: 32px;
+  }
+
+  #rules_panel li {
+    font-size: 1.3rem;
+    padding: 10px 40px 10px 70px;
+    margin-bottom: 25px;
+  }
+
+  /* Improve button spacing */
+  button {
+    font-size: 1.4rem;
+    padding: 8px 25px;
+    font-weight: 700;
+  }
+
+  #high_scores th,
+  #high_scores td {
+    font-size: 1.4rem;
+    padding: 8px;
   }
 }
