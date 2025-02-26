@@ -32,20 +32,7 @@ body {
     url(../images/lightbulb-silversoul.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: center top 20px, left -25px top -40px;
-  /* background-position: center top 10px, left -35px top -60px; */
   background-size: 350px auto, 300px auto;
-  /* background-size: 450px auto, 450px auto; */
-  /* background: var(--background-color) url(../images/pop-quiz-background-390px.svg) no-repeat left -24px top -27px; */
-  /* background-size: 405px auto; */
-  /* background-size: cover; */
-  /*
-    background-image: url(../images/lightbulb-silversoul.svg),
-    url(../images/pop-quiz.svg),
-    url(../images/bg-template-welcome.png);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left -16px top -22px, right -13px top 24px, top center;
-    background-size: 210px auto, 270px auto, 390px auto;
-    */
   color: white;
 }
 
@@ -419,20 +406,18 @@ button {
   flex: none;
 }
 
-/************ Button styling ************/
-
 .outline_btn {
   background: transparent;
   border: 2px solid var(--highlight-blue);
   color: var(--highlight-blue);
-  transition: background 0.3s ease, color 0.3s ease;
+  /* transition: background 0.3s ease, color 0.3s ease; */
 }
 
 .reverse_btn {
   background: var(--highlight-blue);
   color: var(--background-color);
   border: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  /* transition: background 0.3s ease, color 0.3s ease; */
 }
 
 .answer_btn {
