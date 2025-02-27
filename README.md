@@ -80,7 +80,7 @@ The site's color scheme draws inspiration from the vibrant neon lights of a 1970
 
 The primary colours for the site are
 
-To enhance user engagement and guide attention to important areas, I incorporated distinct highlight colors:
+To boost user engagement and draw attention to key areas, I selected distinct highlight colors that complemented the background visuals. These colors were defined as root variables in my CSS file, allowing for effortless adjustments across the site.
 
 - `4f9aff` (Bright Blue): Used to emphasize key UI elements, drawing user focus to interactive components.
 - `e83c5a` (Red): Clearly signals an incorrect answer, creating an instant visual cue for mistakes.
@@ -122,4 +122,41 @@ I chose neon imagery for my site because it’s a pop quiz, and I wanted to refl
 
 ### Wireframes
 
-Wireframes for mobile, tablet, and desktop views were created using [Balsamiq](https://balsamiq.com/). These wireframes helped map out the structure and layout of the site, ensuring a seamless user experience across all devices. The design process focused on responsive layout adjustments to provide an intuitive interface for users on various screen sizes.
+Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, tablet, and desktop views. These wireframes played a crucial role in outlining the site’s structure and layout, ensuring a smooth user experience across different devices. The design process prioritized responsive adjustments to create an intuitive interface that adapts seamlessly to various screen sizes.
+
+<a id=mobile-frames></a>
+
+#### Mobile Wireframes
+
+<details>
+<summary> Click here to see the Mobile Wireframe </summary>
+
+- Home page wireframe
+
+![Home](documentation/mobile-wireframe-info.webp)
+
+- Rules page wireframe
+
+![About](documentation/mobile-wireframe-rules.webp)
+
+- Difficulty page wireframe
+
+![Booking](documentation/mobile-wireframe-difficulty.webp)
+
+- Quiz page wireframe
+
+![Success](documentation/mobile-wireframe-quiz.webp)
+
+- Results page wireframe
+
+![Success](documentation/mobile-wireframe-results.webp)
+
+- 404 page wireframe
+
+![404](documentation/mobile-wireframe-404.webp)
+
+- 500 page wireframe
+
+![404](documentation/mobile-wireframe-500.webp)
+
+</details>
