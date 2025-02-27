@@ -160,3 +160,40 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 ![404](documentation/mobile-wireframe-500.webp)
 
 </details>
+
+<a id=tablet-frames></a>
+
+#### Tablet Wireframes
+
+<details>
+<summary> Click here to see the Tablet Wireframe </summary>
+
+- Home page wireframe
+
+![Home](documentation/tablet-wireframe-info.webp)
+
+- Rules page wireframe
+
+![About](documentation/tablet-wireframe-rules.webp)
+
+- Difficulty page wireframe
+
+![Booking](documentation/tablet-wireframe-difficulty.webp)
+
+- Quiz page wireframe
+
+![Success](documentation/tablet-wireframe-quiz.webp)
+
+- Results page wireframe
+
+![404](documentation/tablet-wireframe-results.webp)
+
+- 404 page wireframe
+
+![404](documentation/tablet-wireframe-404.webp)
+
+- 500 page wireframe
+
+![404](documentation/tablet-wireframe-500.webp)
+
+ </details>
