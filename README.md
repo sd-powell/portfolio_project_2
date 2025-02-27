@@ -129,39 +129,19 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 #### Mobile Wireframes
 
 <details>
-<summary> Click here to see the Mobile Wireframe </summary>
+<summary> Click here to see the Mobile Wireframes </summary>
 
-- Home page wireframe
+|                Home page wireframe                |                Rules page wireframe                 |                   Leaderboard page wireframe                    |
+| :-----------------------------------------------: | :-------------------------------------------------: | :-------------------------------------------------------------: |
+| ![Home](documentation/mobile-wireframe-info.webp) | ![Rules](documentation/mobile-wireframe-rules.webp) | ![Leaderboard](documentation/mobile-wireframe-leaderboard.webp) |
 
-![Home](documentation/mobile-wireframe-info.webp)
+|                   Difficulty page wireframe                   |                Quiz page wireframe                |                 Results page wireframe                  |
+| :-----------------------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------------------: |
+| ![Difficulty](documentation/mobile-wireframe-difficulty.webp) | ![Quiz](documentation/mobile-wireframe-quiz.webp) | ![Results](documentation/mobile-wireframe-results.webp) |
 
-- Rules page wireframe
-
-![Rules](documentation/mobile-wireframe-rules.webp)
-
-- Leaderboard page wireframe
-
-![Leaderboard](documentation/mobile-wireframe-leaderboard.webp)
-
-- Difficulty page wireframe
-
-![Difficulty](documentation/mobile-wireframe-difficulty.webp)
-
-- Quiz page wireframe
-
-![Quiz](documentation/mobile-wireframe-quiz.webp)
-
-- Results page wireframe
-
-![Results](documentation/mobile-wireframe-results.webp)
-
-- 404 page wireframe
-
-![404](documentation/mobile-wireframe-404.webp)
-
-- 500 page wireframe
-
-![500](documentation/mobile-wireframe-500.webp)
+|               404 page wireframe                |               500 page wireframe                |
+| :---------------------------------------------: | :---------------------------------------------: |
+| ![404](documentation/mobile-wireframe-404.webp) | ![500](documentation/mobile-wireframe-500.webp) |
 
 </details>
 
@@ -170,39 +150,23 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 #### Tablet Wireframes
 
 <details>
-<summary> Click here to see the Tablet Wireframe </summary>
+<summary> Click here to see the Tablet Wireframes </summary>
 
-- Home page wireframe
+|                Home page wireframe                |                Rules page wireframe                 |
+| :-----------------------------------------------: | :-------------------------------------------------: |
+| ![Home](documentation/tablet-wireframe-info.webp) | ![Rules](documentation/tablet-wireframe-rules.webp) |
 
-![Home](documentation/tablet-wireframe-info.webp)
+|                   Leaderboard page wireframe                    |                   Difficulty page wireframe                   |
+| :-------------------------------------------------------------: | :-----------------------------------------------------------: |
+| ![Leaderboard](documentation/tablet-wireframe-leaderboard.webp) | ![Difficulty](documentation/tablet-wireframe-difficulty.webp) |
 
-- Rules page wireframe
+|                Quiz page wireframe                |                 Results page wireframe                  |
+| :-----------------------------------------------: | :-----------------------------------------------------: |
+| ![Quiz](documentation/tablet-wireframe-quiz.webp) | ![Results](documentation/tablet-wireframe-results.webp) |
 
-![Rules](documentation/tablet-wireframe-rules.webp)
-
-- Leaderboard page wireframe
-
-![Leaderboard](documentation/tablet-wireframe-leaderboard.webp)
-
-- Difficulty page wireframe
-
-![Difficulty](documentation/tablet-wireframe-difficulty.webp)
-
-- Quiz page wireframe
-
-![Quiz](documentation/tablet-wireframe-quiz.webp)
-
-- Results page wireframe
-
-![Results](documentation/tablet-wireframe-results.webp)
-
-- 404 page wireframe
-
-![404](documentation/tablet-wireframe-404.webp)
-
-- 500 page wireframe
-
-![500](documentation/tablet-wireframe-500.webp)
+|               404 page wireframe                |               500 page wireframe                |
+| :---------------------------------------------: | :---------------------------------------------: |
+| ![404](documentation/tablet-wireframe-404.webp) | ![500](documentation/tablet-wireframe-500.webp) |
 
  </details>
 
@@ -357,13 +321,15 @@ To clone the repository:
 
 <a id=Credits&inspiration></a>
 
-### Credits & Inspiration
+## Credits & Inspiration
 
 - This [YouTube tutorial](https://www.youtube.com/watch?v=xZXW5SnCiWI&t=2918s) was incredibly helpful in shaping the key features of my quiz. It provided valuable insights into concepts like hiding and displaying panels, implementing a timer, and showing correct and incorrect answers after a response. These elements not only enhanced my understanding but also gave me the confidence to develop my own features.
 
 - I watched [This YouTube tutorial](https://www.youtube.com/watch?v=UY6AeR_M_dU) to learn how to use the [Open Trivia API](https://opentdb.com/) in my project.
 
 - I took inspiration from [myfitnesspal](https://www.myfitnesspal.com/) for the colours and interface design for my site.
+
+- This post on [Stack Overflow](https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file) helped me to understand markdown tables and positioning.
 
 <a id=content></a>
 
@@ -388,5 +354,7 @@ I would like to acknowledge the following people:
 - [Jubril Akolade](https://github.com/Jubrillionaire) - My Code Institute Mentor.
 
 - Ax de Klerk, Jordan Acomba & Robert Lewis - My fellow Code Institute cohort, who helped each other over the course of our milestone projects.
+
+- The quiz fans in my family for helping me test my site .
 
 - The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to view my site and look over the code.
