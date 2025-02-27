@@ -137,19 +137,23 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 
 - Rules page wireframe
 
-![About](documentation/mobile-wireframe-rules.webp)
+![Rules](documentation/mobile-wireframe-rules.webp)
+
+- Leaderboard page wireframe
+
+![Leaderboard](documentation/mobile-wireframe-leaderboard.webp)
 
 - Difficulty page wireframe
 
-![Booking](documentation/mobile-wireframe-difficulty.webp)
+![Difficulty](documentation/mobile-wireframe-difficulty.webp)
 
 - Quiz page wireframe
 
-![Success](documentation/mobile-wireframe-quiz.webp)
+![Quiz](documentation/mobile-wireframe-quiz.webp)
 
 - Results page wireframe
 
-![Success](documentation/mobile-wireframe-results.webp)
+![Results](documentation/mobile-wireframe-results.webp)
 
 - 404 page wireframe
 
@@ -157,7 +161,7 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 
 - 500 page wireframe
 
-![404](documentation/mobile-wireframe-500.webp)
+![500](documentation/mobile-wireframe-500.webp)
 
 </details>
 
@@ -174,19 +178,23 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 
 - Rules page wireframe
 
-![About](documentation/tablet-wireframe-rules.webp)
+![Rules](documentation/tablet-wireframe-rules.webp)
+
+- Leaderboard page wireframe
+
+![Leaderboard](documentation/tablet-wireframe-leaderboard.webp)
 
 - Difficulty page wireframe
 
-![Booking](documentation/tablet-wireframe-difficulty.webp)
+![Difficulty](documentation/tablet-wireframe-difficulty.webp)
 
 - Quiz page wireframe
 
-![Success](documentation/tablet-wireframe-quiz.webp)
+![Quiz](documentation/tablet-wireframe-quiz.webp)
 
 - Results page wireframe
 
-![404](documentation/tablet-wireframe-results.webp)
+![Results](documentation/tablet-wireframe-results.webp)
 
 - 404 page wireframe
 
@@ -194,6 +202,47 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 
 - 500 page wireframe
 
-![404](documentation/tablet-wireframe-500.webp)
+![500](documentation/tablet-wireframe-500.webp)
+
+ </details>
+
+<a id=desktop-frames></a>
+
+#### Desktop Wireframes
+
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
+
+- Home page wireframe
+
+![Home](documentation/desktop-wireframe-info.webp)
+
+- Rules page wireframe
+
+![Rules](documentation/desktop-wireframe-rules.webp)
+
+- Leaderboard page wireframe
+
+![Leaderboard](documentation/desktop-wireframe-leaderboard.webp)
+
+- Difficulty page wireframe
+
+![Difficulty](documentation/desktop-wireframe-difficulty.webp)
+
+- Quiz page wireframe
+
+![Quiz](documentation/desktop-wireframe-quiz.webp)
+
+- Results page wireframe
+
+![Success](documentation/desktop-wireframe-results.webp)
+
+- 404 page wireframe
+
+![404](documentation/desktop-wireframe-404.webp)
+
+- 500 page wireframe
+
+![500](documentation/desktop-wireframe-500.webp)
 
  </details>
