@@ -354,3 +354,39 @@ To clone the repository:
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ---
+
+<a id=Credits&inspiration></a>
+
+### Credits & Inspiration
+
+- This [YouTube tutorial](https://www.youtube.com/watch?v=xZXW5SnCiWI&t=2918s) was incredibly helpful in shaping the key features of my quiz. It provided valuable insights into concepts like hiding and displaying panels, implementing a timer, and showing correct and incorrect answers after a response. These elements not only enhanced my understanding but also gave me the confidence to develop my own features.
+
+- I watched [This YouTube tutorial](https://www.youtube.com/watch?v=UY6AeR_M_dU) to learn how to use the [Open Trivia API](https://opentdb.com/) in my project.
+
+- I took inspiration from [myfitnesspal](https://www.myfitnesspal.com/) for the colours and interface design for my site.
+
+<a id=content></a>
+
+### Content
+
+Every question on my site was sourced via the API from [The Open Trivia Database](https://opentdb.com/).
+
+All other content for the site is written by myself.
+
+<a id=media></a>
+
+### Media
+
+- [Adobe Stock](https://stock.adobe.com/) - Used to source royalty free imagery for the site.
+
+<a id=acknowledgement></a>
+
+### Acknowledgments
+
+I would like to acknowledge the following people:
+
+- [Jubril Akolade](https://github.com/Jubrillionaire) - My Code Institute Mentor.
+
+- Ax de Klerk, Jordan Acomba & Robert Lewis - My fellow Code Institute cohort, who helped each other over the course of our milestone projects.
+
+- The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to view my site and look over the code.
