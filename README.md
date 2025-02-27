@@ -228,6 +228,172 @@ All Pages on the website are responsive and have:
 
 </details>
 
+<a id=home-page-features></a>
+
+#### The Home Page
+
+<details>
+<summary> Click here to view the home page </summary>
+
+![Pop quiz home page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+
+</details>
+
+---
+
+The DJ Silver Soul Pop Quiz homepage is designed to provide an engaging and interactive experience for music trivia enthusiasts. Below is a breakdown of its key features and what they offer to the user:
+
+- What it does:
+  - Welcomes the user with a call-to-action: “Hit Start & Test Your Music Knowledge!”
+  - Briefly explains the game’s theme and objective.
+  - Encourages users to challenge themselves and aim for the leaderboard.
+- User Benefits:
+  - Sets an engaging and exciting tone for the quiz.
+  - Clearly communicates the purpose of the game.
+  - Provides a simple, intuitive starting point.
+- Interactive Elements:
+  - Rules Button: Allows users to read the quiz rules before playing.
+  - Leaderboard Button: Gives access to the leaderboard, showing top scores.
+  - Start Button: Begins the quiz immediately.
+
+The homepage effectively sets the stage for an exciting trivia experience. With intuitive navigation, dynamic difficulty selection, and interactive quiz panels, it provides an engaging, competitive, and replayable game that caters to all music fans.
+
+<a id=rules-page-features></a>
+
+#### The Rules Page
+
+<details>
+<summary> Click here to view the rules page </summary>
+
+![Pop quiz rules page shown in a variety of screen sizes](documentation/features-responsive-rules.webp)
+
+</details>
+
+---
+
+- What it does:
+  - Displays quiz rules in a modal window.
+  - Explains gameplay mechanics, such as difficulty selection, time limits, and scoring.
+  - Provides two options: Exit (back to home) or Start Quiz.
+- User Benefits:
+  - Ensures users understand the game mechanics before playing.
+  - Helps prevent confusion about time limits and scoring.
+  - Provides an easy way to return to the homepage.
+- Interactive Elements:
+  - Start Quiz Button: Begins the quiz immediately.
+  - Exit Button: Returns the user to the home page.
+
+<a id=leaderboard-page-features></a>
+
+#### The Leaderboard Page
+
+<details>
+<summary> Click here to view the leaderboard page </summary>
+
+![Pop quiz leaderboard page shown in a variety of screen sizes](documentation/features-responsive-leaderboard.webp)
+
+</details>
+
+---
+
+- What it does:
+  - Displays the Top 10 Highest Scores.
+  - Dynamically updates as new scores are submitted.
+  - Provides two options:
+    - Exit Button: Returns to the home page.
+    - Restart Quiz Button: Starts a new quiz session.
+- User Benefits:
+  - Encourages competition and replayability.
+  - Gives users a goal to aim for.
+  - Creates an engaging social aspect by comparing scores.
+- Interactive Elements:
+  - Exit Button: Returns the user to the home page.
+  - Restart Quiz Button: Starts a new quiz session.
+
+<a id=difficulty-page-features></a>
+
+#### The Difficulty Page
+
+<details>
+<summary> Click here to view the difficulty page </summary>
+
+![Pop quiz difficulty page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+
+</details>
+
+---
+
+- What it does:
+  - Allows users to select their preferred difficulty level.
+  - Offers three themed difficulty levels:
+    - 🎧 Easy: “The Warm-Up”
+    - 🔥 Medium: “Peak Time Questions”
+    - 🚀 Hard: “After Hours – For True Fans”
+  - Includes an Exit Button to return to the home page.
+- User Benefits:
+  - Lets players customize their experience based on their skill level.
+  - Adds variety and replayability.
+  - Clearly explains the differences between difficulty levels.
+- Interactive Elements:
+  - Easy Button: Offers users easier level questions.
+  - Medium Button: Offers users medium level questions.
+  - Hard Button: Offers users hard level questions.
+  - Exit Button: Returns the user to the home page.
+
+<a id=quiz-page-features></a>
+
+#### The Quiz Page
+
+<details>
+<summary> Click here to view the quiz page </summary>
+
+![Pop quiz page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+
+</details>
+
+---
+
+- What it does:
+  - Displays trivia questions dynamically from the API.
+  - Shows:
+    - Question number & total questions
+    - Countdown timer (15 seconds per question)
+    - Four multiple-choice answer options
+  - Users select an answer, and responses are immediately processed.
+  - Score is updated dynamically.
+- User Benefits:
+  - Fast-paced, interactive gameplay keeps users engaged.
+  - The countdown timer adds a challenge.
+  - Immediate feedback enhances the experience.
+  - The exit option ensures users have control over their session.
+- Navigation buttons:
+  - Exit Button: Allows users to leave at any time.
+  - Next Question Button: Moves to the next question (when an answer has been selected or the timer has ended).
+
+<a id=results-page-features></a>
+
+#### The Results Page
+
+<details>
+<summary> Click here to view the results page </summary>
+
+![Pop quiz results page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+
+</details>
+
+---
+
+- What it does:
+  - Displays the user’s final score.
+  - Encourages players to submit their name to the Top 10 Leaderboard.
+- User Benefits:
+  - Provides a satisfying conclusion to the quiz.
+  - Creates motivation for users to improve their scores.
+  - Allows users to replay instantly without navigating away.
+- Navigation buttons:
+  - Exit Button: Returns the user to the home page.
+  - Restart Quiz Button: Starts a new quiz session.
+
 <a id=404-page-features></a>
 
 #### The 404 Error Page
@@ -241,9 +407,10 @@ All Pages on the website are responsive and have:
 
 ---
 
-The 404 page displays a clear and engaging message to inform users that the requested page is unavailable or does not exist.
-
-- A link is provided to redirect the user back to the home page.
+- What it does:
+  - The 404 page displays a clear and engaging message to inform users that the requested page is unavailable or does not exist.
+- Navigation link:
+  - A link is provided to redirect the user back to the home page.
 
 The purpose of the 404 page is to capture any broken link errors and guide the user back to the home page.
 
@@ -260,9 +427,10 @@ The purpose of the 404 page is to capture any broken link errors and guide the u
 
 ---
 
-The 500 error page appears when there is an issue retrieving data from the Open Trivia Database API. It displays a message informing the user of the problem and provides a link to the home page, allowing them to reload the quiz.
-
-- A link is provided to redirect the user back to the home page.
+- What it does:
+  - The 500 error page appears when there is an issue retrieving data from the Open Trivia Database API. It displays a message informing the user of the problem and provides a link to the home page, allowing them to reload the quiz.
+- Navigation link:
+  - A link is provided to redirect the user back to the home page.
 
 The purpose of the 500 page is to capture any issues with API access and guide the user back to the home page.
 
