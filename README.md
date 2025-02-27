@@ -8,7 +8,7 @@ Visit the deployed site here:
 
 **DJ Silver Soul Pop Quiz** is an interactive, disco-themed music trivia game designed to test and entertain players with questions about popular music from past to present.
 
-Music quizzes boost memory, improve learning, and enhance critical thinking while triggering dopamine release for better mood and reduced stress. They also help keep the brain sharp, making them both fun and beneficial.
+Music quizzes enhance memory, support learning, and sharpen critical thinking. They also trigger dopamine release, improving mood and reducing stress. They also help keep the brain sharp, making them both fun and beneficial.
 
 The game features a fast-paced multiple-choice format where players race against the clock to answer questions and secure a spot on the leaderboard. This competitive element encourages replayability, motivating players to return and beat their own high scores.
 
@@ -228,6 +228,44 @@ All Pages on the website are responsive and have:
 
 </details>
 
+<a id=404-page-features></a>
+
+#### The 404 Error Page
+
+<details>
+<summary> Click here to view the 404 page </summary>
+
+![Pop quiz 404 page shown in a variety of screen sizes](documentation/features-responsive-404.webp)
+
+</details>
+
+---
+
+The 404 page displays a clear and engaging message to inform users that the requested page is unavailable or does not exist.
+
+- A link is provided to redirect the user back to the home page.
+
+The purpose of the 404 page is to capture any broken link errors and guide the user back to the home page.
+
+<a id=500-page-features></a>
+
+#### The 500 Error Page
+
+<details>
+<summary> Click here to view the 500 page </summary>
+
+![Pop quiz 500 page shown in a variety of screen sizes](documentation/features-responsive-500.webp)
+
+</details>
+
+---
+
+The 500 error page appears when there is an issue retrieving data from the Open Trivia Database API. It displays a message informing the user of the problem and provides a link to the home page, allowing them to reload the quiz.
+
+- A link is provided to redirect the user back to the home page.
+
+The purpose of the 500 page is to capture any issues with API access and guide the user back to the home page.
+
 ---
 
 <a id=technologies></a>
@@ -258,13 +296,15 @@ HTML, CSS, JavaScript
 
 - [Mobile First Plugin](https://www.webmobilefirst.com/en/) - Chrome plug-in used to test responsiveness of the site on different devices.
 
+- [Responsinator](http://www.responsinator.com/) - To show the website UI on a range of devices.
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) - Another site to show the website UI on a range of devices.
+
 - [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
 - [Font Awesome](https://fontawesome.com/) - Icon library toolkit for social media icons.
 
 - [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
-
-- [Am I Responsive?](http://ami.responsivedesign.is/) - To show the website image on a range of devices.
 
 - [Aria DevTools](https://github.com/ziolko/aria-devtools) - Used to view the website the way screen readers present it to blind users.
 
@@ -325,9 +365,9 @@ To clone the repository:
 
 - This [YouTube tutorial](https://www.youtube.com/watch?v=xZXW5SnCiWI&t=2918s) was incredibly helpful in shaping the key features of my quiz. It provided valuable insights into concepts like hiding and displaying panels, implementing a timer, and showing correct and incorrect answers after a response. These elements not only enhanced my understanding but also gave me the confidence to develop my own features.
 
-- I watched [This YouTube tutorial](https://www.youtube.com/watch?v=UY6AeR_M_dU) to learn how to use the [Open Trivia API](https://opentdb.com/) in my project.
+- Additionally, I watched [This YouTube tutorial](https://www.youtube.com/watch?v=UY6AeR_M_dU) to learn how to use the [Open Trivia API](https://opentdb.com/) in my project.
 
-- I took inspiration from [myfitnesspal](https://www.myfitnesspal.com/) for the colours and interface design for my site.
+- I drew inspiration from [MyFitnessPal](https://www.myfitnesspal.com/) for the site’s color scheme and interface design.
 
 - This post on [Stack Overflow](https://stackoverflow.com/questions/24127507/is-it-possible-to-center-tables-in-a-markdown-file) helped me to understand markdown tables and positioning.
 
@@ -355,6 +395,6 @@ I would like to acknowledge the following people:
 
 - Ax de Klerk, Jordan Acomba & Robert Lewis - My fellow Code Institute cohort, who helped each other over the course of our milestone projects.
 
-- The quiz fans in my family for helping me test my site .
+- The quiz fans in my family for helping me test my site.
 
 - The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to view my site and look over the code.
