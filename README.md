@@ -246,3 +246,111 @@ Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, t
 ![500](documentation/desktop-wireframe-500.webp)
 
  </details>
+
+<a id=features></a>
+
+### Features
+
+The website consists of a home page featuring a series of game panels that are dynamically shown or hidden based on the quiz stage, controlled by button interactions. Additionally, a 404 page manages invalid links, while a 500 error page is displayed if the API encounters a failure.
+
+All Pages on the website are responsive and have:
+
+- A favicon in the browser tab.
+
+<details>
+<summary> Click here to view the favicon </summary>
+
+![favicon](documentation/dj-silver-soul-favicon.webp)
+
+</details>
+
+---
+
+<a id=technologies></a>
+
+## Technologies Used
+
+<a id=languages></a>
+
+### Languages Used
+
+HTML, CSS, JavaScript
+
+<a id=frameworks></a>
+
+### Frameworks, Libraries & Programs Used
+
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes.
+
+- [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html) - Used to design the logo and create visuals.
+
+- [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Used to crop, resize, edit and save images to webp format.
+
+- [Git](https://git-scm.com/) - For version control.
+
+- [Github](https://github.com/) - To save and store the files for the website.
+
+- [Visual Studio Code](https://code.visualstudio.com/) - Code editor used to create the site.
+
+- [Mobile First Plugin](https://www.webmobilefirst.com/en/) - Chrome plug-in used to test responsiveness of the site on different devices.
+
+- [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+
+- [Font Awesome](https://fontawesome.com/) - Icon library toolkit for social media icons.
+
+- [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) - To show the website image on a range of devices.
+
+- [Aria DevTools](https://github.com/ziolko/aria-devtools) - Used to view the website the way screen readers present it to blind users.
+
+- [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
+
+---
+
+<a id=deployment-development></a>
+
+## Deployment & Local Development
+
+<a id=development></a>
+
+### Deployment
+
+The site is deployed using GitHub Pages - [Dj Silver Soul's Pop Quiz](https://sd-powell.github.io/portfolio_project_2/).
+
+To Deploy the site using GitHub Pages:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, [sd-powell/portfolio_project_2](https://github.com/sd-powell/portfolio_project_2).
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+<a id=local-development></a>
+
+### Local Development
+
+<a id=fork></a>
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [sd-powell/portfolio_project_2](https://github.com/sd-powell/portfolio_project_2).
+3. Click the Fork button in the top right corner.
+
+<a id=clone></a>
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [sd-powell/portfolio_project_2](https://github.com/sd-powell/portfolio_project_2).
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+---
