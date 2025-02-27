@@ -28,6 +28,39 @@ The game features a fast-paced multiple-choice format where players race against
     - [Mobile Wireframes](#mobile-frames)
     - [Tablet Wireframes](#tablet-frames)
     - [Desktop Wireframes](#desktop-frames)
+      - [Features](#features)
+      - [The Home Page](#home-page-features)
+      - [The Rules Page](#rules-page-features)
+      - [The Leaderboard Page](#leaderboard-page-features)
+      - [The Difficulty Page](#difficulty-page-features)
+      - [The Quiz Page](#quiz-page-features)
+      - [The Results Page](#results-page-features)
+      - [The 404 Page](#404-page-features)
+      - [The 500 Page](#500-page-features)
+      - [Future Implementations](#future-implementation)
+
+* [Technologies Used](#technologies)
+
+  - [Languages Used](#languages)
+  - [Frameworks, Libraries & Programs Used](#frameworks)
+
+* [Deployment & Local Development](#deployment-development)
+
+  - [Deployment](#development)
+  - [Local Development](#local-development)
+    - [How to Fork](#fork)
+    - [How to clone](#clone)
+
+* [Testing](#testing-readme)
+
+  - [Solved Issues & Bugs](#solved-issues)
+  - [Know Issues & Bugs](#known-issues)
+
+* [Credits](#credits)
+  - [Inspiration](#inspiration)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgement](#acknowledgement)
 
 ---
 
