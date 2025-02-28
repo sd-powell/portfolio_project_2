@@ -14,10 +14,10 @@ let timeLine;
 
 // Quiz API settings (Fetches quiz questions based on difficulty)
 const quizAPIs = {
-  easy: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
+  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
   medium:
-    "https://opentdb.com/api.php?amount=10&category=12&difficulty=medium&type=multiple",
-  hard: "https://opentdb.com/api.php?amount=10&category=12&difficulty=hard&type=multiple",
+    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
 };
 
 // Declare UI elements for interaction
@@ -40,7 +40,6 @@ const resultsPanel = document.getElementById("results_panel");
 const finalScore = document.getElementById("score_number");
 const userName = document.getElementById("user_name");
 const submitScore = document.getElementById("submit_score");
-const quitQuiz = document.getElementById("quit_quiz");
 const restartQuiz = document.getElementById("restart_quiz");
 const leaderboardPanel = document.getElementById("leaderboard_panel");
 const leaderStart = document.getElementById("leaderboard_start");
@@ -58,49 +57,30 @@ document.getElementById("difficulty_panel").addEventListener("click", (e) => {
 // Event listeners for opening and closing quiz panels
 rulesBtn.addEventListener("click", () => rulesPanel.classList.add("show"));
 leaderboard_btn.addEventListener("click", () => showLeaderboard());
-exitBtn.addEventListener("click", () => rulesPanel.classList.remove("show"));
-startBtn.addEventListener("click", () => difficultyPanel.classList.add("show"));
-diffExitBtn.addEventListener("click", () =>
-  difficultyPanel.classList.remove("show")
-);
-rulesStartBtn.addEventListener("click", () => {
-  rulesPanel.classList.remove("show");
-  difficultyPanel.classList.add("show");
-});
-leaderStart.addEventListener("click", restartFromLeaderboard);
-quitQuiz.addEventListener("click", quitToHome);
-restartQuiz.addEventListener("click", restartQuizSession);
-
-// Quit from leaderboard
-leaderQuit.addEventListener("click", function () {
-  leaderboardPanel.classList.remove("show");
-  infoPanel.classList.add("show");
-  resetQuiz();
-});
-
-// Add event listener for quitting the quiz
-quizExitBtn.addEventListener("click", () => {
-  resetQuiz(); // Reset quiz state
-  quizPanel.classList.remove("show"); // Hide quiz panel
-  infoPanel.classList.add("show"); // Show home panel
-});
-
-// Restart Quiz from Leaderboard
-function restartFromLeaderboard() {
-  resetQuiz();
-  resultsPanel.classList.remove("show");
-  difficultyPanel.classList.add("show");
-}
+exitBtn.addEventListener("click", quitToHome);
+leaderQuit.addEventListener("click", quitToHome);
+quizExitBtn.addEventListener("click", quitToHome);
+diffExitBtn.addEventListener("click", quitToHome);
+restartQuiz.addEventListener("click", startQuiz);
+leaderStart.addEventListener("click", startQuiz);
+rulesStartBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", startQuiz);
 
 // Quit Quiz to Home
 function quitToHome() {
   resetQuiz();
+  leaderboardPanel.classList.remove("show");
+  rulesPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
+  quizPanel.classList.remove("show");
+  difficultyPanel.classList.remove("show");
   infoPanel.classList.add("show");
 }
 
-function restartQuizSession() {
+// Start quiz and show difficulty panel
+function startQuiz() {
   resetQuiz();
+  rulesPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
   difficultyPanel.classList.add("show");
 }
