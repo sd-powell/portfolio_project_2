@@ -185,6 +185,10 @@ function getQuestions(data) {
   answerList.removeEventListener("click", answerCheck);
   answerList.addEventListener("click", answerCheck);
 
+  // Add event listener to nextBtn button
+  nextBtn.removeEventListener("click", nextQuestion);
+  nextBtn.addEventListener("click", nextQuestion, { once: true });
+
   startTimer(15); // Start timer for the new question
 }
 
@@ -222,7 +226,6 @@ function answerCheck(event) {
 
   // Shows nextBtn button for user to proceed and adds event listener for click
   nextBtn.classList.remove("hide");
-  nextBtn.addEventListener("click", nextQuestion, { once: true });
 }
 
 // Loads the next question in the quiz
