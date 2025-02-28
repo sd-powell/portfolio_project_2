@@ -204,6 +204,8 @@ function answerCheck(event) {
   selectedAnswer = event.target;
   let isCorrect = selectedAnswer.innerHTML === parseHtmlEntities(correctAnswer);
 
+  clearInterval(timerInterval); // Stop timer when user selects an answer
+
   // Disable answer buttons after user has made their selection
   document.querySelectorAll(".answer_btn").forEach((btn) => {
     btn.classList.add("disabled");
