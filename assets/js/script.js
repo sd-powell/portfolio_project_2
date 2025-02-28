@@ -370,9 +370,9 @@ function resetQuiz() {
 // Timer function
 function startTimer(time) {
   // Ensure elements are up to date (in case DOM has changed)
-  timerDisplay = document.getElementById("timer_secs");
-  timerLabel = document.getElementById("timer_label");
-  timeLine = document.querySelector(".time_line");
+  // timerDisplay = document.getElementById("timer_secs");
+  // timerLabel = document.getElementById("timer_label");
+  // timeLine = document.querySelector(".time_line");
 
   // Clear any existing timer before starting a new one
   if (timerInterval) {
@@ -429,9 +429,9 @@ function startTimer(time) {
 
 // Instantly resets the timer UI
 function resetTimer() {
-  timerDisplay = document.getElementById("timer_secs");
-  timerLabel = document.getElementById("timer_label");
-  timeLine = document.querySelector(".time_line");
+  // timerDisplay = document.getElementById("timer_secs");
+  // timerLabel = document.getElementById("timer_label");
+  // timeLine = document.querySelector(".time_line");
 
   if (!timerDisplay || !timerLabel || !timeLine) {
     console.error("Error: Timer elements not found during reset!");

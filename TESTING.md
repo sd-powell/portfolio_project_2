@@ -63,3 +63,20 @@ Each page is tested using Chrome Developer Tools to ensure that it is responsive
 ### Lighthouse
 
 I've tested my deployed project using the Lighthouse Audit tool to test the performance, accessibility, best practices and SEO of the website.
+
+| Page    | Mobile                                                      | Desktop                                                      | Notes |
+| ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
+
+<a id=manual-features-test></a>
+
+#### Manual Features Testing
+
+`Home Page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| **Rules** button | The **rules** panel should open, displaying instructions on how to play the quiz | Clicked on the **rules** button | The **rules** panel opened and displayed the instructions correctly | **Pass**  |
+| **Leaderboard** button | The **leaderboard** panel should open and display the top 10 scores, ranked by position, player name, and score | Clicked on the **leaderboard** button | The **leaderboard** panel opened and displayed the top 10 scores correctly | **Pass**  |
+| **Start** button | The **difficulty** panel should open, displaying three buttons that allow the user to choose between *Easy*, *Medium*, or *Hard* quiz questions | Clicked on the **Start** button | The **difficulty** panel opened and displayed the three difficulty buttons | **Pass**  |
+| **Rules** and **Leaderboard** buttons - hover effect | When hovered over, the **Rules** and **Leaderboard** buttons should change to a white background with light blue text | Hovered over the **Rules** and **Leaderboard** buttons | The **Rules** and **Leaderboard** buttons changed to a white background with light blue text when hovered over | **Pass** |
+| **Start** button - hover effect | When hovered over, the **Start** button should change from dark blue text to white text | Hovered over the **Start** button | The **Start** button changed from dark blue text to white text when hovered over | **Pass** |
