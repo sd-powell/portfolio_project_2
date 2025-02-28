@@ -11,6 +11,7 @@ let timerDisplay;
 let timerInterval;
 let quizTimerText;
 let timeLine;
+let timerLabel;
 
 // Quiz API settings (Fetches quiz questions based on difficulty)
 const quizAPIs = {
@@ -185,10 +186,6 @@ function getQuestions(data) {
   answerList.removeEventListener("click", answerCheck);
   answerList.addEventListener("click", answerCheck);
 
-  // Add event listener to nextBtn button
-  nextBtn.removeEventListener("click", nextQuestion);
-  nextBtn.addEventListener("click", nextQuestion, { once: true });
-
   startTimer(15); // Start timer for the new question
 }
 
@@ -226,6 +223,7 @@ function answerCheck(event) {
 
   // Shows nextBtn button for user to proceed and adds event listener for click
   nextBtn.classList.remove("hide");
+  nextBtn.addEventListener("click", nextQuestion, { once: true });
 }
 
 // Loads the next question in the quiz
@@ -257,6 +255,12 @@ function nextQuestion() {
 
   resetButtons();
   nextBtn.classList.add("hide");
+
+  // ✅ Ensure the timer restarts for the new question
+  setTimeout(() => {
+    console.log("Restarting timer for new question...");
+    startTimer(15);
+  }, 100);
 }
 
 // Resets answer buttons for a new question
@@ -369,21 +373,25 @@ function startTimer(time) {
 
   let totalTime = time;
   timeLine.style.width = "100%"; // Reset progress bar to full width
+  timerDisplay.style.display = "inline";
 
   timerInterval = setInterval(() => {
-    timerDisplay.textContent = time;
-    time--;
-
-    if (time < 10) {
-      timerDisplay.textContent = "0" + time;
+    if (!timerDisplay) {
+      console.error("Timer display element missing! Stopping timer.");
+      clearInterval(timerInterval);
+      return;
     }
+
+    time--;
+    timerDisplay.textContent = time >= 10 ? time : "0" + time;
 
     let progressWidth = Math.max((time / totalTime) * 100, 0);
     timeLine.style.width = progressWidth + "%";
 
     if (time < 0) {
       clearInterval(timerInterval);
-      quizTimerText.innerHTML = "Time's up!";
+      document.getElementById("timer_label").textContent = "Time's up!";
+      timerDisplay.style.display = "none";
 
       document.querySelectorAll(".answer_btn").forEach((btn) => {
         btn.classList.add("disabled");
@@ -414,10 +422,10 @@ function startTimer(time) {
 // Instantly resets the timer UI
 function resetTimer() {
   timerDisplay = document.getElementById("timer_secs");
-  quizTimerText = document.querySelector(".quiz_timer");
+  let timerLabel = document.getElementById("timer_label");
   timeLine = document.querySelector(".time_line");
 
-  if (!timerDisplay || !quizTimerText || !timeLine) {
+  if (!timerDisplay || !timerLabel || !timeLine) {
     console.error("Error: Timer elements not found during reset!");
     return;
   }
@@ -428,7 +436,8 @@ function resetTimer() {
   }
 
   // **Instantly reset the timer UI**
-  quizTimerText.innerHTML = `Time: <span id="timer_secs">15</span>`;
+  timerLabel.textContent = "Time:";
   timerDisplay.textContent = "15";
-  timeLine.style.width = "100%"; // Reset progress bar immediately
+  timerDisplay.style.display = "inline";
+  timeLine.style.width = "100%";
 }
