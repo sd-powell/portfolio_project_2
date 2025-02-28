@@ -225,15 +225,20 @@ button {
   padding: 12px 18px 0px 18px;
 }
 
-#question_title {
+#question_title h2 {
   font-family: var(--primary-font);
+  color: var(--foreground-white);
   font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0;
   text-wrap: balance;
   min-height: 92px;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  width: 100%;
+  padding-bottom: 0;
 }
 
 #results_panel .results_icon {
@@ -625,7 +630,7 @@ button {
     font-size: 1.3rem;
   }
 
-  #question_title {
+  #question_title h2 {
     font-size: 1.6rem;
     min-height: 120px;
   }

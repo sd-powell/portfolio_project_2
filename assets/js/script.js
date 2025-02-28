@@ -165,7 +165,7 @@ function getQuestions(data) {
 
   let results = quizData.results[questionNum];
 
-  question.innerHTML = results.question;
+  question.innerHTML = `<h2>${results.question}</h2>`;
   correctAnswer = results.correct_answer;
 
   // Shuffle and assign answers to buttons dynamically
