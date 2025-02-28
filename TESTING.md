@@ -42,3 +42,18 @@ Each page is tested using Chrome Developer Tools to ensure that it is responsive
 
 | Directory | File tested | Screenshot | Notes |
 | --------- | ----------- | ---------- | ----- |
+| documentation/testing-w3c-home.webp | index.html | ![screenshot](documentation/testing-w3c-home.webp) | no errors occurred when checking |
+| documentation/testing-w3c-404.webp | 404.html | ![screenshot](documentation/testing-w3c-404.webp) | no errors occurred when checking |
+| documentation/testing-w3c-500.webp | 500.html | ![screenshot](documentation/testing-w3c-500.webp) | no errors occurred when checking |
+
+---
+
+<a id=css-validation></a>
+
+### CSS Validator
+
+[CSS W3C Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file.
+
+| Directory                                | File tested  | Screenshot                                              | Notes                            |
+| ---------------------------------------- | ------------ | ------------------------------------------------------- | -------------------------------- |
+| documentation/testing-w3css-success.webp | style.css    | ![screenshot](documentation/testing-w3css-success.webp) | no errors occurred when checking |
