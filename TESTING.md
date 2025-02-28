@@ -89,3 +89,21 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | **Start Quiz** button | The **difficulty** panel should open, displaying three buttons that allow the user to choose between *Easy*, *Medium*, or *Hard* quiz questions | Clicked on the **Start Quiz** button | The **difficulty** panel opened and displayed the three difficulty buttons | **Pass** |
 | **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | **Pass** |
 | **Start Quiz** button - hover effect | When hovered over, the **Start** button should change from dark blue text to white text | Hovered over the **Start** button | The **Start** button changed from dark blue text to white text when hovered over | **Pass** |
+
+`Leaderboard Page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| **Exit** button | The **leaderboard** panel should close, revealing the **home page** panel | Clicked on the **Exit** button | The **leaderboard** panel closed, and the **home page** panel was revealed | **Pass** |
+| **Restart Quiz** button | The **difficulty** panel should open, displaying three buttons that allow the user to choose between *Easy*, *Medium*, or *Hard* quiz questions | Clicked on the **Restart Quiz** button | The **difficulty** panel opened and displayed the three difficulty buttons | **Pass** |
+| **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | **Pass** |
+| **Restart Quiz** button - hover effect | When hovered over, the **Restart Quiz** button should change from dark blue text to white text | Hovered over the **Restart Quiz** button | The **Restart Quiz** button changed from dark blue text to white text when hovered over | **Pass** |
+
+`Difficulty Page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| **Easy** button | The **difficulty** panel should close, revealing the **Quiz** panel, and the quiz timer should start | Clicked on the **Easy** button | The **difficulty** panel closed, the **Quiz** panel opened, and the quiz timer started | **Pass** |
+| **Medium** button | The **difficulty** panel should close, revealing the **Quiz** panel, and the quiz timer should start | Clicked on the **Medium** button | The **difficulty** panel closed, the **Quiz** panel opened, and the quiz timer started | **Pass** |
+| **Hard** button | The **difficulty** panel should close, revealing the **Quiz** panel, and the quiz timer should start | Clicked on the **Hard** button | The **difficulty** panel closed, the **Quiz** panel opened, and the quiz timer started | **Pass** |
+| **All** buttons - hover effect | When hovered over, the **difficulty** buttons should change from a dark blue background to a light blue background | Hovered over each **difficulty** buttons | The **difficulty** buttons changed from a dark blue background to a light blue background when hovered over | **Pass** |
