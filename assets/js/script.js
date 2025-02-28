@@ -40,10 +40,10 @@ const scoreCount = document.getElementById("score_total");
 
 // Quiz API settings (Fetches quiz questions based on difficulty)
 const quizAPIs = {
-  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
+  easy: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
   medium:
-    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
-  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
+    "https://opentdb.com/api.php?amount=10&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=10&category=12&difficulty=hard&type=multiple",
 };
 
 // Add event listener to difficulty selection buttons
@@ -123,6 +123,7 @@ async function apiCall() {
     hideDifficultyPanel();
     showQuiz_panel();
     getQuestions(data);
+    console.log(data);
   } catch (error) {
     console.error("Error fetching quiz data:", error);
 
