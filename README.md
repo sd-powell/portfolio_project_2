@@ -560,6 +560,22 @@ To clone the repository:
 
 ---
 
+<a id=testing-readme></a>
+
+## Testing
+
+Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
+
+<a id=solved-issues></a>
+
+### Solved Issues & Bugs
+
+| No | Bug                                  | How I solved the issue                              |
+| :- | :----------------------------------- | :-------------------------------------------------- |
+| 1  | When the html code was first tested using the w3c validator, `#quiz_header`, `#quiz_questions` & `#quiz_footer`.
+
+---
+
 <a id=Credits&inspiration></a>
 
 ## Credits & Inspiration
