@@ -8,14 +8,6 @@ let selectedAnswer;
 let apiAddress;
 let timerInterval;
 
-// Quiz API settings (Fetches quiz questions based on difficulty)
-const quizAPIs = {
-  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
-  medium:
-    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
-  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
-};
-
 // Declare UI elements for interaction
 const infoPanel = document.getElementById("info_panel");
 const startBtn = document.getElementById("start_btn");
@@ -46,14 +38,24 @@ let timerLabel = document.getElementById("timer_label");
 let timeLine = document.querySelector(".time_line");
 const scoreCount = document.getElementById("score_total");
 
+// Quiz API settings (Fetches quiz questions based on difficulty)
+const quizAPIs = {
+  easy: "https://opentdb.com/api.php?amount=2&category=12&difficulty=easy&type=multiple",
+  medium:
+    "https://opentdb.com/api.php?amount=2&category=12&difficulty=medium&type=multiple",
+  hard: "https://opentdb.com/api.php?amount=2&category=12&difficulty=hard&type=multiple",
+};
+
 // Add event listener to difficulty selection buttons
 // Event delegation method - https://www.freecodecamp.org/news/event-delegation-javascript/
-document.getElementById("difficulty_panel").addEventListener("click", (e) => {
-  if (e.target.matches("#easy, #medium, #hard")) {
-    apiAddress = quizAPIs[e.target.id]; // Get correct API based on clicked button
-    apiCall();
-  }
-});
+document
+  .getElementById("difficulty_panel")
+  .addEventListener("click", function (e) {
+    if (e.target.matches("#easy, #medium, #hard")) {
+      apiAddress = quizAPIs[e.target.id]; // Get correct API based on clicked button
+      apiCall();
+    }
+  });
 
 // Event listeners for opening and closing quiz panels
 rulesBtn.addEventListener("click", () => rulesPanel.classList.add("show"));
@@ -167,9 +169,11 @@ function getQuestions(data) {
   correctAnswer = results.correct_answer;
 
   // Shuffle and assign answers to buttons dynamically
-  let answers = [...results.incorrect_answers, correctAnswer].sort(
-    () => Math.random() - 0.5
-  );
+  let answers = results.incorrect_answers
+    .concat(correctAnswer)
+    .sort(function () {
+      return Math.random() - 0.5;
+    });
 
   // Generate answer buttons dynamically
   answerList.innerHTML = answers
@@ -192,7 +196,10 @@ function getQuestions(data) {
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 function answerCheck(event) {
-  if (!event.target.matches(".answer_btn")) return; // Ensure a button was clicked
+  // Ensure a button was clicked
+  if (!event.target.matches(".answer_btn")) {
+    return;
+  }
 
   selectedAnswer = event.target;
   let isCorrect = selectedAnswer.innerHTML === parseHtmlEntities(correctAnswer);
