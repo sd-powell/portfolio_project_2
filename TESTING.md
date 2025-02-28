@@ -56,4 +56,10 @@ Each page is tested using Chrome Developer Tools to ensure that it is responsive
 
 | Directory                                | File tested  | Screenshot                                              | Notes                            |
 | ---------------------------------------- | ------------ | ------------------------------------------------------- | -------------------------------- |
-| documentation/testing-w3css-success.webp | style.css    | ![screenshot](documentation/testing-w3css-success.webp) | no errors occurred when checking |
+| documentation/testing-w3css-home.webp | style.css    | ![screenshot](documentation/testing-w3css-home.webp) | no errors occurred when checking |
+
+<a id=lighthouse></a>
+
+### Lighthouse
+
+I've tested my deployed project using the Lighthouse Audit tool to test the performance, accessibility, best practices and SEO of the website.
