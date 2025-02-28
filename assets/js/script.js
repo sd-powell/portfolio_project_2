@@ -40,6 +40,7 @@ const resultsPanel = document.getElementById("results_panel");
 const finalScore = document.getElementById("score_number");
 const userName = document.getElementById("user_name");
 const submitScore = document.getElementById("submit_score");
+const quitQuiz = document.getElementById("quit_quiz");
 const restartQuiz = document.getElementById("restart_quiz");
 const leaderboardPanel = document.getElementById("leaderboard_panel");
 const leaderStart = document.getElementById("leaderboard_start");
@@ -61,6 +62,7 @@ exitBtn.addEventListener("click", quitToHome);
 leaderQuit.addEventListener("click", quitToHome);
 quizExitBtn.addEventListener("click", quitToHome);
 diffExitBtn.addEventListener("click", quitToHome);
+quitQuiz.addEventListener("click", quitToHome);
 restartQuiz.addEventListener("click", startQuiz);
 leaderStart.addEventListener("click", startQuiz);
 rulesStartBtn.addEventListener("click", startQuiz);
@@ -83,6 +85,16 @@ function startQuiz() {
   rulesPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
   difficultyPanel.classList.add("show");
+}
+
+// Hides the difficulty selection panel once a level is selected
+function hideDifficultyPanel() {
+  difficultyPanel.classList.remove("show");
+}
+
+// Shows the quiz panel when the game starts
+function showQuiz_panel() {
+  quizPanel.classList.add("show");
 }
 
 // API call function (Fetches quiz data from the selected difficulty)
@@ -115,16 +127,6 @@ async function apiCall() {
     // Redirect user to a custom 500 error page
     window.location.href = "/500.html";
   }
-}
-
-// Hides the difficulty selection panel once a level is selected
-function hideDifficultyPanel() {
-  difficultyPanel.classList.remove("show");
-}
-
-// Shows the quiz panel when the game starts
-function showQuiz_panel() {
-  quizPanel.classList.add("show");
 }
 
 // Converts HTML entity codes to readable text (e.g., `&quot;` → `"`)
