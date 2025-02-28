@@ -5,13 +5,8 @@ let questionCount = 1;
 let score = 0;
 let correctAnswer;
 let selectedAnswer;
-let scoreCount = document.getElementById("score_total");
 let apiAddress;
-let timerDisplay;
 let timerInterval;
-let quizTimerText;
-let timeLine;
-let timerLabel;
 
 // Quiz API settings (Fetches quiz questions based on difficulty)
 const quizAPIs = {
@@ -46,6 +41,10 @@ const restartQuiz = document.getElementById("restart_quiz");
 const leaderboardPanel = document.getElementById("leaderboard_panel");
 const leaderStart = document.getElementById("leaderboard_start");
 const leaderQuit = document.getElementById("leaderboard_quit");
+let timerDisplay = document.getElementById("timer_secs");
+let timerLabel = document.getElementById("timer_label");
+let timeLine = document.querySelector(".time_line");
+const scoreCount = document.getElementById("score_total");
 
 // Add event listener to difficulty selection buttons
 // Event delegation method - https://www.freecodecamp.org/news/event-delegation-javascript/
@@ -363,7 +362,7 @@ function resetQuiz() {
 function startTimer(time) {
   // Ensure elements are up to date (in case DOM has changed)
   timerDisplay = document.getElementById("timer_secs");
-  quizTimerText = document.querySelector(".quiz_timer");
+  timerLabel = document.getElementById("timer_label");
   timeLine = document.querySelector(".time_line");
 
   // Clear any existing timer before starting a new one
@@ -422,7 +421,7 @@ function startTimer(time) {
 // Instantly resets the timer UI
 function resetTimer() {
   timerDisplay = document.getElementById("timer_secs");
-  let timerLabel = document.getElementById("timer_label");
+  timerLabel = document.getElementById("timer_label");
   timeLine = document.querySelector(".time_line");
 
   if (!timerDisplay || !timerLabel || !timeLine) {
