@@ -572,7 +572,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 | No | Bug                                  | How I solved the issue                              |
 | :- | :----------------------------------- | :-------------------------------------------------- |
-| 1  | When the html code was first tested using the w3c validator, `#quiz_header`, `#quiz_questions` & `#quiz_footer`.
+| 1  | When the html code was first tested using the w3c validator, it raised the issue of trailing slashes e.g. `<br />` which was being caused by the formatter in VS Code. | I disabled format on save to solve this issue and re-tested my html code. |
 
 ---
 
