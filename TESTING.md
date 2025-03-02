@@ -146,3 +146,15 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) |
 | --- | --- | --- | --- | --- |
 | **Score** display | The score achieved in the quiz should be correctly displayed as `You scored: x out of 100` | Completed the quiz and noted the score ![Screenshot](documentation/testing-results-scorestar.webp) | The score was displayed correctly ![Screenshot](documentation/testing-results-score.webp) | ✅ No fix needed |
+| --- | --- | --- | --- | --- |
+| **Exit** button | The **results** panel should close, revealing the **home page** panel | Clicked on the **Exit** button | The **results** panel closed and the **home page** panel was revealed | ✅ No fix needed |
+| **Submit** button - hover effect | When hovered over, the **Submit** button should change from dark blue text to white text | Hovered over the **Submit** button | The **Submit** button changed from dark blue text to white text when hovered over | ✅ No fix needed |
+| **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | ✅ No fix needed |
+| **Restart Quiz** button - hover effect | When hovered over, the **Restart Quiz** button should change from dark blue text to white text | Hovered over the **Restart Quiz** button | The **Restart Quiz** button changed from dark blue text to white text when hovered over | ✅ No fix needed |
+
+`⛔️ Negative Testing Scenarios`
+
+| Component | Expected Behavior | Negative Test Performed | Actual Result | Fix (if needed) |
+| --- | --- | --- | --- | --- |
+| **Leaderboard** Name Submission - blank | Clicking on the **Submit** button while the "Enter Your Name" field is empty should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while the "Enter Your Name" field was empty | An alert reading `Please enter your name before submitting!` was displayed ![Screenshot](documentation/testing-results-submit.webp) | ✅ No fix needed |
+| **Leaderboard** Name Submission - white space | Clicking on the **Submit** button while there is a blank space in the field should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while there was a blank space in the field | An alert reading `Please enter your name before submitting!` was displayed ![Screenshot](documentation/testing-results-submit.webp) | ✅ No fix needed |
