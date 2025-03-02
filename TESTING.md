@@ -144,4 +144,5 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 `Results Page`
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) |
-|  | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| **Score** display | The score achieved in the quiz should be correctly displayed as `You scored: x out of 100` | Completed the quiz and noted the score ![Screenshot](documentation/testing-results-scorestar.webp) | The score was displayed correctly ![Screenshot](documentation/testing-results-score.webp) | ✅ No fix needed |
