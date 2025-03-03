@@ -475,6 +475,22 @@ The purpose of the 500 page is to capture any issues with API access and guide t
 
 ---
 
+<a id=future-implementation></a>
+
+#### Future Implemetations
+
+To ensure the website remains engaging and functional for users, in future implementations I would like to:
+
+1. **Night & Day Mode (Manual & System-Integrated)** – Introduce a toggle feature that allows users to manually switch between light and dark mode, while also offering an auto mode that adapts based on the user’s system settings. This ensures a comfortable viewing experience in any environment, reduces eye strain, and enhances accessibility for users who prefer high-contrast or low-light displays.
+2. **Lifelines / Power-Ups** – Add options like “50/50” (removes two incorrect answers), “Extra Time” (adds 5 seconds), or “Skip Question” for a more strategic experience.
+3. **Additional Question Categories** – Allow users to choose different music genres (e.g., Pop, Rock, Hip-Hop, 80s Hits) instead of a single general quiz.
+4. **Personalized Music Recommendations** – Based on quiz performance, suggest songs or playlists (e.g., “You scored high on Rock – check out this playlist!”).
+5. **Badges & Achievements** – Reward users with unlockable badges (e.g., “Pop Quiz Champion,” “Rock Guru”) for reaching milestones.
+6. **Shareable Results & Social Media Integration** – Let users share their scores on Twitter, Instagram, or Facebook.
+7. **Live Leaderboard** – Introduce a live leaderboard (rather than a locally stored version) to keep competition fresh and exciting. Allowing users to compete agianst each other.
+
+---
+
 <a id=technologies></a>
 
 ## Technologies Used
@@ -570,7 +586,8 @@ To clone the repository:
 
 ## Testing
 
-Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
+> [!NOTE]
+> Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 <a id=solved-issues></a>
 
