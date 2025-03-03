@@ -1,4 +1,4 @@
----
+# Testing
 
 ![DJ Silver Soul website shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
 
@@ -75,6 +75,44 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 
 ---
 
+<a id=manual-testing></a>
+
+## MANUAL TESTING
+
+---
+
+<a id=testing-user></a>
+
+### Testing User Stories
+
+#### First Time Visitors
+
+| Goals | How were they achieved? |
+| ------ | -------------------------- |
+| **As a new site user, I want to have a clear and accessible way to navigate through different sections, so that I can explore the quiz, rules, and leaderboard without difficulty.** | The homepage panel provides clear **buttons for Rules, Leaderboard, and Start Quiz**. All buttons include **ARIA labels for accessibility**. |
+| **As a new site user, I want to understand the game rules quickly, so that I can start playing without confusion.** | The **Rules Panel** presents a **structured ordered list** outlining quiz mechanics clearly, ensuring quick comprehension. The "Start Quiz" button allows easy transition after reading. |
+| **As a new site user, I want to start my first quiz easily, so that I can jump straight into the fun.** | The homepage panel includes a **"Start" button**, which immediately takes users to the **Difficulty Selection Panel**, making the onboarding process seamless. |
+| **As a new site user, I want to play against a timer, so that I feel a sense of challenge and excitement while answering questions quickly.** | Each question displays a **15-second countdown timer**. The **progress bar visually indicates time left**, and expired time prevents further answer selection. |
+| **As a new site user, I want to see my score and progress, so that I feel motivated to improve and replay.** | The quiz footer **displays the current score dynamically** as questions are answered. The **Results Panel** shows the final score, encouraging replay. |
+| **As a new site user, I want to receive feedback on my answer choices, so that I can learn from my mistakes and improve my knowledge.** | Selected answers are **highlighted as correct or incorrect**, reinforcing learning. Incorrect answers **cannot be changed**, ensuring fair gameplay. |
+
+#### Returning Visitors
+
+| Goals | How were they achieved? |
+| ------ | -------------------------- |
+| **As a returning site user, I want the quiz experience to be consistent and function correctly across different devices, so that I can enjoy playing whether I’m on desktop, tablet, or mobile.** | The site uses a **responsive design** that adapts to different screen sizes. All interactive elements remain **functional and accessible** on various devices. |
+| **As a returning site user, I want to select the difficulty level of quiz questions, so that I can tailor the challenge to my knowledge and skill level.** | The **Difficulty Panel** provides **three difficulty options** that allow users to choose their preferred level. The choice is stored and applied to the quiz. |
+| **As a returning site user, I want to easily restart the quiz, so that I can immediately try again if I want to improve my score.** | The **Results Panel** includes a **"Restart Quiz" button**, allowing users to replay instantly without navigating back to the homepage. |
+
+#### Frequent Site Visitors
+
+| Goals | How were they achieved? |
+| ------ | -------------------------- |
+| **As a frequent site user, I want to see a leaderboard of top quiz scores, so that I can compare my performance with others and stay motivated to improve.** | The **Leaderboard Panel** dynamically updates with the **top 10 scores**. Users can submit their name and see their ranking after completing a quiz. |
+| **As a frequent site user, I want to have a fair scoring system where I earn points based on correct answers, so that I feel rewarded for my knowledge and accuracy.** | The **scoring system awards 10 points per correct answer**, ensuring fairness. The score **updates in real-time** during the quiz and is accurately recorded. |
+
+---
+
 <a id=features-test></a>
 
 ## Features Testing
@@ -122,6 +160,7 @@ The **Home Page Panel** serves as the entry point for the DJ Silver Soul Pop Qui
 
 </details>
 <br>
+<hr>
 
 ### Rules Panel
 
@@ -164,6 +203,7 @@ The **Rules Panel** provides users with clear and concise guidelines on how the 
 
 </details>
 <br>
+<hr>
 
 ### Difficulty Panel
 
@@ -206,6 +246,7 @@ The **Difficulty Panel** allows users to select their preferred quiz difficulty 
 
 </details>
 <br>
+<hr>
 
 ### Quiz Panel
 
@@ -260,6 +301,7 @@ The **Quiz Panel** provides an interactive interface for users to answer music-r
 
 </details>
 <br>
+<hr>
 
 ### Results Panel
 
@@ -303,6 +345,7 @@ The **Results Panel** provides users with a summary of their quiz performance, d
 
 </details>
 <br>
+<hr>
 
 ### Leaderboard Panel
 
@@ -342,6 +385,7 @@ The **Leaderboard Panel** provides users with a ranked list of the top 10 scores
 
 </details>
 <br>
+<hr>
 
 ### 404 Page
 
@@ -380,7 +424,8 @@ The **404 Page Not Found** error page provides a fun and engaging experience for
 ![404 page](documentation/testing-features-404.webp)
 
 </details>
-  <br>
+<br>
+<hr>
 
 ### 500 Page
 
@@ -419,6 +464,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 </details>
 <br>
+<hr>
 
 <a id=manual-features-test></a>
 
