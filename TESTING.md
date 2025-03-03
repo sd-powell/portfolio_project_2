@@ -1,14 +1,11 @@
 # Testing
 
-![DJ Silver Soul website shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
-
-Visit the deployed site here: [DJ Silver Soul](https://sd-powell.github.io/portfolio_project_1/)
+Visit the deployed site here: [DJ Silver Soul's Pop Quiz](https://sd-powell.github.io/portfolio_project_2/)
 
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
 This document outlines the testing processes and results for the **DJ Silver Soul Pop Quiz**. It ensures that all features function as expected, meet accessibility standards, and provide an optimal user experience.
-
 
 ---
 
@@ -86,7 +83,7 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 
 ### Accessibility
 
-#### Color contrast compliance
+#### Colour contrast compliance
 
 In addition to the automated tests for accessibility standards, I used [WebAIM](https://webaim.org/resources/contrastchecker/) to test the contrast of the colours on the site for visually impaired users.
 

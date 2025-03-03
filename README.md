@@ -2,7 +2,7 @@
 
 ---
 
-Visit the deployed site here:
+Visit the deployed site here: [DJ Silver Soul's Pop Quiz](https://sd-powell.github.io/portfolio_project_2/)
 
 ## Introduction
 
