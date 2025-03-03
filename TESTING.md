@@ -4,7 +4,12 @@
 
 Visit the deployed site here: [DJ Silver Soul](https://sd-powell.github.io/portfolio_project_1/)
 
+> [!NOTE]  
+> Return back to the [README.md](README.md) file.
+
 ---
+
+<a id=contents></a>
 
 ## CONTENTS
 
@@ -67,12 +72,104 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | Page    | Mobile                                                      | Desktop                                                      | Notes |
 | ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
 
-## Difficulty Panel
+---
 
-### Overview
+<a id=features-test></a>
+
+## Features Testing
+
+<a id=existing-features></a>
+
+### Existing Features
+
+### Home Page Panel
+
+#### Overview
+The **Home Page Panel** serves as the entry point for the DJ Silver Soul Pop Quiz, introducing users to the game and providing navigation options to key sections. It ensures a smooth onboarding experience while maintaining a visually engaging and accessible design.
+
+#### Features Tested:
+- **Introduction & Engagement:**  
+  - The panel presents a **clear and engaging welcome message** that highlights the quiz's theme and challenge.  
+  - The description uses **bold text (`<strong>`)** to emphasize key points like the quiz title and leaderboard competition.  
+  - The message is **formatted properly**, ensuring readability across different devices.  
+
+- **Navigation & Call to Action:**  
+  - The **"Rules" button (`#rules_btn`)** correctly navigates users to the rules panel.  
+  - The **"Leaderboard" button (`#leaderboard_btn`)** allows users to view the top scores.  
+  - The **"Start" button (`#start_btn`)** initiates the quiz and smoothly transitions users into the game.  
+  - **ARIA labels** are applied to all buttons for improved accessibility.  
+
+- **Branding & Design:**  
+  - The **site’s branding is consistently maintained**, with a fun and engaging theme.  
+  - The **layout is structured for easy interaction**, ensuring a smooth user experience.  
+  - The **buttons are clearly labeled** and appropriately styled, making navigation intuitive.  
+
+- **Responsiveness & Accessibility:**  
+  - The home page panel adapts well to **various screen sizes** (desktop, tablet, mobile).  
+  - The **buttons are keyboard-navigable**, ensuring usability for all users.  
+  - **Semantic HTML elements** (`<h2>`, `<p>`, `<button>`) enhance screen reader compatibility.  
+
+- **Performance & Functionality:**  
+  - The **home page panel loads quickly**, with no missing or broken elements.  
+  - The **buttons work correctly**, allowing users to navigate between sections without errors.  
+  - The interface ensures that **users cannot start the quiz without first engaging with the home panel**.  
+
+<details>
+<summary>Click here to see the Home Page Panel</summary>
+
+![Home Page Panel](documentation/testing-features-home.webp)
+
+</details>
+<br>
+
+### Rules Panel
+
+#### Overview
+The **Rules Panel** provides users with clear and concise guidelines on how the quiz functions before they begin. It ensures players understand the gameplay mechanics, scoring system, and time constraints while maintaining an intuitive and accessible layout.
+
+#### Features Tested:
+- **Rules Display & Readability:**  
+  - The panel correctly presents **five key quiz rules** in an ordered list (`<ol>`).  
+  - The rules are structured for **easy reading** and clearly outline:  
+    - Difficulty selection  
+    - Time limits for answering (`15 seconds per question`)  
+    - Answer selection restrictions  
+    - Scoring system (`10 points per correct answer`)  
+  - The text is **formatted properly** to maintain readability on different devices.  
+
+- **Navigation & Call to Action:**  
+  - The **"Start Quiz" button (`#rules_start_btn`)** begins the quiz and transitions users smoothly.  
+  - The **"Exit" button (`#exit_btn`)** allows users to return to the home page.  
+  - **ARIA labels** are applied to all buttons for improved accessibility.  
+
+- **Branding & Design:**  
+  - The rules panel follows the **consistent styling of the site**, ensuring visual uniformity.  
+  - The **button layout is intuitive**, with "Exit" and "Start Quiz" options clearly defined.  
+  - The structured **ordered list (`<ol>`)** ensures proper formatting across devices.  
+
+- **Responsiveness & Accessibility:**  
+  - The panel scales properly across **various screen sizes** (desktop, tablet, mobile).  
+  - The **buttons are keyboard-navigable**, ensuring accessibility for all users.  
+  - **Semantic HTML elements** (`<h2>`, `<ol>`, `<li>`, `<button>`) improve screen reader support.  
+
+- **Performance & Functionality:**  
+  - The **rules panel loads quickly**, with no broken elements or missing content.  
+  - The **"Start Quiz" button** correctly transitions users into the quiz.  
+
+<details>
+<summary>Click here to see the Rules Panel</summary>
+
+![Rules Panel](documentation/testing-features-rules.webp)
+
+</details>
+<br>
+
+### Difficulty Panel
+
+#### Overview
 The **Difficulty Panel** allows users to select their preferred quiz difficulty level before starting the game. The panel presents a fun, engaging theme while ensuring smooth interaction and navigation.
 
-### Features Tested:
+#### Features Tested:
 - **Difficulty Selection Functionality:**  
   - Users can select one of **three difficulty levels**:  
     - 🎧 **Easy Listening** - "The warm-up" (`#easy`)  
@@ -109,12 +206,12 @@ The **Difficulty Panel** allows users to select their preferred quiz difficulty 
 </details>
 <br>
 
-## Quiz Panel
+### Quiz Panel
 
-### Overview
+#### Overview
 The **Quiz Panel** provides an interactive interface for users to answer music-related questions. It dynamically updates the question, tracks the timer, manages user responses, and displays the current score. The panel ensures a smooth and engaging quiz experience.
 
-### Features Tested:
+#### Features Tested:
 - **Question Display & Dynamic Updates:**  
   - The **question number (`#questionNo`)** correctly increments as users progress through the quiz.  
   - Questions and answer choices are **dynamically loaded from an API** and update correctly.  
@@ -163,12 +260,12 @@ The **Quiz Panel** provides an interactive interface for users to answer music-r
 </details>
 <br>
 
-## Results Panel
+### Results Panel
 
-### Overview
+#### Overview
 The **Results Panel** provides users with a summary of their quiz performance, displaying their final score and offering them the chance to submit their name to the leaderboard. It also includes navigation options to restart the quiz or exit to the home page.
 
-### Features Tested:
+#### Features Tested:
 - **Score Display & Feedback:**  
   - The panel **correctly displays** the user’s final score within the `<span id="score_number">`.  
   - A motivational message is included, reinforcing engagement with **"Top of the Pops"** encouragement.  
@@ -206,12 +303,12 @@ The **Results Panel** provides users with a summary of their quiz performance, d
 </details>
 <br>
 
-## Leaderboard Panel
+### Leaderboard Panel
 
-### Overview
+#### Overview
 The **Leaderboard Panel** provides users with a ranked list of the top 10 scores, dynamically updating based on quiz performance. It enhances user engagement by displaying competitive scores and offering options to restart or exit the quiz.
 
-### Features Tested:
+#### Features Tested:
 - **Leaderboard Display & Dynamic Updates:**  
   - The **top 10 scores** are displayed in a structured table format.  
   - The `<tbody>` section dynamically updates with user scores after quiz completion.  
@@ -245,12 +342,12 @@ The **Leaderboard Panel** provides users with a ranked list of the top 10 scores
 </details>
 <br>
 
-## 404 Page
+### 404 Page
 
-### Overview
+#### Overview
 The **404 Page Not Found** error page provides a fun and engaging experience for users who land on a non-existent or unavailable page. It embraces the **musical quiz theme** by presenting a playful message that keeps users entertained while guiding them back to the quiz.
 
-### Features Tested:
+#### Features Tested:
 - **Clear & Engaging Messaging:**  
   - The page displays a **music-themed error message**: *"404: Question Not Found!"*  
   - The wording aligns with the **pop quiz theme**, making the experience more engaging.  
@@ -284,12 +381,12 @@ The **404 Page Not Found** error page provides a fun and engaging experience for
 </details>
   <br>
 
-  ## 500 Page
+### 500 Page
 
-### Overview
+#### Overview
 The **500 Internal Server Error page** provides a fun, engaging message that reassures users when a server-side issue occurs. It maintains a **musical theme** that aligns with the site’s branding while guiding users toward possible solutions.
 
-### Features Tested:
+#### Features Tested:
 - **Clear & Engaging Messaging:**  
   - The page presents a humorous and **on-brand error message**: *"The beat stopped, and the server lost the rhythm!"*  
   - Avoids technical jargon and reassures users that the issue is being addressed.
@@ -324,9 +421,9 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 <a id=manual-features-test></a>
 
-#### Manual Features Testing
+## Manual Features Testing
 
-`Home Page`
+### Home Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -338,7 +435,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ---
 
-`Quiz Rules Page`
+### Quiz Rules Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -349,7 +446,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ---
 
-`Leaderboard Page`
+### Leaderboard Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -361,7 +458,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ---
 
-`Difficulty Page`
+### Difficulty Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -372,7 +469,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 | **Difficulty** buttons - hover effect | When hovered over, the **difficulty** buttons should change from a dark blue background to a light blue background | Hovered over each **difficulty** button | The **difficulty** buttons changed from a dark blue background to a light blue background when hovered over | ✅ No fix needed | ![screenshot](documentation/testing-difficulty-hover.gif) |
 | **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | ✅ No fix needed | ![screenshot](documentation/testing-difficulty-exit.webp) ![screenshot](documentation/testing-difficulty-exithover.webp) |
 
-`⛔️ Difficulty Page - Negative Testing Scenarios`
+### ⛔️ Difficulty Page - Negative Testing Scenarios
 
 | Component | Expected Behavior | Negative Test Performed | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -381,7 +478,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ---
 
-`Quiz Page`
+### Quiz Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -398,7 +495,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 | **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | ✅ No fix needed | ![screenshot](documentation/testing-quiz-exit.webp) ![screenshot](documentation/testing-quiz-exithover.webp) |
 | **Next** button - hover effect | When hovered over, the **Next** button should change from a green background to a white background | Hovered over the **Next** button | The **Next** button changed from a green background to a white background | ✅ No fix needed | ![screenshot](documentation/testing-quiz-next.webp) ![screenshot](documentation/testing-quiz-nexthover.webp) |
 
-`⛔️ Quiz Page - Negative Testing Scenarios`
+### ⛔️ Quiz Page - Negative Testing Scenarios
 
 | Component | Expected Behavior | Negative Test Performed | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -408,7 +505,7 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ---
 
-`Results Page`
+### Results Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
@@ -418,9 +515,12 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 | **Exit** button - hover effect | When hovered over, the **Exit** button should change to a white background with light blue text | Hovered over the **Exit** button | The **Exit** button changed to a white background with light blue text when hovered over | ✅ No fix needed | ![Screenshot](documentation/testing-results-exit.webp) ![Screenshot](documentation/testing-results-exithover.webp) |
 | **Restart Quiz** button - hover effect | When hovered over, the **Restart Quiz** button should change from dark blue text to white text | Hovered over the **Restart Quiz** button | The **Restart Quiz** button changed from dark blue text to white text when hovered over | ✅ No fix needed | ![Screenshot](documentation/testing-results-restart.webp) ![Screenshot](documentation/testing-results-restarthover.webp) |
 
-`⛔️ Results Page - Negative Testing Scenarios`
+### ⛔️ Results Page - Negative Testing Scenarios
 
 | Component | Expected Behavior | Negative Test Performed | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | **Leaderboard** Name Submission - blank | Clicking on the **Submit** button while the "Enter Your Name" field is empty should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while the "Enter Your Name" field was empty | An alert reading `Please enter your name before submitting!` was displayed | ✅ No fix needed | ![Screenshot](documentation/testing-results-submit.webp) |
 | **Leaderboard** Name Submission - white space | Clicking on the **Submit** button while there is a blank space in the field should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while there was a blank space in the field | An alert reading `Please enter your name before submitting!` was displayed | ✅ No fix needed | ![Screenshot](documentation/testing-results-submit.webp) |
+
+<br><hr>
+[🔼 Back to top](#contents)
