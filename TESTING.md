@@ -67,6 +67,83 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | Page    | Mobile                                                      | Desktop                                                      | Notes |
 | ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
 
+## 404 Page
+
+### Overview
+The **404 Page Not Found** error page provides a fun and engaging experience for users who land on a non-existent or unavailable page. It embraces the **musical quiz theme** by presenting a playful message that keeps users entertained while guiding them back to the quiz.
+
+### Features Tested:
+- **Clear & Engaging Messaging:**  
+  - The page displays a **music-themed error message**: *"404: Question Not Found!"*  
+  - The wording aligns with the **pop quiz theme**, making the experience more engaging.  
+  - Avoids overly technical language and reassures users they can easily navigate back.
+
+- **Navigation & Call to Action:**  
+  - Provides a **link back to the quiz homepage** to ensure users can quickly resume their session.  
+  - Uses an **ARIA label** for accessibility, ensuring screen readers describe the link clearly.  
+  - Prevents users from feeling "stuck" by offering a clear way forward.
+
+- **Branding & Design:**  
+  - Maintains **branding consistency** with the rest of the website.  
+  - Features an **error icon (fa-solid fa-ban)** to visually indicate an issue.  
+  - Uses a **friendly, playful tone** that aligns with the quiz experience.  
+
+- **Responsiveness & Accessibility:**  
+  - The page adapts well to different **screen sizes** and devices (desktop, tablet, mobile).  
+  - Uses **semantic HTML** (e.g., `<h2>` for headings, `<p>` for descriptions) to enhance readability.  
+  - ARIA labels improve usability for **assistive technologies**, ensuring smooth navigation.  
+
+- **Performance & Functionality:**  
+  - The **homepage link** works correctly and redirects users back to the quiz.  
+  - The page **loads quickly**, even if the requested URL does not exist.  
+  - The **error icon and text display correctly** without any layout shifts or broken styling.  
+
+<details>
+<summary>Click here to see the 404 page</summary>
+
+![404 page](documentation/testing-features-404.webp)
+
+</details>
+  <br>
+
+  ## 500 Page
+
+### Overview
+The **500 Internal Server Error page** provides a fun, engaging message that reassures users when a server-side issue occurs. It maintains a **musical theme** that aligns with the site’s branding while guiding users toward possible solutions.
+
+### Features Tested:
+- **Clear & Engaging Messaging:**  
+  - The page presents a humorous and **on-brand error message**: *"The beat stopped, and the server lost the rhythm!"*  
+  - Avoids technical jargon and reassures users that the issue is being addressed.
+
+- **Navigation & Call to Action:**  
+  - Provides a **reload option** to encourage users to retry accessing the site.  
+  - Includes a **link back to the homepage** for easy recovery.  
+  - Uses **ARIA labels** to enhance accessibility for screen readers.
+
+- **Branding & Design:**  
+  - Maintains the **musical theme** with a relevant message.  
+  - Uses an **error icon (fa-solid fa-triangle-exclamation)** to visually indicate an issue.  
+  - Consistent color scheme and typography ensure a seamless user experience.
+
+- **Responsiveness & Accessibility:**  
+  - The page adapts well to different **screen sizes** and devices (desktop, tablet, mobile).  
+  - Uses **semantic HTML** (e.g., `<h2>` for headings, `<p>` for descriptions) for better readability.  
+  - ARIA labels improve usability for **assistive technologies**.
+
+- **Performance & Functionality:**  
+  - The **homepage link** and **reload option** function as expected.  
+  - The page **loads quickly**, even during server issues.  
+  - The **error icon and text display correctly** without layout shifts.
+
+<details>
+<summary>Click here to see the 500 page</summary>
+
+![500 page](documentation/testing-features-500.webp)
+
+</details>
+<br>
+
 <a id=manual-features-test></a>
 
 #### Manual Features Testing
