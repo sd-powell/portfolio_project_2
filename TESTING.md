@@ -120,6 +120,44 @@ I tested my deployed project on multiple browsers to check for compatibility iss
 
 ---
 
+<a id=responsiveness></a>
+
+### Responsiveness
+
+In addition to testing my deployed site on different devices, I thoroughly tested the site's responsiveness using Chrome Developer Tools.
+I searched for information on [Stack Exchange](https://ux.stackexchange.com/questions/74798/are-there-devices-narrower-than-320px-and-data-on-their-usage-for-web-browsing) for the narrowest width of modern devices and based my testing on 320px.
+
+#### Mobile Devices
+
+| Device tested | Screen Width (px) | Screen Height (px) | Result | Notes (Issues Found) |
+| :---: | :---: | :---: | :---: | :---: |
+| | iPhone 12/13/14 ![iPhone 12/13/14](documentation/testing-responsive-iphone15.webp) | Google Pixel 8 ![Google Pixel 8](documentation/testing-responsive-pixel8.webp) | iPhone 16 Pro Max ![iPhone 16 Pro Max](documentation/testing-responsive-iphone16max.webp) |
+| iPhone 12/13/14 | 390px | 844px | ✅ Pass | |
+| Google Pixel 8 | 412px | 916px | ✅ Pass | |
+| iPhone 16 Pro Max | 440px | 956px | ✅ Pass | |
+
+
+#### Tablets
+
+| Device tested | Screen Width (px) | Screen Height (px) | Result | Notes (Issues Found) |
+| :---: | :---: | :---: | :---: | :---: |
+| iPad Mini ![iPad Mini](documentation/testing-responsive-ipadmini.webp) | | | | |
+| iPad Mini | 768px | 1024px | ✅ Pass |  |
+
+#### Laptops & Desktops
+
+| Device tested | Screen Width (px) | Screen Height (px) | Result | Notes (Issues Found) |
+| :---: | :---: | :---: | :---: | :---: |
+| MacBook Air 13” ![MacBook Air 13”](documentation/testing-responsive-macbookair.webp) | Dell Latitude ![Dell Latitude](documentation/testing-responsive-dell.webp) | Macbook Pro 16" ![Macbook Pro 16"](documentation/testing-responsive-macbook.webp) | iMac 24" ![iMac 24"](documentation/testing-responsive-imac24.webp) | Full HD monitor ![Full HD monitor](documentation/testing-responsive-hdmonitor.webp) |
+| MacBook Air 13” | 1280px | 800px | ✅ Pass | Fully responsive |
+| Dell Latitude | 1440px | 809px | ✅ Pass | Fully responsive |
+| Macbook Pro 16" | 1728px | 1085px | ✅ Pass | Fully responsive |
+| iMac 24" | 2048px | 1142px | ✅ Pass | Fully responsive |
+| Full HD monitor | 1920px  | 1080px | ✅ Pass | Fully responsive |
+
+
+---
+
 <a id=accessibility></a>
 
 ### Accessibility

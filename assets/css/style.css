@@ -529,15 +529,99 @@ button {
 
 /************ Media Queries ************/
 
+/* Extra small devices (less than 368px wide) */
+@media screen and (max-width: 368px) {
+  /* Change the background images */
+  body {
+    background-color: var(--background-color);
+    background-image: url(../images/pop-quiz.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+
+    /* Adjust container width */
+    #info_panel,
+    #rules_panel,
+    #quiz_panel,
+    #difficulty_panel,
+    #results_panel,
+    #leaderboard_panel,
+    #error_panel {
+      top: 200px; /* Keep 10px from the top */
+      left: 50%;
+      width: 90%; /* Make it flexible */
+      min-height: 400px; /* Reduce height */
+      padding: 12px; /* Adjust padding */
+    }
+
+      /* Reduce font sizes for better readability */
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p, ol {
+    font-size: 0.9rem;
+  }
+
+    /* Adjust question text to fit */
+    #question_title h2 {
+      font-size: 1rem;
+      min-height: 60px;
+      padding: 5px;
+    }
+
+      /* Resize buttons */
+  button {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
+  .answer_btn {
+    font-size: 14px;
+    padding: 6px 15px;
+    min-height: 40px;
+  }
+
+    /* Adjust leaderboard table */
+    #high_scores th,
+    #high_scores td {
+      font-size: 0.8rem;
+      padding: 2px;
+    }
+  
+    /* Reduce form input size */
+    .submit_form input {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    /* Adjust background image */
+    body {
+      background-size: contain;
+      background-position: top center;
+    }
+  
+    /* Fix quiz footer layout */
+    #quiz_footer {
+      height: 45px;
+      padding: 10px;
+    }
+  }
+
 /* Mobile devices less than 500px */
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   /* Change the background images */
   body {
     background-color: var(--background-color);
     background-image: url(../images/pop-quiz-background-390px.svg);
     background-repeat: no-repeat;
-    background-position: left -24px top -27px;
-    background-size: cover;
+    background-position: left -36px top -48px;
+    background-size: 76% auto;
   }
 }
 
@@ -858,5 +942,9 @@ button {
     font-size: 1.2rem;
     padding: 10px 40px 10px 70px;
     margin-bottom: 15px;
+  }
+
+  .quiz_timer {
+    font-size: 1.2rem;
   }
 }
