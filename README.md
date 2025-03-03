@@ -599,6 +599,14 @@ To clone the repository:
 
 ---
 
+<a id=known-issues></a>
+
+### Known Issues & Bugs
+
+I have noticed that most of the images on my site are used as background images, which limits the ability to include descriptive alt text for screen readers. This could impact accessibility for visually impaired users. I plan to explore alternative methods for incorporating images in future revisions to ensure better accessibility and compliance with web standards.
+
+---
+
 <a id=Credits&inspiration></a>
 
 ## Credits & Inspiration
