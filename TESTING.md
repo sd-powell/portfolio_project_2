@@ -84,6 +84,42 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 
 ## MANUAL TESTING
 
+<a id=full-testing></a>
+
+### Full Testing
+
+Full testing was performed on the following physical devices:
+
+* Desktop:
+  * Mac Studio 2022 LG HDR 4k screen
+* Laptop:
+  * Macbook Pro 2023 16 inch screen
+* Tablet:
+  * iPad Pro 12.9in 2017
+* Mobile Devices:
+  * iPhone 11
+  * iPhone 12 pro
+  * iPhone 15 pro
+  * iPhone XR
+
+  Additional testing was taken by friends and family on a variety of devices and screen sizes.
+
+---
+
+<a id=browser></a>
+
+### Browser Compatibility
+
+- [Safari](https://www.apple.com/uk/safari/)
+- [Chrome](https://www.google.com/chrome)
+- [Firefox](https://www.mozilla.org/firefox)
+- [Bing](https://www.bing.com/)
+- [Edge](https://www.microsoft.com/en-gb/edge?form=MA13FJ)
+
+I tested my deployed project on multiple browsers to check for compatibility issues.
+
+---
+
 <a id=accessibility></a>
 
 ### Accessibility
