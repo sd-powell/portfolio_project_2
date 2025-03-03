@@ -67,6 +67,88 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | Page    | Mobile                                                      | Desktop                                                      | Notes |
 | ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
 
+## Results Panel
+
+### Overview
+The **Results Panel** provides users with a summary of their quiz performance, displaying their final score and offering them the chance to submit their name to the leaderboard. It also includes navigation options to restart the quiz or exit to the home page.
+
+### Features Tested:
+- **Score Display & Feedback:**  
+  - The panel **correctly displays** the user’s final score within the `<span id="score_number">`.  
+  - A motivational message is included, reinforcing engagement with **"Top of the Pops"** encouragement.  
+
+- **Leaderboard Submission Functionality:**  
+  - The **name input field (`#user_name`)** allows users to enter a name (up to 20 characters).  
+  - The form enforces **input validation**, preventing blank or whitespace-only submissions (`pattern="\S(.*\S)?" required`).  
+  - The **"Submit" button (`#submit_score`)** correctly registers the name and score in the leaderboard.  
+
+- **Navigation & Call to Action:**  
+  - The **"Exit" button (`#quit_quiz`)** returns users to the home page.  
+  - The **"Restart Quiz" button (`#restart_quiz`)** allows users to start a new quiz session instantly.  
+  - **ARIA labels** are applied to buttons for improved accessibility.  
+
+- **Branding & Design:**  
+  - The panel maintains a **consistent visual style** with the rest of the site.  
+  - The **input field and buttons** are clearly distinguishable and properly styled.  
+  - The layout is structured to ensure easy readability and interaction.  
+
+- **Responsiveness & Accessibility:**  
+  - The results panel adapts well to different **screen sizes** (desktop, tablet, mobile).  
+  - The **form elements (`<input>`, `<button>`)** are accessible via keyboard navigation and screen readers.  
+  - The use of **semantic HTML elements** (`<h2>`, `<p>`, `<form>`, `<input>`, `<button>`) enhances accessibility.  
+
+- **Performance & Functionality:**  
+  - The **score updates dynamically** upon quiz completion.  
+  - The **submission form works correctly**, preventing invalid inputs and successfully adding scores to the leaderboard.  
+  - The page loads **efficiently** without broken elements or layout shifts.  
+
+<details>
+<summary>Click here to see the Results Panel</summary>
+
+![Results Panel](documentation/testing-features-results.webp)
+
+</details>
+<br>
+
+## Leaderboard Panel
+
+### Overview
+The **Leaderboard Panel** provides users with a ranked list of the top 10 scores, dynamically updating based on quiz performance. It enhances user engagement by displaying competitive scores and offering options to restart or exit the quiz.
+
+### Features Tested:
+- **Leaderboard Display & Dynamic Updates:**  
+  - The **top 10 scores** are displayed in a structured table format.  
+  - The `<tbody>` section dynamically updates with user scores after quiz completion.  
+  - **Ranks, names, and scores** are correctly displayed in descending order.  
+
+- **Navigation & Call to Action:**  
+  - The **"Exit" button** allows users to return to the home page.  
+  - The **"Restart Quiz" button** lets users immediately begin a new quiz session.  
+  - **ARIA labels** are applied to buttons for improved accessibility.  
+
+- **Branding & Design:**  
+  - The panel maintains the **consistent styling** of the site.  
+  - Uses **clear, readable fonts** and a structured table format for clarity.  
+  - Buttons follow the **expected UI conventions** (`outline_btn` for exit, `reverse_btn` for restart).  
+
+- **Responsiveness & Accessibility:**  
+  - The leaderboard layout adapts to different **screen sizes** (desktop, tablet, mobile).  
+  - Uses **semantic HTML elements** (`<table>`, `<th>`, `<tbody>`) to ensure proper screen reader support.  
+  - Button labels and interactive elements comply with **ARIA accessibility guidelines**.  
+
+- **Performance & Functionality:**  
+  - The leaderboard updates **instantly** after the quiz is completed.  
+  - The **Exit and Restart buttons** work as expected, redirecting users appropriately.  
+  - The page loads **without delays or broken styling**, ensuring a smooth user experience.  
+
+<details>
+<summary>Click here to see the Leaderboard Panel</summary>
+
+![Leaderboard Panel](documentation/testing-features-leaderboard.webp)
+
+</details>
+<br>
+
 ## 404 Page
 
 ### Overview
