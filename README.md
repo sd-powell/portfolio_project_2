@@ -14,6 +14,8 @@ The game features a fast-paced multiple-choice format where players race against
 
 ---
 
+<a id=contents></a>
+
 ## CONTENTS
 
 - [User Experience](#ux)
@@ -85,19 +87,23 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 
 #### New Site Users
 
+- As a new site user, I want to have a clear and accessible way to navigate through different sections, so that I can explore the quiz, rules, and leaderboard without difficulty.
 - As a new site user, I want to understand the game rules quickly, so that I can start playing without confusion.
-- As a new site user, I want to engage instantly with the design and interface, so that I feel excited and motivated to play.
 - As a new site user, I want to start my first quiz easily, so that I can jump straight into the fun.
 - As a new site user, I want to play against a timer, so that I feel a sense of challenge and excitement while answering questions quickly.
 - As a new site user, I want to see my score and progress, so that I feel motivated to improve and replay.
+- As a new site user, I want to receive feedback on my answer choices, so that I can learn from my mistakes and improve my knowledge.
 
 #### Returning Site Users
 
+-  As a returning site user, I want the quiz experience to be consistent and function correctly across different devices, so that I can enjoy playing whether I’m on desktop, tablet, or mobile.
 - As a returning site user, I want to select the difficulty level of quiz questions, so that I can tailor the challenge to my knowledge and skill level.
+- As a returning site user, I want to easily restart the quiz, so that I can immediately try again if I want to improve my score.
 
 #### Frequent Visitor Goals
 
 - As a frequent site user, I want to see a leaderboard of top quiz scores, so that I can compare my performance with others and stay motivated to improve.
+- As a frequent site user, I want to have a fair scoring system where I earn points based on correct answers, so that I feel rewarded for my knowledge and accuracy.
 
 ---
 
@@ -615,3 +621,6 @@ I would like to acknowledge the following people:
 - The quiz fans in my family for helping me test my site.
 
 - The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to view my site and look over the code.
+
+<br><hr>
+[🔼 Back to top](#contents)

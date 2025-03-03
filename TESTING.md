@@ -69,8 +69,9 @@ Each page is tested using Chrome Developer Tools to ensure that it is responsive
 
 I've tested my deployed project using the Lighthouse Audit tool to test the performance, accessibility, best practices and SEO of the website.
 
-| Page    | Mobile                                                      | Desktop                                                      | Notes |
-| ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
+| Page | Mobile | Desktop | Notes |
+| ---- | ------ | ------- | ----- |
+| ---- | ------ | ------- | ----- |
 
 ---
 
