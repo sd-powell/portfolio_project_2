@@ -7,6 +7,9 @@ Visit the deployed site here: [DJ Silver Soul](https://sd-powell.github.io/portf
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
+This document outlines the testing processes and results for the **DJ Silver Soul Pop Quiz**. It ensures that all features function as expected, meet accessibility standards, and provide an optimal user experience.
+
+
 ---
 
 <a id=contents></a>
@@ -78,6 +81,24 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 <a id=manual-testing></a>
 
 ## MANUAL TESTING
+
+<a id=accessibility></a>
+
+### Accessibility
+
+#### Color contrast compliance
+
+In addition to the automated tests for accessibility standards, I used [WebAIM](https://webaim.org/resources/contrastchecker/) to test the contrast of the colours on the site for visually impaired users.
+
+| Foreground colour | Background colour | Screenshot | Testing results |
+| ----------------- | ----------------- | --------------- | --------------- |
+| `#ffffff`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour1.webp)| ✅ Pass |
+| `#151724`         | `#4f9aff`         | ![Screenshot1](documentation/testing-access-colour2.webp)| ⛔️ Fail on small text <br> ✅  Pass on larger text and graphics |
+| `#4eb738`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour3.webp)| ⛔️ Fail on small text <br> ✅  Pass on larger text and graphics |
+| `#e83c5a`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour4.webp)| ⛔️ Fail on all text <br> ✅  Pass on graphics |
+| `#f59527`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour5.webp)| ⛔️ Fail on small text <br> ✅  Pass on larger text and graphics |
+
+---
 
 ---
 
