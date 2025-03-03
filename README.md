@@ -59,7 +59,7 @@ The game features a fast-paced multiple-choice format where players race against
   - [Know Issues & Bugs](#known-issues)
 
 * [Credits](#credits)
-  - [Inspiration](#inspiration)
+  - [Inspiration](#Credits&inspiration)
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgement](#acknowledgement)
@@ -263,7 +263,7 @@ All Pages on the website are responsive and have:
 <details>
 <summary> Click here to view the favicon </summary>
 
-![favicon](documentation/dj-silver-soul-favicon.webp)
+![favicon](documentation/features-home-favicon.webp)
 
 </details>
 
