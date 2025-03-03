@@ -67,6 +67,102 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 | Page    | Mobile                                                      | Desktop                                                      | Notes |
 | ------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ----- |
 
+## Difficulty Panel
+
+### Overview
+The **Difficulty Panel** allows users to select their preferred quiz difficulty level before starting the game. The panel presents a fun, engaging theme while ensuring smooth interaction and navigation.
+
+### Features Tested:
+- **Difficulty Selection Functionality:**  
+  - Users can select one of **three difficulty levels**:  
+    - 🎧 **Easy Listening** - "The warm-up" (`#easy`)  
+    - 🔥 **Medium** - "Peak Time questions" (`#medium`)  
+    - 🚀 **Hard** - "After hours - for true fans" (`#hard`)  
+  - The correct difficulty selection is stored and passed to the quiz logic.  
+  - Only **one difficulty option can be selected at a time**.  
+
+- **Navigation & Call to Action:**  
+  - The **"Exit" button (`#diff_exit_btn`)** returns users to the home page.  
+  - **ARIA labels** are applied to all buttons for better accessibility.  
+  - The panel ensures users **cannot proceed without selecting a difficulty level**.  
+
+- **Branding & Design:**  
+  - The panel follows the **site’s music-themed branding**, with engaging descriptions and icons.  
+  - The **buttons are well-spaced and clearly labeled**, making selection easy.  
+  - The interface maintains a **fun, inviting experience** that aligns with the quiz’s theme.  
+
+- **Responsiveness & Accessibility:**  
+  - The difficulty panel **scales properly** on different screen sizes (desktop, tablet, mobile).  
+  - The **buttons are keyboard-navigable**, ensuring accessibility for all users.  
+  - The use of **semantic HTML elements** (`<h2>`, `<p>`, `<button>`) supports screen reader functionality.  
+
+- **Performance & Functionality:**  
+  - The **difficulty selection buttons** work as expected and apply the correct settings.  
+  - The **panel loads efficiently**, with no broken styling or layout issues.  
+  - The interface prevents users from **accidentally skipping difficulty selection** before starting the quiz.  
+
+<details>
+<summary>Click here to see the Difficulty Panel</summary>
+
+![Difficulty Panel](documentation/testing-features-difficulty.webp)
+
+</details>
+<br>
+
+## Quiz Panel
+
+### Overview
+The **Quiz Panel** provides an interactive interface for users to answer music-related questions. It dynamically updates the question, tracks the timer, manages user responses, and displays the current score. The panel ensures a smooth and engaging quiz experience.
+
+### Features Tested:
+- **Question Display & Dynamic Updates:**  
+  - The **question number (`#questionNo`)** correctly increments as users progress through the quiz.  
+  - Questions and answer choices are **dynamically loaded from an API** and update correctly.  
+  - The **selected answer buttons (`.answer_btn`)** register clicks and validate responses appropriately.  
+
+- **Timer Functionality:**  
+  - The **quiz timer (`#timer_secs`)** starts at 15 seconds and counts down correctly and displays "Time's Up" when it ends.  
+  - The **progress bar (`.time_line`)** updates visually as time decreases.  
+  - If time expires, the quiz correctly **prevents further answer selection** and moves to the next question.  
+
+- **Answer Selection & Feedback:**  
+  - The **answer buttons (`.answer_btn`)** highlight correct or incorrect responses.  
+  - Once an answer is chosen, **users cannot change their selection** before the next question appears.  
+  - The system registers correct answers and updates the **score (`#score_total`)** dynamically by 10 points per correct answer.  
+
+- **Navigation & Call to Action:**  
+  - The **"Next" button (`#next_btn`)** only becomes available after a user selects an answer or the timer runs out.  
+  - The **"Exit" button (`#quiz_exit_btn`)** correctly navigates back to the home page.  
+  - **ARIA labels** are used on buttons for better accessibility.  
+
+- **Score Tracking & Display:**  
+  - The **score section (`.quiz_score`)** updates after each question.  
+  - Users receive immediate feedback on their **current score (`#score_total`)**.  
+  - The game ensures **accurate tracking of correct answers** throughout the session.  
+
+- **Branding & Design:**  
+  - The quiz panel maintains a **consistent theme and visual design** with the rest of the site.  
+  - The layout is structured for **easy readability and user engagement**.  
+  - The **use of icons (`fa-solid fa-star` for scores, `fa-solid fa-arrow-right` for next question)** enhances the UI experience.  
+
+- **Responsiveness & Accessibility:**  
+  - The quiz adapts well to **different screen sizes** (desktop, tablet, mobile).  
+  - The **buttons are keyboard-navigable**, allowing non-mouse users to interact with the quiz.  
+  - **Semantic HTML elements** (`<h2>`, `<p>`, `<button>`) improve screen reader support.  
+
+- **Performance & Functionality:**  
+  - The quiz **loads questions efficiently** without delays or broken elements.  
+  - Users **cannot proceed to the next question** without answering or the timer expiring.  
+  - The **quiz handles incorrect or missing API data gracefully** without breaking functionality.  
+
+<details>
+<summary>Click here to see the Quiz Panel</summary>
+
+![Quiz Panel](documentation/testing-features-quiz.webp)
+
+</details>
+<br>
+
 ## Results Panel
 
 ### Overview
