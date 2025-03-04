@@ -558,6 +558,12 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 
 ## Manual Features Testing
 
+### Site Functionality Flow Diagram
+
+The diagram below illustrates the overall functionality of the site, including user interactions, quiz progression, and system responses. It provides a structured view of how different components, such as API calls, score calculations, and navigation, integrate to deliver a seamless quiz experience.
+
+![Flow Diagram](documentation/features-functionality-diagram.webp)
+
 ### Home Page
 
 | Component | Expected Behavior | Testing Steps | Actual Result | Fix (if needed) | Screenshot |

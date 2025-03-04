@@ -598,6 +598,7 @@ To clone the repository:
 | No | Bug                                  | How I solved the issue                              |
 | :- | :----------------------------------- | :-------------------------------------------------- |
 | 1  | When the html code was first tested using the w3c validator, it raised the issue of trailing slashes e.g. `<br />` which was being caused by the formatter in VS Code. | I disabled format on save to solve this issue and re-tested my html code. |
+| 2  | When a user left the name field blank, or left a blank space and pressed submit, a chrome alert was displayed `"Please enter your name before submitting!"`. I was advised by my mentor to change this alert to a javascript alert using [sweetalert2](https://sweetalert2.github.io/) | I disabled format on save to solve this issue and re-tested my html code. |
 
 ---
 
