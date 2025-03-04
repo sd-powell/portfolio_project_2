@@ -90,21 +90,7 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 
 ### Full Testing
 
-Full testing was performed on the following physical devices:
-
-* Desktop:
-  * Mac Studio 2022 LG HDR 4k screen
-* Laptop:
-  * Macbook Pro 2023 16 inch screen
-* Tablet:
-  * iPad Pro 12.9in 2017
-* Mobile Devices:
-  * iPhone 11
-  * iPhone 12 pro
-  * iPhone 15 pro
-  * iPhone XR
-
-  Additional testing was taken by friends and family on a variety of devices and screen sizes.
+This section outlines the manual testing process conducted to ensure the website functions correctly across different devices, screen sizes, and user interactions. Each test was performed methodically to identify potential issues with responsiveness, usability, and accessibility, with results documented for further improvements. Additional testing was taken by friends and family on a variety of devices and screen sizes.
 
 ---
 
@@ -126,8 +112,9 @@ I tested my deployed project on multiple browsers to check for compatibility iss
 
 ### Responsiveness
 
-In addition to testing my deployed site on different devices, I thoroughly tested the site's responsiveness using Chrome Developer Tools.
-I searched for information on [Stack Exchange](https://ux.stackexchange.com/questions/74798/are-there-devices-narrower-than-320px-and-data-on-their-usage-for-web-browsing) for the narrowest width of modern devices and based my testing on 320px.
+In addition to testing my deployed site on different devices, I thoroughly tested its responsiveness using Chrome Developer Tools.  
+I researched the **narrowest width of modern devices** on [Stack Exchange](https://ux.stackexchange.com/questions/74798/are-there-devices-narrower-than-320px-and-data-on-their-usage-for-web-browsing) and based my testing on **320px** as a standard minimum width.  
+Additionally, I used the [Mobile First Plugin](https://www.webmobilefirst.com/en/), a Chrome extension designed to test site responsiveness across different devices.
 
 #### Mobile Devices
 
