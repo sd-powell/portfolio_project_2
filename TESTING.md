@@ -167,7 +167,7 @@ I searched for information on [Stack Exchange](https://ux.stackexchange.com/ques
 In addition to the automated tests for accessibility standards, I used [WebAIM](https://webaim.org/resources/contrastchecker/) to test the contrast of the colours on the site for visually impaired users.
 
 | Foreground colour | Background colour | Screenshot | Testing results |
-| ----------------- | ----------------- | --------------- | --------------- |
+| :-----------------: | :-----------------: | :---------------: | :---------------: |
 | `#ffffff`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour1.webp)| ✅ Pass |
 | `#151724`         | `#4f9aff`         | ![Screenshot1](documentation/testing-access-colour2.webp)| ⛔️ Fail on small text <br> ✅  Pass on larger text and graphics |
 | `#4eb738`         | `#252733`         | ![Screenshot1](documentation/testing-access-colour3.webp)| ⛔️ Fail on small text <br> ✅  Pass on larger text and graphics |
