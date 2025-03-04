@@ -18,6 +18,7 @@ This document outlines the testing processes and results for the **DJ Silver Sou
 - [AUTOMATED TESTING](#automated-testing)
   - [W3C Validator](#w3c-validation)
   - [W3C CSS Validator](#css-validation)
+  - [JavaScript Validator](#js-validation)
   - [Lighthouse](#lighthouse)
 - [MANUAL TESTING](#manual-testing)
   - [Full Testing](#full-testing)
@@ -69,6 +70,19 @@ To guarantee **cross-device compatibility**, every page was rigorously tested ac
 | Directory                                | File tested  | Screenshot                                              | Notes                            |
 | ---------------------------------------- | ------------ | ------------------------------------------------------- | -------------------------------- |
 | documentation/testing-w3css-home.webp | style.css    | ![screenshot](documentation/testing-w3css-home.webp) | no errors occurred when checking |
+
+<a id=js-validation></a>
+
+### JavaScript Validator
+
+The [JSHint](https://jshint.com/) website was used to validate the JavaScript code. I also installed [ESLint](https://eslint.org/) in [VS Code](https://code.visualstudio.com/), which automatically checked my JavaScript code in the console and reported any errors.  
+
+I attempted to test with [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/), but I encountered complications when importing functions into my test scripts. After assessing the time required to resolve these issues, I decided it would be more efficient to use alternative testing methods.
+
+| Validator| Issues found | Fix Implemented |
+| :--: | :-- | :-- |
+| **JSHint** | One warning `117	'async functions' is only available in ES8 (use 'esversion: 8').` | JSHint is warning you that async functions are only supported in ES8 (ECMAScript 2017), but it is currently set to an older ECMAScript version. I updated the JSHint configuration to ES8. |
+| **ESLint** | One error `297:5 error 'Swal' is not defined no-undef` | I researched this issue on [GitHub](https://github.com/sweetalert2/sweetalert2/issues/477) and it should be resolved by declaring the link to the sweetalert2 CDN in `ìndex.html` |
 
 <a id=lighthouse></a>
 
