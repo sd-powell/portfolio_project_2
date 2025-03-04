@@ -595,10 +595,11 @@ To clone the repository:
 
 ### Solved Issues & Bugs
 
-| No | Bug                                  | How I solved the issue                              |
-| :- | :----------------------------------- | :-------------------------------------------------- |
-| 1  | When the html code was first tested using the w3c validator, it raised the issue of trailing slashes e.g. `<br />` which was being caused by the formatter in VS Code. | I disabled format on save to solve this issue and re-tested my html code. |
-| 2  | When a user left the name field blank, or left a blank space and pressed submit, a chrome alert was displayed `"Please enter your name before submitting!"`. I was advised by my mentor to change this alert to a javascript alert using [sweetalert2](https://sweetalert2.github.io/) | I disabled format on save to solve this issue and re-tested my html code. |
+| No | Bug Description | Solution | Screenshot |
+| :- | :------------- | :-------- | :--------- |
+| 1  | When testing the HTML code with the W3C validator, it flagged an issue with trailing slashes (e.g., `<br />`). This was caused by the formatter in VS Code. | I disabled "Format on Save" in VS Code to resolve the issue and re-tested my HTML code. | ![Screenshot](documentation/testing-fix-slash.webp) |
+| 2  | When a user leaves the name field blank or enters only spaces before submitting, Chrome displays its default alert: `"Please enter your name before submitting!"`. My mentor suggested replacing this with a JavaScript alert using [SweetAlert2](https://sweetalert2.github.io/). | I installed the SweetAlert2 CDN link and implemented a custom alert modal. | ![Screenshot](documentation/testing-fix-modal.webp) |
+| 3  | When testing the site on small screens (320px wide), part of the main panel was cropped by the viewport. | I added a media query `@media screen and (max-width: 320px) and (max-height: 568px)`, which removed the background image and repositioned the panel at the top of the screen. | ![Screenshot](documentation/testing-fix-320px.webp) |
 
 ---
 
@@ -606,7 +607,7 @@ To clone the repository:
 
 ### Known Issues & Bugs
 
-I have noticed that most of the images on my site are used as background images, which limits the ability to include descriptive alt text for screen readers. This could impact accessibility for visually impaired users. I plan to explore alternative methods for incorporating images in future revisions to ensure better accessibility and compliance with web standards.
+I’ve realized that most images on my site are set as background images, making it difficult to provide descriptive alt text for screen readers. This could affect accessibility for visually impaired users. Moving forward, I plan to explore alternative ways to incorporate images to improve accessibility and align with web standards.
 
 ---
 
