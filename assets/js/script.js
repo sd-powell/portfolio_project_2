@@ -296,8 +296,8 @@ function saveHighScore() {
     // sweetalert2 alert modal
     Swal.fire({
       icon: "error",
-      title: "Oops...",
-      text: "Please enter your name before submitting!",
+      title: "Oops!",
+      text: "Please enter your name before submitting. (Max: 20 characters)",
       confirmButtonColor: '#4f9aff',
       customClass: {
         popup: 'my-custom-font'
