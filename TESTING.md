@@ -1,5 +1,7 @@
 # Testing
 
+![DJ Silver Soul's Pop Quiz shown in a variety of screen sizes](documentation/testing-responsive-devices.webp)
+
 Visit the deployed site here: [DJ Silver Soul's Pop Quiz](https://sd-powell.github.io/portfolio_project_2/)
 
 > [!NOTE]  
