@@ -895,11 +895,12 @@ button {
   body {
     background-color: var(--background-color);
     background-image: url(../images/pop-quiz.svg),
-      url(../images/lightbulb-silversoul.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center top 20px, left -35px top -55px;
+      url(../images/lightbulb-silversoul.svg),
+      url(../images/large-lightbulb.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center top 20px, left -35px top -55px, right -22px top 14px;
     /* background-position: center top 10px, left -35px top -60px; */
-    background-size: 450px auto, 450px auto;
+    background-size: 450px auto, 450px auto, 100% auto;
     /* background-size: 450px auto, 450px auto; */
   }
 
