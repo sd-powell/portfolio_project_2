@@ -293,7 +293,16 @@ function showResults() {
 function saveHighScore() {
   const playerName = userName.value.trim();
   if (!playerName) {
-    alert("Please enter your name before submitting!");
+    // sweetalert2 alert modal
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please enter your name before submitting!",
+      confirmButtonColor: '#4f9aff',
+      customClass: {
+        popup: 'my-custom-font'
+    }
+    });
     return;
   }
 
