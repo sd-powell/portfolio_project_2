@@ -674,8 +674,8 @@ The diagram below illustrates the overall functionality of the site, including u
 
 | Component | Expected Behavior | Negative Test Performed | Actual Result | Fix (if needed) | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| **Leaderboard** Name Submission - blank | Clicking on the **Submit** button while the "Enter Your Name" field is empty should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while the "Enter Your Name" field was empty | An alert reading `Please enter your name before submitting!` was displayed | ✅ No fix needed | ![Screenshot](documentation/testing-results-submit.webp) |
-| **Leaderboard** Name Submission - white space | Clicking on the **Submit** button while there is a blank space in the field should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while there was a blank space in the field | An alert reading `Please enter your name before submitting!` was displayed | ✅ No fix needed | ![Screenshot](documentation/testing-results-submit.webp) |
+| **Leaderboard** Name Submission - blank | Clicking on the **Submit** button while the "Enter Your Name" field is empty should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while the "Enter Your Name" field was empty | An alert reading `Please enter your name before submitting!` was displayed | 🛠️ I was advised by my mentor to use a JavaScript modal instead of the default alert window. See the README’s bug fixes section for details. | ![Screenshot](documentation/testing-results-submit.webp) |
+| **Leaderboard** Name Submission - white space | Clicking on the **Submit** button while there is a blank space in the field should activate an alert reading `Please enter your name before submitting!` | Clicked the **Submit** button while there was a blank space in the field | An alert reading `Please enter your name before submitting!` was displayed | 🛠️ Fix applied as the issue above. | ![Screenshot](documentation/testing-results-submit.webp) |
 
 <br><hr>
 [🔼 Back to top](#contents)

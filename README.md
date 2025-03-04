@@ -72,7 +72,7 @@ The game features a fast-paced multiple-choice format where players race against
 
 ## User Experience (UX)
 
-The quiz is built with the player in mind, offering an engaging and immersive experience. Below are the key user-centric principles that make the game fun, intuitive, and rewarding for all music lovers:
+The quiz is built with the player in mind, offering an engaging and immersive experience. Designed for music enthusiasts of all ages, from casual listeners to die-hard fans, it provides an interactive challenge tailored to their knowledge levels. Below are the key user-centric principles that make the game fun, intuitive, and rewarding for all music lovers:
 
 1. **Engaging & Fun Experience** – The quiz is designed to be entertaining, immersive, and enjoyable for all music lovers
 2. **Easy-to-Use Interface** – A clean, intuitive UI ensures seamless navigation and accessibility for players of all skill levels
