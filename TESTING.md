@@ -508,7 +508,9 @@ The **404 Page Not Found** error page provides a fun and engaging experience for
 - **Branding & Design:**  
   - Maintains **branding consistency** with the rest of the website.  
   - Features an **error icon (fa-solid fa-ban)** to visually indicate an issue.  
-  - Uses a **friendly, playful tone** that aligns with the quiz experience.  
+  - Uses a **friendly, playful tone** that aligns with the quiz experience.
+  - Includes a **CSS keyframe animation** applied to the `<h2>` element to create a subtle shake effect, reinforcing the idea of an "error" or "glitch."  
+  - The animation enhances user engagement without being distracting.  
 
 - **Responsiveness & Accessibility:**  
   - The page adapts well to different **screen sizes** and devices (desktop, tablet, mobile).  
@@ -548,6 +550,8 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
   - Maintains the **musical theme** with a relevant message.  
   - Uses an **error icon (fa-solid fa-triangle-exclamation)** to visually indicate an issue.  
   - Consistent color scheme and typography ensure a seamless user experience.
+  - Includes a **CSS keyframe animation** applied to the `<h2>` element to create a subtle shake effect, reinforcing the idea of an "error" or "glitch."  
+  - The animation enhances user engagement without being distracting.
 
 - **Responsiveness & Accessibility:**  
   - The page adapts well to different **screen sizes** and devices (desktop, tablet, mobile).  
@@ -571,12 +575,6 @@ The **500 Internal Server Error page** provides a fun, engaging message that rea
 <a id=manual-features-test></a>
 
 ## Manual Features Testing
-
-### Site Functionality Flow Diagram
-
-The diagram below illustrates the overall functionality of the site, including user interactions, quiz progression, and system responses. It provides a structured view of how different components, such as API calls, score calculations, and navigation, integrate to deliver a seamless quiz experience.
-
-![Flow Diagram](documentation/features-functionality-diagram.webp)
 
 ### Home Page
 

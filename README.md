@@ -28,6 +28,7 @@ The game features a fast-paced multiple-choice format where players race against
   - [Colour Scheme](#colour-scheme)
   - [Typography](#typography)
   - [Imagery](#imagery)
+  - [Site Functionality Flow Diagram](#siteflow)
   - [Game Logic Overview](#gameplay)
   - [Wireframes](#wireframes)
     - [Mobile Wireframes](#mobile-frames)
@@ -168,6 +169,17 @@ Google Fonts was used to import the selected fonts for the site, ensuring high-q
 ### Imagery
 
 I chose neon imagery for my site because it’s a pop quiz, and I wanted to reflect the fun, energetic vibe of an ’80s neon disco theme. The vibrant glow and retro-futuristic aesthetic create an engaging, nostalgic atmosphere that makes the quiz experience feel exciting and immersive. All images were sourced from [Adobe Stock](https://stock.adobe.com/)
+
+<br>
+<hr>
+
+<a id=siteflow></a>
+
+### Site Functionality Flow Diagram
+
+The diagram below illustrates the overall functionality of the site, including user interactions, quiz progression, and system responses. It provides a structured view of how different components, such as API calls, score calculations, and navigation, integrate to deliver a seamless quiz experience.
+
+![Flow Diagram](documentation/features-functionality-diagram.webp)
 
 <br>
 <hr>
