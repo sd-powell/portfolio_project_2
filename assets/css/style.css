@@ -86,6 +86,7 @@ button {
 }
 
 /************ Containers ************/
+/* Hide the headings for screen readers */
 /* https://webaim.org/techniques/css/invisiblecontent/ */
 .hidden_heading {
   position: absolute;
@@ -125,7 +126,7 @@ button {
 #difficulty_panel,
 #leaderboard_panel,
 #results_panel {
-  padding: 18px 18px;
+  padding: 18px;
 }
 
 #rules_panel,
@@ -133,18 +134,17 @@ button {
 #difficulty_panel,
 #results_panel,
 #leaderboard_panel {
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
   display: none;
 }
 
 #results_panel {
-  /* display: flex; */
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* min-height: 350px; */
 }
 
+/* Show panels by adding the .show class */
 #rules_panel.show,
 #results_panel.show,
 #leaderboard_panel.show,
@@ -275,6 +275,7 @@ button {
   transition: background 0.3s ease;
 }
 
+/* Style the rules list items with a counter */
 #rules_panel li::before {
   content: counter(rule-counter);
   counter-increment: rule-counter;
@@ -386,6 +387,7 @@ button {
   font-weight: bold;
 }
 
+/* Differentiate the background color of the table rows */
 #high_scores tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -416,14 +418,12 @@ button {
   background: transparent;
   border: 2px solid var(--highlight-blue);
   color: var(--highlight-blue);
-  /* transition: background 0.3s ease, color 0.3s ease; */
 }
 
 .reverse_btn {
   background: var(--highlight-blue);
   color: var(--background-color);
   border: none;
-  /* transition: background 0.3s ease, color 0.3s ease; */
 }
 
 .answer_btn {
@@ -667,10 +667,9 @@ button {
       url(../images/lightbulb-silversoul.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: center top 20px, left -25px top -40px;
-    /* background-position: center top 10px, left -35px top -60px; */
     background-size: 350px auto, 300px auto;
-    /* background-size: 450px auto, 450px auto; */
   }
+
   /* Increase the width of content containers */
   #info_panel,
   #rules_panel,
@@ -729,10 +728,6 @@ button {
   #info_panel h2 {
     padding: 0 22px 22px 22px;
   }
-
-  /* .difficulty_btn {
-    padding-bottom: 32px;
-  } */
 
   #rules_panel li {
     padding: 10px 40px 10px 70px;
@@ -879,9 +874,7 @@ button {
         url(../images/lightbulb-silversoul.svg);
       background-repeat: no-repeat, no-repeat;
       background-position: right 10px top 20px, left -25px top -40px;
-      /* background-position: center top 10px, left -35px top -60px; */
       background-size: 300px auto, 300px auto;
-      /* background-size: 450px auto, 450px auto; */
     }
 
     /* Adjust panel position for shorter screens */
@@ -906,9 +899,7 @@ button {
       url(../images/large-lightbulb.svg);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center top 20px, left -35px top -55px, right -22px top 14px;
-    /* background-position: center top 10px, left -35px top -60px; */
     background-size: 450px auto, 450px auto, 100% auto;
-    /* background-size: 450px auto, 450px auto; */
   }
 
   h2 {
