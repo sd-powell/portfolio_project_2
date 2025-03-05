@@ -148,7 +148,8 @@ button {
 #rules_panel.show,
 #results_panel.show,
 #leaderboard_panel.show,
-#difficulty_panel.show {
+#difficulty_panel.show,
+#info_panel.show {
   display: flex;
   z-index: 5;
 }
