@@ -28,6 +28,7 @@ The game features a fast-paced multiple-choice format where players race against
   - [Colour Scheme](#colour-scheme)
   - [Typography](#typography)
   - [Imagery](#imagery)
+  - [Game Play](#gameplay)
   - [Wireframes](#wireframes)
     - [Mobile Wireframes](#mobile-frames)
     - [Tablet Wireframes](#tablet-frames)
@@ -83,6 +84,9 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 7. **Mobile-Friendly Design** – Optimized for desktop and mobile play to ensure accessibility anytime, anywhere
 8. **Encourages Learning & Memory Recall** – Combining music knowledge with trivia boosts memory retention and cognitive skills
 
+<br>
+<hr>
+
 <a id=user-stories></a>
 
 ### User Stories
@@ -137,6 +141,9 @@ This color scheme enhances clarity, feedback, and user experience while maintain
 
 </details>
 
+<br>
+<hr>
+
 <a id=typography></a>
 
 ### Typography
@@ -153,17 +160,43 @@ Google Fonts was used to import the selected fonts for the site, ensuring high-q
 
 - **social media icons:** [Font Awesome](https://fontawesome.com/) library icons were used throughout the site because they provide a versatile, scalable, and visually consistent icon set that enhances usability and complements the clean, modern aesthetic of my typography.
 
+<br>
+<hr>
+
 <a id=imagery></a>
 
 ### Imagery
 
 I chose neon imagery for my site because it’s a pop quiz, and I wanted to reflect the fun, energetic vibe of an ’80s neon disco theme. The vibrant glow and retro-futuristic aesthetic create an engaging, nostalgic atmosphere that makes the quiz experience feel exciting and immersive. All images were sourced from [Adobe Stock](https://stock.adobe.com/)
 
+<br>
+<hr>
+
+<a id=gameplay></a>
+
+## Game Logic Overview
+
+The quiz game follows a structured flow to ensure an engaging and fair experience for players. It begins with the user selecting a difficulty level, which determines the set of ten questions fetched from an online API. Once the game starts, players must answer multiple-choice questions within a time limit. 
+
+Each question presents four possible answers, and players must select one before the timer of 15 seconds runs out. If a correct answer is chosen, their score increases by 10 points. If an incorrect answer is selected (or the timer expires), the correct answer is highlighted before moving to the next question and the player gets no points.
+
+The game continues until all questions are answered, at which point the player's final score is displayed (maximum 100 points). Players can then submit their score to a leaderboard, where high scores are stored locally in the players browser and ranked. They can choose to restart the game or exit at any point.
+
+Below is a flowchart illustrating the complete game logic:
+
+![Quiz Game Flowchart](documentation/features-functionality-pseudo.webp)
+
+<br>
+<hr>
+
 <a id=wireframes></a>
 
 ### Wireframes
 
 Using [Balsamiq](https://balsamiq.com/), wireframes were developed for mobile, tablet, and desktop views. These wireframes played a crucial role in outlining the site’s structure and layout, ensuring a smooth user experience across different devices. The design process prioritized responsive adjustments to create an intuitive interface that adapts seamlessly to various screen sizes.
+
+<br>
+<hr>
 
 <a id=mobile-frames></a>
 
