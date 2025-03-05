@@ -180,7 +180,7 @@ function getQuestions(data) {
   answerList.innerHTML = answers
     .map(
       (answer, index) =>
-        `<button class="answer_btn" id="answerNo${
+        `<button class="answer_btn" id="answer_No${
           index + 1
         }">${parseHtmlEntities(answer)}</button>`
     )
