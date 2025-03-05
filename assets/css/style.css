@@ -687,7 +687,8 @@ button {
   #rules_panel,
   #difficulty_panel,
   #results_panel,
-  #leaderboard_panel {
+  #leaderboard_panel,
+  #error_panel {
     padding: 30px;
   }
 
@@ -759,6 +760,10 @@ button {
     padding: 18px 30px;
   }
 
+  #error_panel p {
+    font-size: 1.6rem;
+  }
+
   /* Improve button spacing */
   button {
     font-size: 1.4rem;
@@ -817,7 +822,8 @@ button {
   #rules_panel,
   #difficulty_panel,
   #results_panel,
-  #leaderboard_panel {
+  #leaderboard_panel,
+  #error_panel {
     padding: 30px;
   }
 
@@ -891,6 +897,10 @@ button {
 
 .results_text p {
   font-size: 1.5rem;
+}
+
+#error_panel p {
+  font-size: 1.8rem;
 }
 
   /* Improve button spacing */
