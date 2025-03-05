@@ -810,13 +810,34 @@ button {
     min-height: 600px;
   }
 
+  #info_panel,
+  #rules_panel,
+  #difficulty_panel,
+  #results_panel,
+  #leaderboard_panel {
+    padding: 30px;
+  }
+
+  #quiz_questions {
+    padding: 20px 30px 0px 30px;
+  }
+
+  /* Increase font size, spacing and padding */
   h2 {
     font-size: 2.5rem;
     letter-spacing: 1px;
   }
 
-  #info_panel p,
-  #difficulty_panel p {
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  body #info_panel p,
+  body #difficulty_panel p {
     padding: 0 20px 0 20px;
     font-size: 1.55rem;
     margin-bottom: 22px;
@@ -837,11 +858,48 @@ button {
     margin-bottom: 25px;
   }
 
+  #rules_panel li::before {
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.3rem;
+  }
+
+  #question_title h2 {
+    font-size: 1.6rem;
+    min-height: 120px;
+  }
+
+  .question_total {
+    padding: 18px 30px 18px 30px;
+  }
+
+  #quiz_footer {
+    height: 80px;
+    padding: 18px 30px;
+  }
+
+.results_text h3,
+.results_text p {
+  padding: 10px 80px 40px 80px;
+}
+
+.results_text p {
+  font-size: 1.5rem;
+}
+
   /* Improve button spacing */
   button {
     font-size: 1.4rem;
     padding: 8px 25px;
     font-weight: 700;
+  }
+
+  .answer_btn {
+    font-size: 1.3rem;
+    min-height: 55px;
+    padding: 10px 50px;
+    margin: 18px 0;
   }
 
   #high_scores th,
@@ -862,12 +920,26 @@ button {
     margin-bottom: 15px;
   }
 
+    .answer_btn::after {
+    right: 55px;
+  }
+
+  /* Adds tick to button with correct answer */
+  .answer_btn[data-correct="true"]::after {
+    font-size: 1.5rem;
+  }
+
+  /* Adds cross to button with incorrect answer */
+  .answer_btn.incorrect::after {
+    font-size: 1.5rem;
+  }
+
   .quiz_timer {
     font-size: 1.2rem;
   }
 
   @media screen and (max-height: 870px) {
-    /* Change the background images */
+    /* Change the background images on shallow screens */
     body {
       background-color: var(--background-color);
       background-image: url(../images/pop-quiz.svg),
@@ -877,7 +949,7 @@ button {
       background-size: 300px auto, 300px auto;
     }
 
-    /* Adjust panel position for shorter screens */
+    /* Adjust panel position for shallow screens */
     #info_panel,
     #rules_panel,
     #quiz_panel,
