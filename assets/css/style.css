@@ -216,8 +216,8 @@ button {
   bottom: -5px;
   left: 0;
   height: 4px;
-  background: var(--highlight-blue); /* Or any color you prefer */
-  width: 100%; /* Full width at start */
+  background: var(--highlight-blue);
+  width: 100%;
   transition: width linear;
 }
 
@@ -443,6 +443,7 @@ button {
   padding: 8px 40px;
   word-wrap: break-word;
   white-space: normal;
+  transition: all 0.3s ease-in-out;
 }
 
 #difficulty_panel .answer_btn {

@@ -28,7 +28,7 @@ The game features a fast-paced multiple-choice format where players race against
   - [Colour Scheme](#colour-scheme)
   - [Typography](#typography)
   - [Imagery](#imagery)
-  - [Game Play](#gameplay)
+  - [Game Logic Overview](#gameplay)
   - [Wireframes](#wireframes)
     - [Mobile Wireframes](#mobile-frames)
     - [Tablet Wireframes](#tablet-frames)
