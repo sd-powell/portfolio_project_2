@@ -4,7 +4,6 @@ let questionNum = 0;
 let questionCount = 1;
 let score = 0;
 let correctAnswer;
-let selectedAnswer;
 let apiAddress;
 let timerInterval;
 
@@ -95,7 +94,7 @@ function hideDifficultyPanel() {
 }
 
 // Shows the quiz panel when the game starts
-function showQuiz_panel() {
+function showQuizPanel() {
   quizPanel.classList.add("show");
 }
 
@@ -121,7 +120,7 @@ async function apiCall() {
     }
     // If API call is successful, show the quiz
     hideDifficultyPanel();
-    showQuiz_panel();
+    showQuizPanel();
     getQuestions(data);
     console.log(data);
   } catch (error) {
@@ -202,7 +201,7 @@ function answerCheck(event) {
     return;
   }
 
-  selectedAnswer = event.target;
+  let selectedAnswer = event.target;
   let isCorrect = selectedAnswer.innerHTML === parseHtmlEntities(correctAnswer);
 
   clearInterval(timerInterval); // Stop timer when user selects an answer
