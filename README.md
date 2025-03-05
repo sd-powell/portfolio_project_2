@@ -10,9 +10,15 @@ Visit the deployed site here: [DJ Silver Soul's Pop Quiz](https://sd-powell.gith
 
 **DJ Silver Soul Pop Quiz** is an interactive, disco-themed music trivia game designed to test and entertain players with questions about popular music from past to present.
 
-Music quizzes enhance memory, support learning, and sharpen critical thinking. They also trigger dopamine release, improving mood and reducing stress. They also help keep the brain sharp, making them both fun and beneficial.
+**The aim and purpose of the site** is to provide an engaging and competitive platform for music lovers to challenge their knowledge while enjoying a fun, fast-paced gaming experience. By blending entertainment with learning, the quiz enhances memory, supports cognitive development, and encourages critical thinking.
+
+**The goal of the site** is to create an immersive and enjoyable quiz experience that keeps players coming back for more. By incorporating time-based challenges, a leaderboard system, and a variety of music-related questions, the game fosters a sense of excitement and accomplishment.
+
+Music quizzes enhance memory, support learning, and sharpen critical thinking. They also trigger dopamine release, improving mood and reducing stress. They help keep the brain sharp, making them both fun and beneficial.
 
 The game features a fast-paced multiple-choice format where players race against the clock to answer questions and secure a spot on the leaderboard. This competitive element encourages replayability, motivating players to return and beat their own high scores.
+
+**The target audience is music enthusiasts of all ages** who enjoy trivia, competition, and testing their knowledge of popular music history. The quiz is designed for casual players looking for quick entertainment, as well as dedicated music fans eager to prove their expertise.
 
 ---
 
@@ -124,7 +130,9 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 
 The site's color scheme draws inspiration from the vibrant neon lights of a 1970s disco, featuring bold, electrifying hues that evoke the energy, excitement, and retro-futuristic aesthetics of the era. The glowing, high-contrast palette enhances the immersive experience, creating a visually dynamic atmosphere reminiscent of classic dance floors, shimmering reflections, and the iconic nightlife of the time.
 
-The primary colours for the site are
+The primary colours for the site are:
+- `#1d1a21` (Dark Blue) – This deep, dark shade is used as the **main background color**, evoking the feeling of a dimly lit **disco or nightclub**. It provides a strong contrast against brighter elements, enhancing visibility and making interactive components stand out. The dark blue **reduces eye strain** and creates a sense of depth, immersing players in the quiz experience.
+- `#252733` (Blue-Gray) – Inspired by **dark mode UI design**, this color serves as a **secondary background and panel color**, ensuring that content remains clearly distinguishable. It enhances readability while maintaining the **futuristic, neon-lit aesthetic** associated with music and nightlife culture.
 
 To boost user engagement and draw attention to key areas, I selected distinct highlight colors that complemented the background visuals. These colors were defined as root variables in my CSS file, allowing for effortless adjustments across the site.
 
@@ -321,7 +329,7 @@ All Pages on the website are responsive and have:
 <details>
 <summary> Click here to view the home page </summary>
 
-![Pop quiz home page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+![Pop quiz home page shown in a variety of screen sizes](documentation/features-responsive-home.webp)
 
 </details>
 
@@ -403,7 +411,7 @@ The homepage effectively sets the stage for an exciting trivia experience. With 
 <details>
 <summary> Click here to view the difficulty page </summary>
 
-![Pop quiz difficulty page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+![Pop quiz difficulty page shown in a variety of screen sizes](documentation/features-responsive-difficulty.webp)
 
 </details>
 
