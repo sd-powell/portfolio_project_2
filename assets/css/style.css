@@ -658,7 +658,7 @@ button {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 751px - 1079px) */
 @media screen and (min-width: 751px) and (max-width: 1079px) {
   /* Change the background images */
   body {
@@ -734,6 +734,8 @@ button {
     padding: 10px 40px 10px 70px;
     margin-bottom: 12px;
     justify-content: left;
+    text-align: center;
+    text-wrap: balance;
   }
 
   #rules_panel li::before {
@@ -857,6 +859,8 @@ button {
     font-size: 1.3rem;
     padding: 10px 40px 10px 70px;
     margin-bottom: 25px;
+    text-align: center;
+    text-wrap: balance;
   }
 
   #rules_panel li::before {
@@ -999,6 +1003,8 @@ button {
     font-size: 1.3rem;
     padding: 10px 40px 10px 70px;
     margin-bottom: 25px;
+    text-align: center;
+    text-wrap: balance;
   }
 
   /* Improve button spacing */
