@@ -716,8 +716,8 @@ button {
   }
 
   #difficulty_panel p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    padding: 0 20px 0px 20px;
   }
 
   #difficulty_panel h2 {
@@ -730,6 +730,7 @@ button {
   }
 
   #rules_panel li {
+    font-size: 1.2rem;
     padding: 10px 40px 10px 70px;
     margin-bottom: 12px;
     justify-content: left;
@@ -776,7 +777,7 @@ button {
 
   #high_scores th,
   #high_scores td {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     padding: 4.5px;
   }
 
@@ -795,7 +796,7 @@ button {
   }
 }
 
-/* Large devices (large laptops and desktops, 1200px and up) */
+/* Large devices (large laptops and desktops, 1080px and up) */
 @media screen and (min-width: 1080px) {
   /* Increase the width of content containers */
   #info_panel,
