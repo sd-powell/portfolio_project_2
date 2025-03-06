@@ -69,7 +69,7 @@ To guarantee **cross-device compatibility**, every page was rigorously tested ac
 
 | Directory                                | File tested  | Screenshot                                              | Notes                            |
 | ---------------------------------------- | ------------ | ------------------------------------------------------- | -------------------------------- |
-| documentation/testing-w3css-home.webp | style.css    | ![screenshot](documentation/testing-w3css-home.webp) | no errors occurred when checking |
+| documentation/testing-w3css-home.webp | style.css    | ![screenshot](documentation/testing-w3css-home.webp) | ⚠ There were 9 warnings about checking CSS variables, but this is not a concern. |
 
 <a id=js-validation></a>
 
