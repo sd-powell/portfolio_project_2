@@ -1,3 +1,6 @@
+// tell ESLint that Swal is a global variable
+/* global Swal */
+
 // Declare game variables (Track game state)
 let quizData = {};
 let questionNum = 0;
