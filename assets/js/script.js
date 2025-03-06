@@ -60,7 +60,7 @@ document
   });
 
   // Declare button functions before they are called
-  
+
 // Hides the info panel when other panels are visible
 function hideInfoPanel() {
   infoPanel.classList.add("hidden");
@@ -195,6 +195,7 @@ function getQuestions(data) {
     });
 
   // Generate answer buttons dynamically
+  // Map concept researched here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
   answerList.innerHTML = answers
     .map(
       (answer, index) =>
@@ -454,9 +455,6 @@ function startTimer(time) {
 
 // Instantly resets the timer UI
 function resetTimer() {
-  // timerDisplay = document.getElementById("timer_secs");
-  // timerLabel = document.getElementById("timer_label");
-  // timeLine = document.querySelector(".time_line");
 
   if (!timerDisplay || !timerLabel || !timeLine) {
     return;
