@@ -57,7 +57,7 @@ document
   });
 
 // Event listeners for opening and closing quiz panels
-rulesBtn.addEventListener("click", () => { 
+rulesBtn.addEventListener("click", () => {
   rulesPanel.classList.add("show");
   hideInfoPanel();
 });
@@ -149,7 +149,8 @@ function parseHtmlEntities(str) {
   return str.replace(/&#(\d+);/g, (_, num) => String.fromCharCode(num));
 }
 
-// Updates the score when a correct answer is selected
+// Increases the player's score when a correct answer is selected.
+// Updates the UI to reflect the new score.
 // Based on content from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 function increaseScore() {
   score += 10;
@@ -208,7 +209,8 @@ function getQuestions(data) {
 // https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a
 // Custom data attributes researched here - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 function answerCheck(event) {
-  // Ensure a button was clicked
+  // Checks if the clicked element is an answer button
+  // Prevents errors if the user clicks outside the button area
   if (!event.target.matches(".answer_btn")) {
     return;
   }
@@ -276,7 +278,7 @@ function nextQuestion() {
   resetButtons();
   nextBtn.classList.add("hide");
 
-  // ✅ Ensure the timer restarts for the new question
+  // Ensure the timer restarts for the new question
   setTimeout(() => {
     console.log("Restarting timer for new question...");
     startTimer(15);
@@ -301,6 +303,8 @@ function showResults() {
 }
 
 // Save high score function
+// Score is saved to local storage array or a blank array is created if no scores exist
+// Tutorial - https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 function saveHighScore() {
   const playerName = userName.value.trim();
   if (!playerName) {
@@ -309,14 +313,16 @@ function saveHighScore() {
       icon: "error",
       title: "Oops!",
       text: "Please enter your name before submitting. (Max: 20 characters)",
-      confirmButtonColor: '#4f9aff',
+      confirmButtonColor: "#4f9aff",
       customClass: {
-        popup: 'my-custom-font'
-    }
+        popup: "my-custom-font",
+      },
     });
     return;
   }
-
+  // Retrieves "highScores" from local storage.
+  // If "highScores" exists, it is converted from a JSON string into an array.
+  // If "highScores" does not exist (null), an empty array [] is used as a fallback.
   const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
   // Create new score entry
@@ -390,10 +396,6 @@ function resetQuiz() {
 
 // Timer function
 function startTimer(time) {
-  // Ensure elements are up to date (in case DOM has changed)
-  // timerDisplay = document.getElementById("timer_secs");
-  // timerLabel = document.getElementById("timer_label");
-  // timeLine = document.querySelector(".time_line");
 
   // Clear any existing timer before starting a new one
   if (timerInterval) {
@@ -417,7 +419,7 @@ function startTimer(time) {
     let progressWidth = Math.max((time / totalTime) * 100, 0);
     timeLine.style.width = progressWidth + "%";
 
-    if (time < 0) {
+    if (time <= 0) {
       clearInterval(timerInterval);
       document.getElementById("timer_label").textContent = "Time's up!";
       timerDisplay.style.display = "none";
