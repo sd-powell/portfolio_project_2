@@ -119,7 +119,7 @@ async function apiCall() {
 
     const response = await fetch(apiAddress);
 
-    // Check if response is okay (status code 200-299)
+    // Check if response is okay (status code 200-299) else throw an error
     if (!response.ok) {
       throw new Error(`Server error: ${response.status}`);
     }
@@ -134,10 +134,7 @@ async function apiCall() {
     hideDifficultyPanel();
     showQuizPanel();
     getQuestions(data);
-    console.log(data);
   } catch (error) {
-    console.error("Error fetching quiz data:", error);
-
     // Redirect user to a custom 500 error page
     window.location.href = "/500.html";
   }
@@ -279,10 +276,7 @@ function nextQuestion() {
   nextBtn.classList.add("hide");
 
   // Ensure the timer restarts for the new question
-  setTimeout(() => {
-    console.log("Restarting timer for new question...");
-    startTimer(15);
-  }, 100);
+  setTimeout(() => startTimer(15), 100);
 }
 
 // Resets answer buttons for a new question
@@ -408,7 +402,6 @@ function startTimer(time) {
 
   timerInterval = setInterval(() => {
     if (!timerDisplay) {
-      console.error("Timer display element missing! Stopping timer.");
       clearInterval(timerInterval);
       return;
     }
@@ -457,7 +450,6 @@ function resetTimer() {
   // timeLine = document.querySelector(".time_line");
 
   if (!timerDisplay || !timerLabel || !timeLine) {
-    console.error("Error: Timer elements not found during reset!");
     return;
   }
 
