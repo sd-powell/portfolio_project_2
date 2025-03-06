@@ -124,6 +124,7 @@ async function apiCall() {
       throw new Error(`Server error: ${response.status}`);
     }
 
+    // Convert JSON response to object
     const data = await response.json();
 
     // Check if the API returned quiz questions
@@ -136,6 +137,7 @@ async function apiCall() {
     getQuestions(data);
   } catch (error) {
     // Redirect user to a custom 500 error page
+    // eslint-disable-next-line no-unused-vars
     window.location.href = "/500.html";
   }
 }

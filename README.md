@@ -662,7 +662,9 @@ To clone the repository:
 
 ### Known Issues & Bugs
 
-	I have noticed that when the keyboard appears on mobile devices while a user is submitting their name in the form field, the panel is nudged up the screen, slightly obscuring the header background image. A tutor advised me that this shouldn’t be a concern.
+| No | Bug Description | Screenshot |
+| :- | :------------- | :--------- |
+| 1 |	I have noticed that when the keyboard appears on mobile devices while a user is submitting their name in the form field, the panel is nudged up the screen, slightly obscuring the header background image. A tutor advised me that this shouldn’t be a concern. | ![Screenshot](documentation/testing-bugs-keyboard.webp) |
 
 ---
 
