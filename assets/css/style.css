@@ -69,6 +69,8 @@ button {
 #difficulty_panel p {
   margin-bottom: 12px;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-wrap: balance;
 }
 
@@ -148,8 +150,7 @@ button {
 #rules_panel.show,
 #results_panel.show,
 #leaderboard_panel.show,
-#difficulty_panel.show,
-#info_panel.show {
+#difficulty_panel.show {
   display: flex;
   z-index: 5;
 }
@@ -238,6 +239,8 @@ button {
   font-size: 19px;
   font-weight: 400;
   letter-spacing: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-wrap: balance;
   min-height: 92px;
   display: flex;
@@ -315,6 +318,8 @@ button {
   font-family: var(--secondary-font);
   font-size: 1.2rem;
   text-wrap: balance;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #error_panel i {
@@ -743,6 +748,8 @@ button {
     justify-content: left;
     text-align: center;
     text-wrap: balance;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   #rules_panel li::before {
@@ -873,6 +880,8 @@ button {
     margin-bottom: 25px;
     text-align: center;
     text-wrap: balance;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   #rules_panel li::before {
@@ -1021,6 +1030,8 @@ button {
     margin-bottom: 25px;
     text-align: center;
     text-wrap: balance;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   /* Improve button spacing */

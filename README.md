@@ -662,7 +662,7 @@ To clone the repository:
 
 ### Known Issues & Bugs
 
-I’ve realized that most images on my site are set as background images, making it difficult to provide descriptive alt text for screen readers. This could affect accessibility for visually impaired users. Moving forward, I plan to explore alternative ways to incorporate images to improve accessibility and align with web standards.
+	I have noticed that when the keyboard appears on mobile devices while a user is submitting their name in the form field, the panel is nudged up the screen, slightly obscuring the header background image. A tutor advised me that this shouldn’t be a concern.
 
 ---
 
