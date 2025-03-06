@@ -91,8 +91,10 @@ I attempted to test with [Jest](https://jestjs.io/) and [Cypress](https://www.cy
 I've tested my deployed project using the Lighthouse Audit tool to test the performance, accessibility, best practices and SEO of the website.
 
 | Page | Mobile | Desktop | Notes |
-| ---- | ------ | ------- | ----- |
-| ---- | ------ | ------- | ----- |
+| :--: | :--: | :--: | :--: |
+| Home | ![screenshot](documentation/testing-lighthouse-mobile-index.webp) | ![screenshot](documentation/testing-lighthouse-desktop-index.webp) | ✅ Passed with great results |
+| 404 | ![screenshot](documentation/testing-lighthouse-mobile-404.webp) | ![screenshot](documentation/testing-lighthouse-desktop-404.webp) | ✅ Passed with great results |
+| 500 | ![screenshot](documentation/testing-lighthouse-mobile-500.webp) | ![screenshot](documentation/testing-lighthouse-desktop-500.webp) | ✅ Passed with great results |
 
 ---
 
