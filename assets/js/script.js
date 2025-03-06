@@ -86,6 +86,7 @@ function startQuiz() {
   rulesPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
   difficultyPanel.classList.add("show");
+  infoPanel.classList.remove("show");
 }
 
 // Hides the difficulty selection panel once a level is selected

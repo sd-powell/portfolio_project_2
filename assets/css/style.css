@@ -134,7 +134,7 @@ button {
 #difficulty_panel,
 #results_panel,
 #leaderboard_panel {
-  transition: 0.3s ease all;
+  transition: opacity 0.3s ease-in-out;
   display: none;
 }
 
