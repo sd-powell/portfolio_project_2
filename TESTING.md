@@ -83,8 +83,8 @@ I attempted to test with [Jest](https://jestjs.io/) and [Cypress](https://www.cy
 
 | Validator| Issues found | Fix Implemented |
 | :--: | :-- | :-- |
-| **JSHint** | One warning `117	'async functions' is only available in ES8 (use 'esversion: 8').` | JSHint is warning you that async functions are only supported in ES8 (ECMAScript 2017), but it is currently set to an older ECMAScript version. I updated the JSHint configuration to ES8. |
-| **ESLint** | One error `297:5 error 'Swal' is not defined no-undef` | I researched this issue on [GitHub](https://github.com/sweetalert2/sweetalert2/issues/477) and it should be resolved by declaring the link to the sweetalert2 CDN in `ìndex.html` |
+| **JSHint** | One warning `117	'async functions' is only available in ES8 (use 'esversion: 8').` | JSHint is warning you that async functions are only supported in ES8 (ECMAScript 2017), but it is currently set to an older ECMAScript version. I updated the JSHint configuration to ES8 using this code `/*jshint esversion: 8 */`. |
+| **ESLint** | One error `297:5 error 'Swal' is not defined no-undef` | I researched this issue on [GitHub](https://github.com/sweetalert2/sweetalert2/issues/477) and it should be resolved by adding this code to the head of the JavaScript file `// tell ESLint that Swal is a global variable /* global Swal */` |
 
 <a id=lighthouse></a>
 
