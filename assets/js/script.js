@@ -59,26 +59,14 @@ document
     }
   });
 
-// Event listeners for opening and closing quiz panels
-rulesBtn.addEventListener("click", () => {
-  rulesPanel.classList.add("show");
-  hideInfoPanel();
-});
-leaderboard_btn.addEventListener("click", () => {
-  showLeaderboard();
-  hideInfoPanel();
-});
-exitBtn.addEventListener("click", quitToHome);
-leaderQuit.addEventListener("click", quitToHome);
-quizExitBtn.addEventListener("click", quitToHome);
-diffExitBtn.addEventListener("click", quitToHome);
-quitQuiz.addEventListener("click", quitToHome);
-restartQuiz.addEventListener("click", startQuiz);
-leaderStart.addEventListener("click", startQuiz);
-rulesStartBtn.addEventListener("click", startQuiz);
-startBtn.addEventListener("click", startQuiz);
+  // Declare button functions before they are called
+  
+// Hides the info panel when other panels are visible
+function hideInfoPanel() {
+  infoPanel.classList.add("hidden");
+}
 
-// Quit Quiz to Home
+  // Quit Quiz to Home
 function quitToHome() {
   resetQuiz();
   leaderboardPanel.classList.remove("show");
@@ -108,10 +96,25 @@ function showQuizPanel() {
   quizPanel.classList.add("show");
 }
 
-// Hides the info panel when other panels are visible
-function hideInfoPanel() {
-  infoPanel.classList.add("hidden");
-}
+// Event listeners for opening and closing quiz panels
+rulesBtn.addEventListener("click", () => {
+  rulesPanel.classList.add("show");
+  hideInfoPanel();
+});
+leaderboard_btn.addEventListener("click", () => {
+  showLeaderboard();
+  hideInfoPanel();
+});
+
+exitBtn.addEventListener("click", quitToHome);
+leaderQuit.addEventListener("click", quitToHome);
+quizExitBtn.addEventListener("click", quitToHome);
+diffExitBtn.addEventListener("click", quitToHome);
+quitQuiz.addEventListener("click", quitToHome);
+restartQuiz.addEventListener("click", startQuiz);
+leaderStart.addEventListener("click", startQuiz);
+rulesStartBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", startQuiz);
 
 // API call function (Fetches quiz data from the selected difficulty)
 // Researched methods on https://rapidapi.com/guides/fetch-api-async-await
@@ -184,6 +187,7 @@ function getQuestions(data) {
   correctAnswer = results.correct_answer;
 
   // Shuffle and assign answers to buttons dynamically
+  // Concept researched here - https://medium.com/@apestruy/shuffling-an-array-in-javascript-8fcbc5ff12c7
   let answers = results.incorrect_answers
     .concat(correctAnswer)
     .sort(function () {
