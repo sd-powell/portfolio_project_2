@@ -159,6 +159,12 @@ button {
   z-index: 5;
 }
 
+#info_panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden; /* Hides from screen readers */
+}
+
 /************ Elements ************/
 
 #quiz_header {

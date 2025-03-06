@@ -57,8 +57,14 @@ document
   });
 
 // Event listeners for opening and closing quiz panels
-rulesBtn.addEventListener("click", () => rulesPanel.classList.add("show"));
-leaderboard_btn.addEventListener("click", () => showLeaderboard());
+rulesBtn.addEventListener("click", () => { 
+  rulesPanel.classList.add("show");
+  hideInfoPanel();
+});
+leaderboard_btn.addEventListener("click", () => {
+  showLeaderboard();
+  hideInfoPanel();
+});
 exitBtn.addEventListener("click", quitToHome);
 leaderQuit.addEventListener("click", quitToHome);
 quizExitBtn.addEventListener("click", quitToHome);
@@ -77,7 +83,7 @@ function quitToHome() {
   resultsPanel.classList.remove("show");
   quizPanel.classList.remove("show");
   difficultyPanel.classList.remove("show");
-  infoPanel.classList.add("show");
+  hideInfoPanel();
 }
 
 // Start quiz and show difficulty panel
@@ -86,7 +92,7 @@ function startQuiz() {
   rulesPanel.classList.remove("show");
   resultsPanel.classList.remove("show");
   difficultyPanel.classList.add("show");
-  infoPanel.classList.remove("show");
+  hideInfoPanel();
 }
 
 // Hides the difficulty selection panel once a level is selected
@@ -97,6 +103,11 @@ function hideDifficultyPanel() {
 // Shows the quiz panel when the game starts
 function showQuizPanel() {
   quizPanel.classList.add("show");
+}
+
+// Hides the info panel when other panels are visible
+function hideInfoPanel() {
+  infoPanel.classList.add("hidden");
 }
 
 // API call function (Fetches quiz data from the selected difficulty)
