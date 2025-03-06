@@ -1,8 +1,8 @@
 # Testing
 
-![DJ Silver Soul's Pop Quiz shown in a variety of screen sizes](documentation/testing-responsive-devices.webp)
+![DJ Silver Soul Pop Quiz shown in a variety of screen sizes](documentation/testing-responsive-devices.webp)
 
-Visit the deployed site here: [DJ Silver Soul's Pop Quiz](https://sd-powell.github.io/portfolio_project_2/)
+Visit the deployed site here: [DJ Silver Soul Pop Quiz](https://sd-powell.github.io/portfolio_project_2/)
 
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
@@ -79,7 +79,7 @@ A series of **automated testing** tools were used on the site to check the code 
 
 The [JSHint](https://jshint.com/) website was used to validate the JavaScript code. I also installed [ESLint](https://eslint.org/) in [VS Code](https://code.visualstudio.com/), which automatically checked my JavaScript code in the console and reported any errors.  
 
-I attempted to test with [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/), but I encountered complications when importing functions into my test scripts. After assessing the time required to resolve these issues, I decided it would be more efficient to use alternative testing methods.
+I attempted to test with [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/), but I encountered complications when importing functions into my test scripts. After assessing the time required to resolve these issues, I decided it would be more efficient to use the testing methods mentioned above.
 
 | Validator| Issues found | Fix Implemented |
 | :--: | :-- | :-- |

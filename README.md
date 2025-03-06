@@ -87,9 +87,8 @@ The quiz is built with the player in mind, offering an engaging and immersive ex
 3. **Responsive & Fast-Paced Gameplay** – Players answer multiple-choice questions against the clock, keeping the game dynamic and exciting
 4. **Competitive & Replayable** – A leaderboard system encourages users to return, improve their scores, and challenge friends
 5. **Interactive Feedback** – Instant response to answers (correct/incorrect) enhances the learning experience and player satisfaction
-6. **Social Sharing Features** – Encourages players to share their scores and challenge friends, increasing engagement and reach
-7. **Mobile-Friendly Design** – Optimized for desktop and mobile play to ensure accessibility anytime, anywhere
-8. **Encourages Learning & Memory Recall** – Combining music knowledge with trivia boosts memory retention and cognitive skills
+6. **Mobile-Friendly Design** – Optimized for desktop and mobile play to ensure accessibility anytime, anywhere
+7. **Encourages Learning & Memory Recall** – Combining music knowledge with trivia boosts memory retention and cognitive skills
 
 <br>
 <hr>
@@ -532,7 +531,7 @@ The purpose of the 500 page is to capture any issues with API access and guide t
 
 <a id=future-implementation></a>
 
-#### Future Implemetations
+#### Future Implementations
 
 To ensure the website remains engaging and functional for users, in future implementations I would like to:
 
@@ -542,7 +541,7 @@ To ensure the website remains engaging and functional for users, in future imple
 4. **Personalized Music Recommendations** – Based on quiz performance, suggest songs or playlists (e.g., “You scored high on Rock – check out this playlist!”).
 5. **Badges & Achievements** – Reward users with unlockable badges (e.g., “Pop Quiz Champion,” “Rock Guru”) for reaching milestones.
 6. **Shareable Results & Social Media Integration** – Let users share their scores on Twitter, Instagram, or Facebook.
-7. **Live Leaderboard** – Introduce a live leaderboard (rather than a locally stored version) to keep competition fresh and exciting. Allowing users to compete agianst each other.
+7. **Live Leaderboard** – Introduce a live leaderboard (rather than a locally stored version) to keep competition fresh and exciting. Allowing users to compete against each other.
 
 ---
 
@@ -602,7 +601,7 @@ The site is deployed using GitHub Pages - [Dj Silver Soul's Pop Quiz](https://sd
 
 To Deploy the site using GitHub Pages:
 
-1. Login (or signup) to Github.
+1. Login (or sign up) to Github.
 2. Go to the repository for this project, [sd-powell/portfolio_project_2](https://github.com/sd-powell/portfolio_project_2).
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
