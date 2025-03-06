@@ -47,6 +47,8 @@ To guarantee **cross-device compatibility**, every page was rigorously tested ac
 
 ## AUTOMATED TESTING
 
+A series of **automated testing** tools were used on the site to check the code for web standard compliance and errors. These tools ensured repeatable, scalable, and performance-driven results throughout the site’s development.
+
 <a id=w3c-validation></a>
 
 ### W3C Validator
@@ -106,7 +108,7 @@ I've tested my deployed project using the Lighthouse Audit tool to test the perf
 
 ### Full Testing
 
-This section outlines the manual testing process conducted to ensure the website functions correctly across different devices, screen sizes, and user interactions. Each test was performed methodically to identify potential issues with responsiveness, usability, and accessibility, with results documented for further improvements. Additional testing was taken by friends and family on a variety of devices and screen sizes.
+This section outlines the **manual testing** process conducted to ensure the website functions correctly across different devices, screen sizes, and user interactions. Each test was performed methodically to identify potential issues with responsiveness, usability, and accessibility, with results documented for further improvements. Additional testing was taken by friends and family on a variety of devices and screen sizes.
 
 ---
 
