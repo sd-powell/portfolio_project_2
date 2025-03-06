@@ -83,7 +83,7 @@ function quitToHome() {
   resultsPanel.classList.remove("show");
   quizPanel.classList.remove("show");
   difficultyPanel.classList.remove("show");
-  hideInfoPanel();
+  infoPanel.classList.remove("hidden");
 }
 
 // Start quiz and show difficulty panel
