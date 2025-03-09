@@ -66,7 +66,7 @@ The game features a fast-paced multiple-choice format where players race against
 * [Testing](#testing-readme)
 
   - [Solved Issues & Bugs](#solved-issues)
-  - [Know Issues & Bugs](#known-issues)
+  - [Known Issues & Bugs](#known-issues)
 
 * [Credits & Inspiration](#credits&inspiration)
   - [Content](#content)
