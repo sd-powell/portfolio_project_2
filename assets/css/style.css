@@ -631,6 +631,11 @@ button {
     min-height: 40px;
   }
 
+  adjust position of tick and cross icons */
+  .answer_btn::after {
+    right: 40px;
+  }
+
   /* Adjust leaderboard table */
   #high_scores th,
   #high_scores td {
