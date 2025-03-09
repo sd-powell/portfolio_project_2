@@ -160,6 +160,7 @@ button {
   z-index: 5;
 }
 
+/* Hide the info panel by adding the .hidden class */
 #info_panel.hidden {
   opacity: 0;
   pointer-events: none;
@@ -309,6 +310,7 @@ button {
 
 /************ Error Panel ************/
 
+/* error panel animation applied to h2 */
 #error_panel h2 {
   animation: shake 0.5s ease-in-out infinite alternate;
   padding-bottom: 0;
@@ -471,6 +473,7 @@ button {
   background-color: var(--correct-green);
 }
 
+/* Hide next button when not needed */
 .nextQuestion_btn.hide {
   display: none;
 }
@@ -505,6 +508,7 @@ button {
   pointer-events: none;
 }
 
+/* Position tick and cross icons */
 .answer_btn::after {
   position: absolute;
   right: 35px;
@@ -631,7 +635,7 @@ button {
     min-height: 40px;
   }
 
-  adjust position of tick and cross icons */
+  /* Adjust position of tick and cross icons */
   .answer_btn::after {
     right: 40px;
   }
@@ -806,6 +810,7 @@ button {
     padding: 4.5px;
   }
 
+  /* Adjust position of tick and cross icons */
   .answer_btn::after {
     right: 55px;
   }
@@ -955,6 +960,7 @@ button {
     margin-bottom: 15px;
   }
 
+  /* Adjust position of tick and cross icons */
     .answer_btn::after {
     right: 55px;
   }
