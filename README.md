@@ -439,7 +439,7 @@ The homepage effectively sets the stage for an exciting trivia experience. With 
 <details>
 <summary> Click here to view the quiz page </summary>
 
-![Pop quiz page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+![Pop quiz page shown in a variety of screen sizes](documentation/features-responsive-quiz.webp)
 
 </details>
 
@@ -469,7 +469,7 @@ The homepage effectively sets the stage for an exciting trivia experience. With 
 <details>
 <summary> Click here to view the results page </summary>
 
-![Pop quiz results page shown in a variety of screen sizes](documentation/dj-silver-soul-responsive.webp)
+![Pop quiz results page shown in a variety of screen sizes](documentation/features-responsive-results.webp)
 
 </details>
 
