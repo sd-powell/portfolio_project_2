@@ -68,8 +68,7 @@ The game features a fast-paced multiple-choice format where players race against
   - [Solved Issues & Bugs](#solved-issues)
   - [Know Issues & Bugs](#known-issues)
 
-* [Credits](#credits)
-  - [Inspiration](#Credits&inspiration)
+* [Credits & Inspiration](#credits&inspiration)
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgement](#acknowledgement)
@@ -424,7 +423,7 @@ The homepage effectively sets the stage for an exciting trivia experience. With 
     - 🚀 Hard: “After Hours – For True Fans”
   - Includes an Exit Button to return to the home page.
 - User Benefits:
-  - Lets players customize their experience based on their skill level.
+  - Lets players customise their experience based on their skill level.
   - Adds variety and replayability.
   - Clearly explains the differences between difficulty levels.
 - Interactive Elements:
@@ -450,13 +449,13 @@ The homepage effectively sets the stage for an exciting trivia experience. With 
   - Displays trivia questions dynamically from the API.
   - Shows:
     - Question number & total questions
-    - Countdown timer (15 seconds per question)
+    - Countdown timer and visual time line indicator (15 seconds per question)
     - Four multiple-choice answer options
   - Users select an answer, and responses are immediately processed.
   - Score is updated dynamically.
 - User Benefits:
   - Fast-paced, interactive gameplay keeps users engaged.
-  - The countdown timer adds a challenge.
+  - The countdown timer and visual time line indicator adds a challenge.
   - Immediate feedback enhances the experience.
   - The exit option ensures users have control over their session.
 - Navigation buttons:
@@ -583,7 +582,7 @@ HTML, CSS, JavaScript
 
 - [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-- [Aria DevTools](https://github.com/ziolko/aria-devtools) - Used to view the website the way screen readers present it to blind users.
+- [Aria DevTools](https://github.com/ziolko/aria-devtools) - Used to view the website the way screen readers present it to visually impaired users.
 
 - [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
 
@@ -667,7 +666,7 @@ To clone the repository:
 
 ---
 
-<a id=Credits&inspiration></a>
+<a id=credits&inspiration></a>
 
 ## Credits & Inspiration
 
