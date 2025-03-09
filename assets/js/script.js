@@ -59,14 +59,13 @@ document
     }
   });
 
-  // Declare button functions before they are called
-
+// Declare button functions before they are called
 // Hides the info panel when other panels are visible
 function hideInfoPanel() {
   infoPanel.classList.add("hidden");
 }
 
-  // Quit Quiz to Home
+// Quit Quiz to Home
 function quitToHome() {
   resetQuiz();
   leaderboardPanel.classList.remove("show");
@@ -237,7 +236,7 @@ function answerCheck(event) {
     selectedAnswer.dataset.correct = "true"; // Add FontAwesome tick via CSS
     increaseScore();
   } else {
-    selectedAnswer.classList.add("incorrect");
+    selectedAnswer.classList.add("incorrect"); // Add FontAwesome cross via CSS
 
     // Find the correct answer and highlight it
     let correctButton = [...document.querySelectorAll(".answer_btn")].find(
@@ -400,7 +399,6 @@ function resetQuiz() {
 
 // Timer function
 function startTimer(time) {
-
   // Clear any existing timer before starting a new one
   if (timerInterval) {
     clearInterval(timerInterval);
@@ -455,7 +453,6 @@ function startTimer(time) {
 
 // Instantly resets the timer UI
 function resetTimer() {
-
   if (!timerDisplay || !timerLabel || !timeLine) {
     return;
   }

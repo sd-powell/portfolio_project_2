@@ -597,7 +597,7 @@ button {
   #error_panel {
     top: 200px;
     left: 50%;
-    width: 90%; 
+    width: 90%;
     min-height: 400px;
     padding: 12px;
   }
@@ -915,18 +915,18 @@ button {
     padding: 18px 30px;
   }
 
-.results_text h3,
-.results_text p {
-  padding: 10px 80px 40px 80px;
-}
+  .results_text h3,
+  .results_text p {
+    padding: 10px 80px 40px 80px;
+  }
 
-.results_text p {
-  font-size: 1.5rem;
-}
+  .results_text p {
+    font-size: 1.5rem;
+  }
 
-#error_panel p {
-  font-size: 1.8rem;
-}
+  #error_panel p {
+    font-size: 1.8rem;
+  }
 
   /* Improve button spacing */
   button {
@@ -961,7 +961,7 @@ button {
   }
 
   /* Adjust position of tick and cross icons */
-    .answer_btn::after {
+  .answer_btn::after {
     right: 55px;
   }
 
@@ -1011,7 +1011,8 @@ button {
       url(../images/lightbulb-silversoul.svg),
       url(../images/large-lightbulb.svg);
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: center top 20px, left -35px top -55px, right -22px top 14px;
+    background-position: center top 20px, left -35px top -55px,
+      right -22px top 14px;
     background-size: 450px auto, 450px auto, 100% auto;
   }
 
